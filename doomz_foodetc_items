@@ -1,0 +1,423 @@
+ACTOR Canfoo : Ammo 										                               	//food ammo
+{
+ SpawnID 199
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ Ammo.BackpackAmount 0 
+ Scale 0.12
+ Ammo.BackpackMaxAmount 100 
+ Inventory.Icon "CANBA0" 
+ Tag "A can of beans"
+ Inventory.PickupMessage "You picked up a can of christmas beans."
+ States
+ {
+ Spawn:
+  CANB A -1
+  Stop
+ 
+ }
+}
+
+
+
+ACTOR meatfoo : Ammo 										                               	//food ammo
+{
+ Inventory.Amount 1 
+SpawnID 180
+ Inventory.MaxAmount 100
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+  Inventory.MaxAmount 100
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+  
+     health 20
+	 -solid
+ -friendly
+ Tag "A glob of meat"
+ Inventory.Icon "CANBA0" 
+ scale 0.15
+ Inventory.PickupMessage "You picked up a hunk of meat"
+ States
+ {
+ Spawn:
+  STEC B 30
+  STEC B 1 A_SpawnItemEx ("meatysmell", 0,0,50,0,0,0,0,0,0)
+ 
+  loop
+ 
+ }
+}
+
+
+Actor Meatpickup : CustomInventory 
+{
+  Inventory.PickupMessage "Picked up some uncooked meat"
+  Inventory.PickupSound "misc/p_pkup"
+  scale 0.1
+  States
+  {
+  Spawn:
+		STEC A -1
+		Stop
+   vanish:
+		TNT1 A 0 A_GiveInventory ("meatfoo")
+		stop
+  Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,19)), "vanish")
+		fail
+  }
+}
+
+
+ACTOR Stekfoo : Ammo 										                               	//food ammo
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ SpawnID 656
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+ Inventory.Icon "CANBA0"  
+     health 20
+	 -solid
+	 -friendly
+ scale 0.15
+  Tag "Cooked meat"
+ Inventory.PickupMessage "You picked up a hunk of cooked meat"
+ States
+ {
+ Spawn:
+ STEC a 30
+  STEC a 1 A_SpawnItemEx ("meatysmell", 0,0,50,0,0,0,0,0,0)
+  loop
+ }
+}
+
+Actor Steakpickup : CustomInventory 
+{
+  Inventory.PickupMessage "Picked up some uncooked meat"
+  Inventory.PickupSound "misc/p_pkup"
+  scale 0.1
+  States
+  {
+  Spawn:
+		STEC A -1
+		Stop
+   vanish:
+		TNT1 A 0 A_GiveInventory ("Stekfoo")
+		stop
+  Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,14)), "vanish")
+		fail
+  }
+}
+
+ACTOR Cantfoo : Ammo 																     	//Drink ammo
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ SpawnID 200
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+ Tag "A full water canteen"
+ Inventory.Icon "COKBA0" 
+ Scale 0.225
+ Inventory.PickupMessage "You picked up a full canteen thing."
+ States
+ {
+ Spawn:
+  CANP A -1
+  Stop
+ }
+}
+
+Actor Canteenpickup : CustomInventory 
+{
+  Inventory.PickupMessage "Picked up some uncooked meat"
+  Inventory.PickupSound "misc/p_pkup"
+  scale 0.1
+  States
+  {
+  Spawn:
+		CANP A -1
+		Stop
+   vanish:
+		TNT1 A 0 A_GiveInventory ("Cantfoo")
+		stop
+  Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,22)), "vanish")
+		fail
+  }
+}
+
+
+
+ACTOR Emptfoo : Ammo 																     	//Drink ammo
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ SpawnID 178
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+ Tag "An empty water canteen"
+ Inventory.Icon "COKBA0" 
+ Scale 0.225
+ Inventory.PickupMessage "You picked up an EMPTY canteen thing."
+ States
+ {
+ Spawn:
+  CANP A -1
+  Stop
+ }
+}
+
+Actor emptycantepickup : CustomInventory 
+{
+  Inventory.PickupMessage "Picked up some uncooked meat"
+  Inventory.PickupSound "misc/p_pkup"
+  scale 0.1
+  States
+  {
+  Spawn:
+		CANP A -1
+		Stop
+   vanish:
+		TNT1 A 0 A_GiveInventory ("Emptfoo")
+		stop
+  Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,21)), "vanish")
+		fail
+  }
+}
+
+
+
+ACTOR Drnkfoo : Ammo 																     	//Drink ammo
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+  Tag "A can of coke"
+ Inventory.Icon "COKBA0" 
+ Scale 0.12
+  SpawnID 198
+ Inventory.PickupMessage "You picked up a drink can thing."
+ States
+ {
+ Spawn:
+  COKB A -1
+  Stop
+ }
+}
+
+
+
+
+
+ACTOR Banfoo : Ammo 										                               	//food ammo
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ Ammo.BackpackAmount 0 
+  SpawnID 197
+ Ammo.BackpackMaxAmount 100 
+ Inventory.Icon "CANBA0" 
+ scale 0.05
+  Tag "A bandage (stem bleeding)"
+ Inventory.PickupMessage "You picked up a bandage."
+ States
+ {
+ Spawn:
+  BAND A -1
+  Stop
+ 
+ }
+}
+
+
+Actor bandpickup : CustomInventory 
+{
+  Inventory.PickupMessage "Picked up some uncooked meat"
+  Inventory.PickupSound "misc/p_pkup"
+  scale 0.1
+  States
+  {
+  Spawn:
+		CANP A -1
+		Stop
+   vanish:
+		TNT1 A 0 A_GiveInventory ("Banfoo")
+		stop
+  Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,3)), "vanish")
+		fail
+  }
+}
+
+
+
+
+ACTOR Bloodfoo : Ammo 										                               	//food ammo
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ SpawnID 179
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+ Inventory.Icon "CANBA0" 
+ scale 0.12
+  Tag "A blood-bag (restore health)"
+ Inventory.PickupMessage "You picked up a blood bag"
+ States
+ {
+ Spawn:
+  BBAG A -1
+  Stop
+ 
+ }
+}
+
+
+
+
+
+
+ACTOR deadratfoo : Ammo 										                               	//food ammo
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ SpawnID 201
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+ Inventory.Icon "CANBA0" 
+ scale 1.0
+   Tag "A Dead rat"
+ Inventory.PickupMessage "You picked up a dead rat"
+ States
+ {
+ Spawn:
+  //RATZ A -1
+  RATS L -1
+  Stop
+ 
+ }
+}
+
+ACTOR cookedratfoo : Ammo 										                               	//food ammo
+{
+  
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ SpawnID 202
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+ Inventory.Icon "CANBA0" 
+ scale 0.15
+   Tag "A cooked rat"
+ Inventory.PickupMessage "You picked up a cooked rat"
+ States
+ {
+ Spawn:
+  RATX A -1
+  Stop
+ 
+ }
+}
+
+
+
+
+ACTOR branchfoo : Ammo 										                               	//food ammo
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ SpawnID 181
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+ Inventory.Icon "CANBA0"
+   Tag "Some wood"
+ scale 0.2
+ Inventory.PickupMessage "You picked up some wood"
+ States
+ {
+ Spawn:
+  LOGS A -1
+  Stop
+ 
+ }
+}
+
+
+
+ACTOR Morphfoo : Ammo 										                               	//food ammo
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ SpawnID 182
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+ Inventory.Icon "CANBA0" 
+ scale 0.08
+ Inventory.PickupMessage "You picked up a morpheine injector"
+   Tag "Morpheine (fix broken bones)"
+ States
+ {
+ Spawn:
+  MORP I -1
+  Stop
+ 
+ }
+}
+
+
+
+
+ACTOR antibfoo : Ammo 										                               	//food ammo
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ SpawnID 183
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+ Inventory.Icon "CANBA0" 
+ scale 0.05
+ Inventory.PickupMessage "You picked up some antibiotics"
+    Tag "Antibiotics"
+ States
+ {
+ Spawn:
+  ANTI C -1
+  Stop
+ 
+ }
+}
+
+
+
+
+
+ACTOR Heatfoo : Ammo 										                               	//food ammo
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ SpawnID 184
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+ Inventory.Icon "CANBA0" 
+ scale 0.07
+ Inventory.PickupMessage "You picked up a heatpack"
+    Tag "Heatpack"
+ States
+ {
+ Spawn:
+  HETP A -1
+  Stop
+ 
+ }
+}
+
+
+
+
+

@@ -1,0 +1,46 @@
+
+//#include "doomz_weapons" //Weapons
+#include "doomz_monsters" //Monster types
+
+#include "doomz_ammo" // Ammunition types
+//UNUSED doomz_archaic are ones that are no longer used. 
+#include "doomz_decoration" // lockers, tills, shelves etc
+#include "doomz_foliage" // trees, leaves etc etc
+#include "doomz_environmental" // clouds and sun and what have you
+#include "doomz_foodetc_items" // food, drink, morpheine etc
+#include "doomz_foodetc_actions" // eating, morpheining, drinking etc
+#include "doomz_spawners" //Spawner types
+#include "doomz_bagsanditems" // food, drink, morpheine etc
+#include "doomz_carstuff" // food, drink, morpheine etc
+
+#include "doomz_houseobjects" //chairs and tables etc
+#include "doomz_fieldobjects" //signs and bales etc
+#include "doomz_mainplayer" // main player
+
+#include "doomz_theisland" // main player
+
+#include "doomz_playervariables" // stat counters. These should be replaced with player inventories 
+#include "doomz_testing" // testing new features. Won't be used at the moment, but needs including
+#include "doomz_effects" // glass shards etc
+#include "doomz_basebuilding" // testing contructing bases
+
+
+#include "doomz_ai_test" // testing contructing bases
+
+#include "doomz_new_foodetc_items" // new fooditems
+#include "doomz_new_foodetc_actions" // new fooditems
+
+#include "doomz_weap_pickup" 
+
+#include "doomz_new_weapons"
+
+#include "doomz_new_ammo"
+#include "doomz_new_pickup"
+
+#include "doomz_new_weapons_mele"
+#include "doomz_new_weapons_pistols"
+#include "doomz_new_weapons_smgs"
+#include "doomz_new_weapons_test"
+
+#include "doomz_new_weapons_shotgun"
+#include "doomz_new_weapons_rifle"

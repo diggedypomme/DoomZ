@@ -1,0 +1,288 @@
+
+
+ACTOR Empty : Weapon replaces fist	5000																// empty
+{
+  Game Doom
+  Weapon.SelectionOrder 5000  // needs deciding and setting
+  Weapon.Kickback 0  //how far back you knock them.
+  Weapon.SlotNumber 1
+  Obituary "%o should not have been able to be killed by %k's hands"
+//  Tag "Empty"
+  +INVENTORY.UNDROPPABLE
+  +WEAPON.WIMPY_WEAPON
+	  States
+	  {
+		  Ready:
+			EMPT A 1 A_WeaponReady
+			Loop
+		  Deselect:
+			EMPT A 1 A_Lower
+			Loop
+		  Select:
+			EMPT A 1 A_Raise
+			Loop
+		  Fire:
+			Goto Ready  //we don't want you to ever be able to fire
+		}
+}
+//****************************************** knife
+
+
+ACTOR Knife : Weapon	5003																// Knife
+{
+  Game Doom
+  Weapon.SelectionOrder 5003  //obviously incorrect
+  Weapon.Kickback 100 // needs setting. Should be less than baseball bat
+  Weapon.SlotNumber 1
+  DamageType knife
+  Obituary "%o was stabbed to death by %k's knife"
+  Inventory.PickupMessage "You got a knife"
+//  Tag "knife"
+//  +WEAPON.WIMPY_WEAPON
+  +WEAPON.MELEEWEAPON
+	  States
+		  {
+		  Ready:
+			KNFG A 1 A_WeaponReady
+			Loop
+		  Deselect:
+			KNFG A 1 A_Lower
+			Loop
+		  Select:
+			KNFG A 1 A_Raise
+			Loop
+		  Fire:
+			KNFG B 2
+			KNFG C 4 A_Punch   //again, use custom punch and see if you can get some sound in there.
+			KNFG D 2
+			KNFG E 2
+			KNFG F 2
+			KNFG E 2
+			KNFG D 2
+			KNFG A 2 A_ReFire
+			Goto Ready
+		  Spawn:
+			KNFE A -1
+			Stop
+		  }
+}
+//****************************************** Axe
+
+ACTOR Axe : Weapon																	// axe
+{
+  Game Doom
+  Weapon.SelectionOrder 5002// change this
+  Weapon.Kickback 100 // needs calibrating
+  Weapon.SlotNumber 1
+  DamageType axe
+  Obituary "%o was chopped into pieces by %k's axe"
+  Inventory.PickupMessage "You picked up an axe"
+   Tag "axe"
+//  Tag "$TAG_FIST"
+//  +WEAPON.WIMPY_WEAPON
+  +WEAPON.MELEEWEAPON
+	  States
+		  {
+		  Ready:
+			AXEG A 1 A_WeaponReady
+			Loop
+		  Deselect:
+			PUNG A 1 A_Lower
+			Loop
+		  Select:
+			PUNG A 1 A_Raise
+			Loop
+		  Fire:
+			AXEG ABCDE 3
+			TNT1 A 4
+			AXEG I 2 //A_PlaySound("weapons/axeswing", CHAN_WEAPON) #would be good to get an axe swing in here. Check the original axe?
+			AXEG A 0 
+			AXEG J 2 A_CustomPunch(20+random(4, 16), 1, 0, "AxeHitPuff") // decide on the actual damage that this should do
+			TNT1 A 3 //A_Light2 - a_light is no longer useful as this will be changed constantly by our script
+			AXEG K 2
+			TNT1 A 4
+			AXEG EDCBA 2
+			AXEG A 6
+			Goto Ready
+		   Spawn:
+			 ZXXD  A -1
+			 Stop
+		  }
+}
+
+//****************************************** baseball bat
+																      			 																                               // mele
+
+
+ACTOR baseballbat : Weapon 5001																// baseball bat
+{
+  Game Doom
+  Weapon.SelectionOrder 5001 //needs changing
+  Weapon.Kickback 100  // needs calibrating
+  Weapon.SlotNumber 1
+  Obituary "%o was beaten to a pulp with %k's baseball bat"
+  Inventory.PickupMessage "You got a baseball bat"
+  Tag "Baseball bat"
+  +WEAPON.MELEEWEAPON
+  DamageType blunt
+  +Weapon.NoAlert
+	  States
+	  {
+		  Ready:
+			BACT A 1 A_WeaponReady
+			Loop
+		  Deselect:
+			PUNG A 1 A_Lower
+			Loop
+		  Select:
+			PUNG A 1 A_Raise
+			Loop
+		  Fire:
+			PUNG B 4
+			PUNG C 4 A_Punch  //have a swishing noise then a thump or not a thum. "meleesound/misssound"
+			PUNG D 5// use A_CustomPunch istead of pung - you have more control
+			PUNG C 4 // use bulletpuff
+			PUNG B 5 A_ReFire
+			Goto Ready
+		  Spawn:
+			 ZXXA  A -1
+			 Stop
+		  }
+}
+
+
+
+
+//****************************************** book
+
+
+
+ACTOR book : Weapon	5004															// book
+{
+  Game Doom
+  Weapon.SelectionOrder 9301 //obviously incorrect
+  Weapon.Kickback 100 // this obviously need to be much less
+  Weapon.SlotNumber 1
+  Obituary "%k somehow managed to kill %o with a book!"
+  Inventory.PickupMessage "You picked up a book"
+  Tag "Book"
+  +WEAPON.WIMPY_WEAPON
+  +WEAPON.MELEEWEAPON
+	  States
+	  {
+		  Ready:
+		  // PBUK A 1 A_WeaponReady
+			PBUK A-1
+			Loop
+		  Deselect:
+			PBUK A 1 A_Lower
+			Loop
+		  Select:
+			PBUK A 1 A_Raise
+			Loop
+		  Fire:
+			PBUK B 5
+			PBUK C 8 A_Punch  // as ever - use a custom punch here, and use the missing swish
+			PBUK D 58 A_ReFire
+	 	    Goto Ready
+		  Spawn:
+			KNFE A -1
+			Stop
+		  }
+}
+
+
+//****************************************** machete
+
+
+ACTOR machete : Weapon	5005															// Machete
+{
+  Game Doom
+  Weapon.SelectionOrder 5005 // fix
+  Weapon.Kickback 100  //this should be less than the baseball but more than the knife
+  Weapon.SlotNumber 1
+  DamageType machete
+  Obituary "%o was hacked to death by %k's machete"
+  Tag "Machete"
+//  +WEAPON.WIMPY_WEAPON - I dont think that this should be used unless its causing an issue.
+  +WEAPON.MELEEWEAPON
+	  States
+		  {
+		  Ready:
+			MHT2 H 2  A_WeaponReady
+			Loop
+		  Deselect:
+			MHT2 H 2 A_Lower
+			Loop
+		  Select:
+			MHT2 H 2 A_Raise
+			Loop
+		  Fire:
+			MHT2 A 2 A_PlayWeaponSound("MacheteSwing")   // does this currently work? if so, can this also be used for the other guns
+			MHT2 B 2 
+			MHT2 C 4 A_Punch // fix this - use custom punch
+			MHT2 D 2
+			MHT2 E 2
+			MHT2 F 2
+			MHT2 G 2
+			MHT2 H 2 
+		  Goto Ready
+			Spawn:
+			 MHTE A -1
+			 Stop
+		  }
+}
+
+//****************************************** pitchfork
+
+ACTOR pitchfork : Weapon	5006															// pitchfork
+{
+  Game Doom
+  Weapon.SelectionOrder 5006 // fix
+  Weapon.Kickback 100  //this should be less than the baseball but more than the knife
+  Weapon.SlotNumber 1
+  DamageType machete
+  Obituary "%o was hacked to death by %k's machete"
+  Inventory.PickupMessage "You got a pitchfork"
+  Tag "Pitchfork"
+//  +WEAPON.WIMPY_WEAPON - I dont think that this should be used unless its causing an issue.
+  +WEAPON.MELEEWEAPON
+	  States
+		  {
+		  Ready:
+			MHT2 H 2  A_WeaponReady
+			Loop
+		  Deselect:
+			MHT2 H 2 A_Lower
+			Loop
+		  Select:
+			MHT2 H 2 A_Raise
+			Loop
+		  Fire:
+			MHT2 A 2 A_PlayWeaponSound("MacheteSwing")   // grunting noise as you thrust maybe?
+			MHT2 B 2 
+			MHT2 C 4 A_Punch // fix this - use custom punch. could have a grunting noise if missed, or a splat/chink noise if hit
+			MHT2 D 2
+			MHT2 E 2
+			MHT2 F 2
+			MHT2 G 2
+			MHT2 H 2 
+		  Goto Ready
+			Spawn:
+			 MHTE A -1
+			 Stop
+		  }
+}
+
+//****************************************** START OF GUNS ******************************************
+//***************************************************************************************************
+
+// DZ_ - weapon
+// DL_ - loaded
+// DZA_ - ammo
+
+
+//get some more accurate values for reload time etc and damage from the guns
+
+//****************************************** crossbow
+ 

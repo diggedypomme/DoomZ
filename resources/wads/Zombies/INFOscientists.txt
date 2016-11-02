@@ -1,0 +1,17 @@
+[INFO]
+Name: Former UAC Scientists
+Difficulty: Very Easy
+Connections: Zombieman, Shotgun Guy, Female Zombie
+Summon: ZombieScientist, ZombieScientist2, FemaleScientist, FemaleScientist2
+Melee: Yes
+Distance: None
+Type: Human, Undead
+
+[CREDITS]
+Submitted: scalliano
+Decorate: scalliano
+GLDefs: none
+Sounds: Id Software, DavidRaven, Konami, Valve
+Sprites: Id Software (Zombieman), Xim (Jawless Zombie Head), JoeyTD (Player 6, 7 & 8 frames), The Skulltag Team (Illucia, Player II), DavidRaven (Female Zombie), Marty Kirra (Alt Female Zombie) 
+Sprite Edit: scalliano
+Idea Base: The UAC's apparent lack of staff

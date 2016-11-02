@@ -1,0 +1,237 @@
+
+actor sidebale 1881
+{
+	//$Category Voxel Vehicles Pack - Cars
+	//$Title "60's car - Red"
+	-NOGRAVITY
+	Radius 10
+	Height 10
+	+SOLID
+	+SHOOTABLE
+	+NODAMAGE
+	+NOBLOOD
+	+CANPASS
+	scale 1
+	States
+	{
+	Spawn:
+		BALS A -1
+		Stop
+	}
+}
+actor otherbale 1874
+{
+	//$Category Voxel Vehicles Pack - Cars
+	//$Title "60's car - Red"
+	-NOGRAVITY
+	Radius 10
+	Height 10
+	+SOLID
+	+SHOOTABLE
+	+NODAMAGE
+	+NOBLOOD
+	+CANPASS
+	scale 1
+	States
+	{
+	Spawn:
+		BALE A -1
+		Stop
+	}
+}
+
+
+ACTOR t5  15450 //tent
+{
+  Game Doom
+  SpawnID 254
+  Radius 45
+  Height 40
+  scale 3.5
+  -shootable
+   +USESPECIAL
+   //  +ROCKETTRAIL
+   Activation THINGSPEC_Switch
+  ProjectilePassHeight -16
+  +SOLID
+  States
+  {
+  Spawn:
+ NULL BCD 1 	Thing_SetSpecial(0, 80, 790, 0, 0) // for some reason it insisted on having this start bit or it wasn't useable after
+   TENT A 4  
+     Goto Ready
+   
+  Ready:
+   
+   TENT A 4  
+   TENT a -1  
+
+   // Loop 
+   goto ready
+   stop
+   
+  }
+}
+
+
+ACTOR sign 10629
+{
+	height 1
+	radius 1
+	+SOLID
+	scale 1.2
+	states
+	{
+	Spawn:
+		CAT2 A -1
+		Stop
+	}
+}
+
+
+
+ACTOR chopper 10632                   //this is the chopper spawn
+{
+	height 80
+	radius 30
+	+SOLID
+	scale 1.2
+	states
+	{
+	Spawn:
+		//CHOP A -1
+		UHEK B 1
+		UHEK BBB 4 A_SpawnItemEx ("choppersmoke", 0, 0, 50, random(0,1), random(0,1), random(1,2),random(0,255), 0.5)
+		loop
+	}
+}
+
+
+
+
+actor floatcar 1872
+{
+	//$Category Voxel Vehicles Pack - Cars
+	//$Title "60's car - Red"
+	
+	Radius 1
+	Height 300
+	-SOLID
+	+SHOOTABLE
+	+NODAMAGE
+	+NOBLOOD
+	+CANPASS
+	+nogravity
+	
+	States
+	{
+	Spawn:
+	//BRCA A -1
+		TANK A -1
+		Stop
+	}
+}
+
+
+actor pump : table 1877
+{
+	Radius 10
+	Height 30
+	scale 5.0
+	States
+	{
+	Spawn:
+		pump A -1
+		Stop
+	}
+}
+
+
+
+
+
+ACTOR roof2
+{
+scale 0.1
+	Radius 16
+	Height 28
+	Mass 0x7FFFFFF
+	+FLOORCLIP
+	+SOLID
+	States
+	{
+	Spawn:
+		POSS A 3
+		Loop
+	}
+}
+
+
+
+
+
+
+
+ACTOR fire2 replaces ExplosiveBarrel
+{
+//BURNFIRE
+  Game Doom
+  SpawnID 149
+  Radius 16
+  Height 32
+  -shootable
+   +USESPECIAL
+   //  +ROCKETTRAIL
+   Activation THINGSPEC_Switch
+  ProjectilePassHeight -16
+  +SOLID
+  States
+  {
+  Spawn:
+ FIRE BCD 4 Bright	Thing_SetSpecial(0, 80, 772, 0, 0)
+   FIRE BCD 4 Bright A_GiveInventory("FireCounter", 100)
+   FIRE a 0 A_PlaySound (fire2, 0, 200, 1)//can also do attenuation
+  // ATcloudbomb
+  
+       Goto Ready
+   
+  Ready:
+   
+   FIRE BCD 4 Bright A_TakeInventory("FireCounter", 1)
+   FIRE BCD 4 Bright A_SpawnItemEx ("cloudsmoke", 0, 0, 50, random(0,1), random(0,1), random(1,2),random(0,255), 0.5) 
+   FIRE BCD 4 Bright A_JumpIfInventory("FireCounter", 1, "Ready")
+
+   // Loop 
+   stop
+   
+  }
+}
+ACTOR FireCounter : Inventory { Inventory.MaxAmount 500 }
+
+
+
+actor 60sCarRed 
+{
+	//$Category Voxel Vehicles Pack - Cars
+	//$Title "60's car - Red"
+	
+	Radius 32
+	Height 39
+	+SOLID
+	+SHOOTABLE
+	+NODAMAGE
+	+NOBLOOD
+	+CANPASS
+	States
+	{
+	Spawn:
+	BRCA A -1
+
+		stop
+		
+	}
+}
+
+
+
+

@@ -1,0 +1,445 @@
+
+statusbar Fullscreen, fullscreenoffsets
+{
+	drawnumber 3, INDEXFON, gold, ammocapacity Clip, -10, 120;
+	
+		
+	DrawSwitchableImage Foodz == 1, "nullimage",  "WZWLA0", -50, 0+center,center;
+	DrawSwitchableImage Foodz == 2, "nullimage",  "WZWKA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 3, "nullimage",  "WZWJA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 4, "nullimage",  "WZWIA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 5, "nullimage",  "WZWHA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 6, "nullimage",  "WZWGA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 7, "nullimage",  "WZWFA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 8, "nullimage",  "WZWEA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 9, "nullimage",  "WZWDA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 10, "nullimage",  "WZWCA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 11, "nullimage",  "WZWBA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 12, "nullimage",  "WZWAA0", -50, 0+center,center;
+	//	DrawNumber 3, HUDFONT_DOOM, RED, Foodz, fillzeros, 0, -650;
+	//	DrawNumber 3, HUDFONT_DOOM, RED, Bagcomz, fillzeros, 0, -650;
+	//	DrawNumber 3, HUDFONT_DOOM, GREEN, Smallbagpick, fillzeros, 0, -550;
+	//	DrawNumber 3, HUDFONT_DOOM, BLUE, Zootcomz, fillzeros, 0, -450;
+	//Bagcomz	
+	DrawSwitchableImage Drenkz == 1, "nullimage",  "WZTLA0",-50, -50+center,center;
+	DrawSwitchableImage Drenkz == 2, "nullimage",  "WZTKA0", -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 3, "nullimage",  "WZTJA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 4, "nullimage",  "WZTIA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 5, "nullimage",  "WZTHA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 6, "nullimage",  "WZTGA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 7, "nullimage",  "WZTFA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 8, "nullimage",  "WZTEA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 9, "nullimage",  "WZTDA0", -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 10, "nullimage",  "WZTCA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 11, "nullimage",  "WZTBA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 12, "nullimage",  "WZTAA0", -50, -50+center,center;
+	//	DrawNumber 3, HUDFONT_DOOM, GREEN, Drenkz, fillzeros, 0, -600;
+	
+	
+	DrawSwitchableImage Tempz == 12, "nullimage",  "HETAA0", -50, 50+center,center;
+	
+	DrawSwitchableImage Tempz == 11, "nullimage",  "HETBA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 10, "nullimage",  "HETCA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 9, "nullimage",  "HETDA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 8, "nullimage",  "HETEA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 7, "nullimage",  "HETFA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 6, "nullimage",  "HETGA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 5, "nullimage",  "HETHA0", -50, 50+center,center;
+	DrawSwitchableImage Tempz == 3, "nullimage",  "HETIA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 4, "nullimage",  "HETIA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 2, "nullimage",  "HETJA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 1, "nullimage",  "HETKA0", -50, 50+center,center;
+	
+	
+	
+	
+	
+	
+	
+	}
+	
+	
+StatusBar PopupLog
+{
+
+//drawimage "DRINA0", 900, -50, center;
+//	drawimage "FOXVA0", 900, -100, center;
+	
+	
+//	drawimage "HEAFA0", 900, 0, center;
+	
+	
+	drawimage "UIMNA2", 180, -350, center;
+drawimage "UIMNA1", 170, -270, center;
+
+drawimage "UIMNA3", 580, -450, center;
+DrawSwitchableImage Smallbagpick, "nullimage", "UIMNA3B", 580, -450, center;
+DrawSwitchableImage Mbagpick2, "nullimage", "UIMNA4", 580, -450, center;
+DrawSwitchableImage Largbagpick3, "nullimage", "UIMNA5", 580, -450, center;
+
+
+DrawSwitchableImage Selectr == 1, "nullimage", "UIMNA6", 445, -600, center;
+DrawSwitchableImage Selectr == 2, "nullimage", "UIMNA6", 545, -600, center;
+DrawSwitchableImage Selectr == 3, "nullimage", "UIMNA6", 635, -600, center;
+DrawSwitchableImage Selectr == 4, "nullimage", "UIMNA6", 720, -600, center;
+
+DrawSwitchableImage Selectr == 5, "nullimage", "UIMNA6", 445, -520, center;
+DrawSwitchableImage Selectr == 6, "nullimage", "UIMNA6", 545, -520, center;
+DrawSwitchableImage Selectr == 7, "nullimage", "UIMNA6", 635, -520, center;
+DrawSwitchableImage Selectr == 8, "nullimage", "UIMNA6", 720, -520, center;
+
+DrawSwitchableImage Selectr == 9, "nullimage", "UIMNA6", 445, -420, center;
+DrawSwitchableImage Selectr == 10, "nullimage", "UIMNA6", 545, -420, center;
+DrawSwitchableImage Selectr == 11, "nullimage", "UIMNA6", 635, -420, center;
+DrawSwitchableImage Selectr == 12, "nullimage", "UIMNA6", 720, -420, center;
+
+
+
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar1, fillzeros, 445, -650;
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar2, fillzeros, 545, -650;
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar3, fillzeros, 635, -650;
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar4, fillzeros, 725, -650;
+
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar5, fillzeros, 445, -510;
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar6, fillzeros, 545, -510;
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar7, fillzeros, 635, -510;
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar8, fillzeros, 725, -510;
+
+//drawimage "SSHLA0", 445, -650, center;
+
+DrawSwitchableImage Sbar1 == 1, "nullimage", "CANBA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 2, "nullimage", "COKBA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 3, "nullimage", "BANDA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 4, "nullimage", "SSHLA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 5, "nullimage", "BOLBA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 6, "nullimage", "CLIPA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 7, "nullimage", "NTEMA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 8, "nullimage", "NTENA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 9, "nullimage", "CLIPA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 10, "nullimage", "NTEPA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 11, "nullimage", "NTEQA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 12, "nullimage", "NTERA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 13, "nullimage", "NTELA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 14, "nullimage", "STECB0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 15, "nullimage", "HETPA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 16, "nullimage", "ANTIU0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 17, "nullimage", "MORPI0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 18, "nullimage", "LOGSA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 19, "nullimage", "STECA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 20, "nullimage", "BBAGA0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 21, "nullimage", "CANPB0", 445, -600, center;
+DrawSwitchableImage Sbar1 == 22, "nullimage", "CANPA0", 445, -600, center;
+
+
+DrawSwitchableImage Sbar2 == 1, "nullimage", "CANBA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 2, "nullimage", "COKBA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 3, "nullimage", "BANDA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 4, "nullimage", "SSHLA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 5, "nullimage", "BOLBA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 6, "nullimage", "CLIPA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 7, "nullimage", "NTEMA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 8, "nullimage", "NTENA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 9, "nullimage", "CLIPA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 10, "nullimage", "NTEPA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 11, "nullimage", "NTEQA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 12, "nullimage", "NTERA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 13, "nullimage", "NTELA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 14, "nullimage", "STECU0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 15, "nullimage", "HETPA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 16, "nullimage", "ANTIU0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 17, "nullimage", "MORPI0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 18, "nullimage", "LOGSA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 19, "nullimage", "STECA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 20, "nullimage", "BBAGA0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 21, "nullimage", "CANPB0", 545, -600, center;
+DrawSwitchableImage Sbar2 == 22, "nullimage", "CANPA0", 545, -600, center;
+
+
+DrawSwitchableImage Sbar3 == 1, "nullimage", "CANBA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 2, "nullimage", "COKBA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 3, "nullimage", "BANDA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 4, "nullimage", "SSHLA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 5, "nullimage", "BOLBA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 6, "nullimage", "CLIPA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 7, "nullimage", "NTEMA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 8, "nullimage", "NTENA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 9, "nullimage", "CLIPA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 10, "nullimage", "NTEPA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 11, "nullimage", "NTEQA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 12, "nullimage", "NTERA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 13, "nullimage", "NTELA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 14, "nullimage", "STECB0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 15, "nullimage", "HETPA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 16, "nullimage", "ANTIU0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 17, "nullimage", "MORPI0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 18, "nullimage", "LOGSA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 19, "nullimage", "STECA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 20, "nullimage", "BBAGA0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 21, "nullimage", "CANPB0", 635, -600, center;
+DrawSwitchableImage Sbar3 == 22, "nullimage", "CANPA0", 635, -600, center;
+
+
+DrawSwitchableImage Sbar4 == 1, "nullimage", "CANBA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 2, "nullimage", "COKBA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 3, "nullimage", "BANDA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 4, "nullimage", "SSHLA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 5, "nullimage", "BOLBA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 6, "nullimage", "CLIPA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 7, "nullimage", "NTEMA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 8, "nullimage", "NTENA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 9, "nullimage", "CLIPA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 10, "nullimage", "NTEPA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 11, "nullimage", "NTEQA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 12, "nullimage", "NTERA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 13, "nullimage", "NTELA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 14, "nullimage", "STECB0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 15, "nullimage", "HETPA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 16, "nullimage", "ANTIU0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 17, "nullimage", "MORPI0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 18, "nullimage", "LOGSA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 19, "nullimage", "STECA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 20, "nullimage", "BBAGA0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 21, "nullimage", "CANPB0", 720, -600, center;
+DrawSwitchableImage Sbar4 == 22, "nullimage", "CANPA0", 720, -600, center;
+
+DrawSwitchableImage Sbar5 == 1, "nullimage", "CANBA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 2, "nullimage", "COKBA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 3, "nullimage", "BANDA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 4, "nullimage", "SSHLA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 5, "nullimage", "BOLBA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 6, "nullimage", "CLIPA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 7, "nullimage", "NTEMA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 8, "nullimage", "NTENA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 9, "nullimage", "CLIPA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 10, "nullimage", "NTEPA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 11, "nullimage", "NTEQA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 12, "nullimage", "NTERA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 13, "nullimage", "NTELA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 14, "nullimage", "STECB0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 15, "nullimage", "HETPA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 16, "nullimage", "ANTIU0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 17, "nullimage", "MORPI0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 18, "nullimage", "LOGSA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 19, "nullimage", "STECA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 20, "nullimage", "BBAGA0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 21, "nullimage", "CANPB0", 445, -510, center;
+DrawSwitchableImage Sbar5 == 22, "nullimage", "CANPA0", 445, -510, center;
+
+
+DrawSwitchableImage Sbar6 == 1, "nullimage", "CANBA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 2, "nullimage", "COKBA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 3, "nullimage", "BANDA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 4, "nullimage", "SSHLA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 5, "nullimage", "BOLBA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 6, "nullimage", "CLIPA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 7, "nullimage", "NTEMA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 8, "nullimage", "NTENA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 9, "nullimage", "CLIPA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 10, "nullimage", "NTEPA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 11, "nullimage", "NTEQA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 12, "nullimage", "NTERA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 13, "nullimage", "NTELA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 14, "nullimage", "STECB0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 15, "nullimage", "HETPA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 16, "nullimage", "ANTIU0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 17, "nullimage", "MORPI0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 18, "nullimage", "LOGSA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 19, "nullimage", "STECA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 20, "nullimage", "BBAGA0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 21, "nullimage", "CANPB0", 545, -510, center;
+DrawSwitchableImage Sbar6 == 22, "nullimage", "CANPA0", 545, -510, center;
+
+
+DrawSwitchableImage Sbar7 == 1, "nullimage", "CANBA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 2, "nullimage", "COKBA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 3, "nullimage", "BANDA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 4, "nullimage", "SSHLA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 5, "nullimage", "BOLBA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 6, "nullimage", "CLIPA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 7, "nullimage", "NTEMA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 8, "nullimage", "NTENA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 9, "nullimage", "CLIPA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 10, "nullimage", "NTEPA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 11, "nullimage", "NTEQA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 12, "nullimage", "NTERA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 13, "nullimage", "NTELA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 14, "nullimage", "STECB0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 15, "nullimage", "HETPA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 16, "nullimage", "ANTIU0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 17, "nullimage", "MORPI0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 18, "nullimage", "LOGSA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 19, "nullimage", "STECA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 20, "nullimage", "BBAGA0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 21, "nullimage", "CANPB0", 635, -510, center;
+DrawSwitchableImage Sbar7 == 22, "nullimage", "CANPA0", 635, -510, center;
+
+
+DrawSwitchableImage Sbar8== 1, "nullimage", "CANBA0", 720, -510, center;
+DrawSwitchableImage Sbar8== 2, "nullimage", "COKBA0", 720, -510, center;
+DrawSwitchableImage Sbar8== 3, "nullimage", "BANDA0", 720, -510, center;
+DrawSwitchableImage Sbar8== 4, "nullimage", "SSHLA0", 720, -510, center;
+DrawSwitchableImage Sbar8== 5, "nullimage", "BOLBA0", 720, -510, center;
+DrawSwitchableImage Sbar8== 6, "nullimage", "CLIPA0", 720, -510, center;
+DrawSwitchableImage Sbar8== 7, "nullimage", "NTEMA0", 720, -510, center;
+DrawSwitchableImage Sbar8== 8, "nullimage", "NTENA0", 720, -510, center;
+DrawSwitchableImage Sbar8== 9, "nullimage", "CLIPA0", 720, -510, center;
+DrawSwitchableImage Sbar8== 10, "nullimage", "NTEPA0", 720, -510, center;
+DrawSwitchableImage Sbar8== 11, "nullimage", "NTEQA0", 720, -510, center;
+DrawSwitchableImage Sbar8== 12, "nullimage", "NTERA0", 720, -510, center;
+DrawSwitchableImage Sbar8== 13, "nullimage", "NTELA0", 720, -510, center;
+DrawSwitchableImage Sbar8 == 14, "nullimage", "STECB0", 720, -510, center;
+DrawSwitchableImage Sbar8 == 15, "nullimage", "HETPA0", 720, -510, center;
+DrawSwitchableImage Sbar8 == 16, "nullimage", "ANTIU0", 720, -510, center;
+DrawSwitchableImage Sbar8 == 17, "nullimage", "MORPI0", 720, -510, center;
+DrawSwitchableImage Sbar8 == 18, "nullimage", "LOGSA0", 720, -510, center;
+DrawSwitchableImage Sbar8 == 19, "nullimage", "STECA0", 720, -510, center;
+DrawSwitchableImage Sbar8 == 20, "nullimage", "BBAGA0", 720, -510, center;
+DrawSwitchableImage Sbar8 == 21, "nullimage", "CANPB0", 720, -510, center;
+DrawSwitchableImage Sbar8 == 22, "nullimage", "CANPA0", 720, -510, center;
+
+
+DrawSwitchableImage sbar9 == 1, "nullimage", "CANBA0", 445, -420, center;
+DrawSwitchableImage sbar9 == 2, "nullimage", "COKBA0", 445, -420, center;
+DrawSwitchableImage sbar9 == 3, "nullimage", "BANDA0", 445, -420, center;
+DrawSwitchableImage sbar9 == 4, "nullimage", "SSHLA0", 445, -420, center;
+DrawSwitchableImage sbar9 == 5, "nullimage", "BOLBA0", 445, -420, center;
+DrawSwitchableImage sbar9 == 6, "nullimage", "CLIPA0", 445, -420, center;
+DrawSwitchableImage sbar9 == 7, "nullimage", "NTEMA0", 445, -420, center;
+DrawSwitchableImage sbar9 == 8, "nullimage", "NTENA0", 445, -420, center;
+DrawSwitchableImage sbar9 == 9, "nullimage", "CLIPA0", 445, -420, center;
+DrawSwitchableImage sbar9 == 10, "nullimage", "NTEPA0", 445, -420, center;
+DrawSwitchableImage sbar9 == 11, "nullimage", "NTEQA0", 445, -420, center;
+DrawSwitchableImage sbar9 == 12, "nullimage", "NTERA0", 445, -420, center;
+DrawSwitchableImage sbar9 == 13, "nullimage", "NTELA0", 445, -420, center;
+DrawSwitchableImage Sbar9 == 14, "nullimage", "STECB0", 445, -420, center;
+DrawSwitchableImage Sbar9 == 15, "nullimage", "HETPA0", 445, -420, center;
+DrawSwitchableImage Sbar9 == 16, "nullimage", "ANTIU0", 445, -420, center;
+DrawSwitchableImage Sbar9 == 17, "nullimage", "MORPI0", 445, -420, center;
+DrawSwitchableImage Sbar9 == 18, "nullimage", "LOGSA0", 445, -420, center;
+DrawSwitchableImage Sbar9 == 19, "nullimage", "STECA0", 445, -420, center;
+DrawSwitchableImage Sbar9 == 20, "nullimage", "BBAGA0", 445, -420, center;
+DrawSwitchableImage Sbar9 == 21, "nullimage", "CANPB0", 445, -420, center;
+DrawSwitchableImage Sbar9 == 22, "nullimage", "CANPA0", 445, -420, center;
+
+
+
+DrawSwitchableImage sbar10 == 1, "nullimage", "CANBA0", 545, -420, center;
+DrawSwitchableImage sbar10 == 2, "nullimage", "COKBA0", 545, -420, center;
+DrawSwitchableImage sbar10 == 3, "nullimage", "BANDA0", 545, -420, center;
+DrawSwitchableImage sbar10 == 4, "nullimage", "SSHLA0", 545, -420, center;
+DrawSwitchableImage sbar10 == 5, "nullimage", "BOLBA0", 545, -420, center;
+DrawSwitchableImage sbar10 == 6, "nullimage", "CLIPA0", 545, -420, center;
+DrawSwitchableImage sbar10 == 7, "nullimage", "NTEMA0", 545, -420, center;
+DrawSwitchableImage sbar10 == 8, "nullimage", "NTENA0", 545, -420, center;
+DrawSwitchableImage sbar10 == 9, "nullimage", "CLIPA0", 545, -420, center;
+DrawSwitchableImage sbar10 == 10, "nullimage", "NTEPA0", 545, -420, center;
+DrawSwitchableImage sbar10 == 11, "nullimage", "NTEQA0", 545, -420, center;
+DrawSwitchableImage sbar10 == 12, "nullimage", "NTERA0", 545, -420, center;
+DrawSwitchableImage sbar10 == 13, "nullimage", "NTELA0", 545, -420, center;
+DrawSwitchableImage Sbar10 == 14, "nullimage", "STECB0", 545, -420, center;
+DrawSwitchableImage Sbar10 == 15, "nullimage", "HETPA0", 545, -420, center;
+DrawSwitchableImage Sbar10 == 16, "nullimage", "ANTIU0", 545, -420, center;
+DrawSwitchableImage Sbar10 == 17, "nullimage", "MORPI0", 545, -420, center;
+DrawSwitchableImage Sbar10 == 18, "nullimage", "LOGSA0", 545, -420, center;
+DrawSwitchableImage Sbar10 == 19, "nullimage", "STECA0", 545, -420, center;
+DrawSwitchableImage Sbar10 == 20, "nullimage", "BBAGA0", 545, -420, center;
+DrawSwitchableImage Sbar10 == 21, "nullimage", "CANPB0", 545, -420, center;
+DrawSwitchableImage Sbar10 == 22, "nullimage", "CANPA0", 545, -420, center;
+
+
+
+DrawSwitchableImage sbar11 == 1, "nullimage", "CANBA0", 635, -420, center;
+DrawSwitchableImage sbar11 == 2, "nullimage", "COKBA0", 635, -420, center;
+DrawSwitchableImage sbar11 == 3, "nullimage", "BANDA0", 635, -420, center;
+DrawSwitchableImage sbar11 == 4, "nullimage", "SSHLA0", 635, -420, center;
+DrawSwitchableImage sbar11 == 5, "nullimage", "BOLBA0", 635, -420, center;
+DrawSwitchableImage sbar11 == 6, "nullimage", "CLIPA0", 635, -420, center;
+DrawSwitchableImage sbar11 == 7, "nullimage", "NTEMA0", 635, -420, center;
+DrawSwitchableImage sbar11 == 8, "nullimage", "NTENA0", 635, -420, center;
+DrawSwitchableImage sbar11 == 9, "nullimage", "CLIPA0", 635, -420, center;
+DrawSwitchableImage sbar11 == 10, "nullimage", "NTEPA0", 635, -420, center;
+DrawSwitchableImage sbar11 == 11, "nullimage", "NTEQA0", 635, -420, center;
+DrawSwitchableImage sbar11 == 12, "nullimage", "NTERA0", 635, -420, center;
+DrawSwitchableImage sbar11 == 13, "nullimage", "NTELA0", 635, -420, center;
+DrawSwitchableImage Sbar11 == 14, "nullimage", "STECB0", 635, -420, center;
+DrawSwitchableImage Sbar11 == 15, "nullimage", "HETPA0", 635, -420, center;
+DrawSwitchableImage Sbar11 == 16, "nullimage", "ANTIU0", 635, -420, center;
+DrawSwitchableImage Sbar11 == 17, "nullimage", "MORPI0", 635, -420, center;
+DrawSwitchableImage Sbar11 == 18, "nullimage", "LOGSA0", 635, -420, center;
+DrawSwitchableImage Sbar11 == 19, "nullimage", "STECA0", 635, -420, center;
+DrawSwitchableImage Sbar11 == 20, "nullimage", "BBAGA0", 635, -420, center;
+DrawSwitchableImage Sbar11 == 21, "nullimage", "CANPB0", 635, -420, center;
+DrawSwitchableImage Sbar11 == 22, "nullimage", "CANPA0", 635, -420, center;
+
+
+
+DrawSwitchableImage sbar12== 1, "nullimage", "CANBA0", 720, -420, center;
+DrawSwitchableImage sbar12== 2, "nullimage", "COKBA0", 720, -420, center;
+DrawSwitchableImage sbar12== 3, "nullimage", "BANDA0", 720, -420, center;
+DrawSwitchableImage sbar12== 4, "nullimage", "SSHLA0", 720, -420, center;
+DrawSwitchableImage sbar12== 5, "nullimage", "BOLBA0", 720, -420, center;
+DrawSwitchableImage sbar12== 6, "nullimage", "CLIPA0", 720, -420, center;
+DrawSwitchableImage sbar12== 7, "nullimage", "NTEMA0", 720, -420, center;
+DrawSwitchableImage sbar12== 8, "nullimage", "NTENA0", 720, -420, center;
+DrawSwitchableImage sbar12== 9, "nullimage", "CLIPA0", 720, -420, center;
+DrawSwitchableImage sbar12== 10, "nullimage", "NTEPA0", 720, -420, center;
+DrawSwitchableImage sbar12== 11, "nullimage", "NTEQA0", 720, -420, center;
+DrawSwitchableImage sbar12== 12, "nullimage", "NTERA0", 720, -420, center;
+DrawSwitchableImage sbar12== 13, "nullimage", "NTELA0", 720, -420, center;
+DrawSwitchableImage Sbar12 == 14, "nullimage", "STECB0", 720, -420, center;
+DrawSwitchableImage Sbar12 == 15, "nullimage", "HETPA0", 720, -420, center;
+DrawSwitchableImage Sbar12 == 16, "nullimage", "ANTIU0", 720, -420, center;
+DrawSwitchableImage Sbar12 == 17, "nullimage", "MORPI0", 720, -420, center;
+DrawSwitchableImage Sbar12 == 18, "nullimage", "LOGSA0", 720, -420, center;
+DrawSwitchableImage Sbar12 == 19, "nullimage", "STECA0", 720, -420, center;
+DrawSwitchableImage Sbar12 == 20, "nullimage", "BBAGA0", 720, -420, center;
+DrawSwitchableImage Sbar12 == 21, "nullimage", "CANPB0", 720, -420, center;
+DrawSwitchableImage Sbar12 == 22, "nullimage", "CANPA0", 720, -420, center;
+
+
+
+
+
+//DrawSwitchableImage Canfoo, "nullimage", "UIMNA6", 720, -410, center;  //the selector I think
+
+DrawSwitchableImage Descripter == 1, "nullimage", "UIMNA7", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 2, "nullimage", "UIMNA8", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 3, "nullimage", "UIMNA9", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 4, "nullimage", "UIMNA10", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 5, "nullimage", "UIMNA11", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 6, "nullimage", "UIMNA12", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 7, "nullimage", "UIMNA13", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 8, "nullimage", "UIMNA14", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 9, "nullimage", "UIMNA15", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 10, "nullimage", "UIMNA16", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 11, "nullimage", "UIMNA17", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 12, "nullimage", "UIMNA18", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 13, "nullimage", "UIMNA19", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 14, "nullimage", "UIMNA20", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 15, "nullimage", "UIMNA21", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 16, "nullimage", "UIMNA22", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 17, "nullimage", "UIMNA23", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 18, "nullimage", "UIMNA24", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 19, "nullimage", "UIMNA25", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 20, "nullimage", "UIMNA26", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 21, "nullimage", "UIMNA27", -400, -310, center; // the description
+DrawSwitchableImage Descripter == 22, "nullimage", "UIMNA28", -400, -310, center; // the description
+//drawimage "UIMNA3", 580, -450, center;
+//drawimage "UIMNA3B", 580, -450, center;
+//drawimage "UIMNA4", 580, -450, center;
+//drawimage "UIMNA5", 580, -450, center;
+
+//Smallbagpick
+//Mbagpick2
+//Largbagpick3
+//DrawNumber 3, HUDFONT_DOOM, Black, Health, fillzeros, 950, -160;
+//DrawNumber 1, HUDFONT_DOOM, RED, decbleed, fillzeros, 920, -140;
+ //DrawNumber 3, HUDFONT_DOOM, Green, Deceat, fillzeros, 920, -120;
+ //DrawNumber 3, HUDFONT_DOOM, Blue, Decdrink, fillzeros, 900, -100;
+  
+  
+  
+   // DrawNumber 3, HUDFONT_DOOM, White, Health, fillzeros, alignment(left), 950, 0;
+
+}
+

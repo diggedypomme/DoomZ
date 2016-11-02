@@ -1,0 +1,444 @@
+Wads
+	Zombie sprites
+		Former UAC Scientists
+			[CREDITS]
+			Submitted: scalliano
+			Decorate: scalliano
+			GLDefs: none
+			Sounds: Id Software, DavidRaven, Konami, Valve
+			Sprites: Id Software (Zombieman), Xim (Jawless Zombie Head), JoeyTD (Player 6, 7 & 8 frames), The Skulltag Team (Illucia, Player II), DavidRaven (Female Zombie), Marty Kirra (Alt Female Zombie) 
+			Sprite Edit: scalliano
+			Idea Base: The UAC's apparent lack of staff
+
+	SWITCHABLE TECH LAMP
+			Decorate: Gez
+				(used as a base for the lockers)
+
+	Red car, Brown car, helecopter
+		Voxel Vehicles Pack 1.0
+			Author                  : NerdKoopa
+			Email Address           : jknerd@luukku.com
+			
+	Lightening
+		T667ThunFX
+			Submitted: Tormentor667
+			Decorate: Tormentor667
+			GLDEFs: N/A
+			Sounds: Kurt Kessler
+			Sprites: Tormentor667, Solarsnowfall
+			Idea Base: Serious Sam Thunder Effect
+			http://realm667.com/
+
+	Torch
+		Flashlight
+			Submitted: idGamer
+			Decorate: Alando1, idGamer
+			GLDefs: Alando1
+			Sounds: Unreal Tournament
+			Sprites: Alando1, osjclatchford, Eriance, id Software, 3D Realms
+			Sprite Edit: MagicWazard (angled)
+			http://realm667.com/
+			
+	Rats
+		ScurryingRats
+			Type: Scurrying Rat
+			Decorate: Captain Toenail
+			Sprites: Operation Bodycount
+			Sounds: FindSounds.com/
+			http://realm667.com/
+			
+	Frogs in the pond
+		Pond Frogs
+			Submitted: zrrion the insect
+			Decorate: zrrion the insect
+			Sounds: Raven Software (stock Hexen IWAD sounds, not included)
+			Sprites: zrrion the insect
+			Idea Base: homestuck
+			http://realm667.com/
+			
+	Bloodsplat decals
+		Doom3blooddecals
+			DecalDef: Ghastly_dragon
+			Sprites: Id Software
+			http://realm667.com/
+			
+	Terrains
+		Doom Terrains
+			Submitted: MagicWazard
+			Decorate: MagicWazard
+			GLDefs: MagicWazard
+			Sounds: Raven Software
+			Sprites: Raven Software
+			Sprite Edit: MagicWazard
+			Idea Base: Heretic/Hexen splashes
+			http://realm667.com/
+			
+	Snow
+		Snow Simple
+			Submitted: Tormentor667
+			Decorate: Tormentor667, Ghastly_dragon
+			GLDEFs: N/A
+			Sounds: N/A
+			Sprites: Tormentor667
+			Idea Base: XMas Deathmatch
+			
+	textures used for a large amount of the floor and road ones from alpha 14. 
+		The circle texture pack
+			Author: Danc from Lost Garden
+			Submitted: Neoworm, Gez
+			http://www.lostgarden.com/2006/02/250-free-handdrawn-textures.html			
+			
+			
+    rain
+		rain simple
+			Submitted: Tormentor667
+			Decorate: Ghastly_dragon, Tormentor667
+			GLDEFs: N/A
+			Sounds: N/A
+			Sprites: Tormentor667
+			
+	casing spawners
+		CasingSpawners
+			Decorate: Ghastly_dragon
+			Sprites: KDiZD Team
+
+	
+	Footstep noises
+        Footsteps 
+            The Zombie Killer 
+            Ryan Cordell - The original ACS footsteps library that this was originally based on
+               Ral22 - Supplying me with a full soundset of footsteps for v3
+			
+Code
+	
+	General code
+		zdoom wiki
+			http://zdoom.org/wiki/
+			This has been invaluable throughout the project
+			
+	Gun guide
+		gunlabs.blogspot.co.uk
+			The tutorials here were used for the guns. These need re-doing for the next version
+			but the guides themselves were incredibly useful
+			
+    Guns in general - see the ones listed under graphics below. I think I changed out the code, but some may still have been used
+
+Help
+
+
+Graphics
+
+	Particle based trees
+		http://www.prodigal-game.com/
+			Trisk was super kind to let us use his tree idea and build on it, even letting us use the sprites for it
+			Thanks so much for this! - we still need to go back to this and put in more grass and different types of 
+			trees.  The island was a real inspiration seeing just how great this could look (and giving a base reference
+			for how much of a cpu hit this would take)
+			
+	Various voxels
+		Burktross (DoomZ)
+			Created for this project we have team member Burktross' contributions. From shelves, tanks, lockers and more, these
+			are really fantastic and are much appreciated. Thanks again Burktross!
+		
+	textures used for a large amount of the floor and road ones from alpha 14. These look great, and forced me to learn to tile
+	textures, so, thanks for that!
+		The circle texture pack
+			Author: Danc from Lost Garden
+			Submitted: Neoworm, Gez
+			http://www.lostgarden.com/2006/02/250-free-handdrawn-textures.html
+		
+	Sky textures day
+		Self generated using Nutty Software WEbGL tool
+			http://www.nutty.ca/webgl/skygen/
+	
+	sky textures night
+		self generatored using Alex Peterson's "Spacespace"
+			http://alexcpeterson.com/spacescape/
+			       
+            
+	house textures
+		https://www.facebook.com/sketchup.texture/
+		
+		
+		chock2 	http://www.sketchuptextureclub.com/textures/architecture/buildings/residential-buildings/texture-
+		residential-building-horizontal-seamless-00836
+		z1	http://www.textures.com/download/highriseresidential0013/17077
+		z3	http://www.textures.com/download/buildingshighrise0487/52761
+		z4	http://www.textures.com/download/buildingshighrise0391/25394
+		z5	http://www.textures.com/download/buildingshighrise0361/20435
+		z6	http://www.textures.com/download/buildingshighrise0329/17146
+		z7	http://www.textures.com/download/buildingshighrise0303/16981
+		z8	http://www.sketchuptextureclub.com
+		z10	http://www.sketchuptextureclub.com/textures/architecture/buildings/old-buildings/old-building-
+		
+    "NEW TEXTURES"
+		Files in this folder starting plntx 
+			http://www.plaintextures.com/
+		Files in this folder starting opft
+			http://www.openfootage.net/
+		Files in this folder starting txcom
+			http://textures.com
+		Files in this folder starting txlib
+			http://texturelib.com/
+texture-seamless-00714
+z11	http://www.sketchuptextureclub.com/textures/architecture/buildings/residential-buildings/texture-
+
+residential-building-seamless-00752
+z12	http://www.sketchuptextureclub.com
+z14	http://www.sketchuptextureclub.com
+
+****	road textures
+		http://www.sketchuptexture.com/p/asphalt-road-rails.html
+		
+	straw texture
+		DoubleCross Animation
+			https://doublecrossanimation.wordpress.com/2012/06/06/introduction-to-digital-textures/
+			
+****	road texture
+		roadb0
+			http://www.sketchuptexture.com/p/asphalt-road-rails.html
+			
+****	road with grass
+		coroada	
+			http://texturelib.com/texture/?path=/Textures/road/dirt%20road/road_dirt_road_0047
+			
+!!!!	garage door		
+			unsure where from
+		
+!!!!	road
+		coroadb
+			unsure where from
+		
+    coke can
+        http://www.smokersheavenshop.co.uk/
+        
+    "mosin"
+        "M40A1 SNIPER RIFLE"
+            realm667.com
+            Submitted: TODM
+            Decorate: TODM
+            Sprites: HL:OpFor, TODM
+            Sounds: Valve
+            Sprite Edit: Cory Whittle, TheDarkArchon, TODM
+            Idea Base: Left 4 Dead 2/CS:S/HL:OpFor "AWP"
+        
+	akm
+        "AK47"
+            realm667.com
+            Submitted: JoeyTD
+            Decorate: JoeyTD
+            Sprites: Terminator Rampage
+            Sounds: Unknown
+            Sprite Edit: JoeyTD, WildWeasel
+			
+	makarov
+        "ANGLED PISTOL"
+            realm667.com
+            Submitted: Ghastly_dragon
+            Decorate: JoeyTD, Ghastly_dragon
+            Sprites: Id Software, 3D Realms, JoeyTD
+            Sounds: Id Software
+            
+    axe 
+        "axe"
+            realm667.com
+            Submitted: TheMightyHeracross
+            Decorate: TheMightyHeracross, Blue Shadow
+            ACS: Blue Shadow
+            Sounds: Rogue, 3D Realms
+            Sprites: Mike12, scalliano
+            Sprite Edit: idgamer
+            Idea Base: scalliano's axe zombie
+            
+    claymore
+        "claymore mines"
+            realm667.com
+            Submitted: Captain Toenail
+            Decorate: Captain Toenail
+            Sprites: Id Software, TeamTNT
+            SpriteEdit: Captain Toenail
+            Sounds: 3D Realms
+            Idea Base: Call of Duty and NAM
+            
+    knife 
+        "knife"
+            realm667.com
+            Submitted: Xim
+            Decorate: Xim
+            Sprites: ScubaSteve
+            Sounds: Unknown
+            
+    machete
+        "machete"
+            realm667.com
+            Submitted: Xim
+            Decorate: Xim
+            Sprites: Exhumed
+            Sounds: Unknown
+			
+    uzi
+        "uzi"
+            Submitted: Captain Toenail
+            Decorate: Captain Toenail
+            Sprites: Doom, Hacx
+            Sprite Edit: Captain Toenail
+            Sounds: ShadowWarrior Beta
+            
+    m40 
+        "autogun"
+            realm667.com
+            Name: Autogun
+            Class: Level 4
+            Type: Hitscan
+            Palette: Custom
+            Summon: Autogun
+            Ammotype: Clip
+            AltFire: No
+            Powered Mode: No 
+            
+    crossbow
+        "iron crossbow"
+            Submitted: Evil Space Tomato
+            Decorate: Evil Space Tomato
+            GLDefs: None
+            Sounds: Heretic Modified by Evil Space Tomato
+            Sprites: Neoworm
+            Sprite Edit: Evil Space Tomato
+            ACS: None
+            
+    revolver
+        "revolver"
+            realm667.com
+               Submitted: lolo_is_cool
+                Decorate: lolo_is_cool
+                Sprites: Lobotomy Software
+                Sounds: ww-ana.wad
+                Idea Base: Revolver from Powerslave
+     
+    zombies
+        "former scientists"
+            realm667.com
+            Submitted: scalliano
+            Decorate: scalliano
+            Sounds: Id Software, DavidRaven, Konami, Valve
+            Sprites: Id Software (Zombieman), JoeyTD (Player 6, 7 & 8 frames), The Skulltag Team (Illucia, Player II), DavidRaven (Female Zombie), Marty Kirra (Diaz, Alt Female Zombie), NMN, Tormentor667 (Rapid Fire Zombie), Woolie Wool (SMG Zombie), Vader (Chaingun Major), Mike12 (Revy Skin), solarsnowfall (Steam Sprites)
+            Sprite Edit: scalliano
+            Idea Base: The UAC's apparent lack of staff
+   
+   wheel image
+		Wheel Free vector
+			http://all-free-download.com/free-vector/download/wheel_55920.html
+            
+                
+    cow
+        (animium.com)           
+
+    chicken
+        heretic - raven software
+        
+    Sprites in "theisland" folder
+		http://www.prodigal-game.com/
+			Trisk was super kind to let us use use these too. these are the grass textures, flowers, and tree branches, CAT1A0,CAT2A0, CAT2b0, DEDTA0.lmp,DEDTB0.lmp, GRS2A0.lmp, GRSTA0.png, GRSTB0.png, GRSTG0.png, ROZ1A0.png
+            ROZ2A0.png, ROZ3A0.lmp, ROZ4A0.lmp, ROZ5A0.lmp, ROZ6A0.lmp, ROZ7A0.png, ROZ8A0.png, ROZ9A0.png, ROZAA0.png, ROZBA0.png, ROZCA0.png, PINEB0, TRE2A0, TRE4A0, TRE4B0, ROZ3A0
+            For further info, please see "credits" within the sprites/theisland folder
+          
+            
+            
+!!!!    WHERE DID ALL OF THE AMMO PICS COME FROM?  
+       
+			
+Sounds
+	
+!!!!	what is love midi
+		
+!!!!	background wind noise
+		TESTSND.mp3
+
+	car motor
+		WINCH.wav
+			"motor loop 3" http://www.freesound.org/people/soundjoao/sounds/325809/
+				
+	wolf howl 1 
+		wolf1.mp3	
+			"wolf howl 4.wav https://www.freesound.org/people/Robinhood76/sounds/81904/
+				
+				
+	wolf howl 2	
+		wolf2.mp3
+			"dog howl 1" https://www.freesound.org/people/CGEffex/sounds/158976/
+			
+	wolf howl 3
+		wolf3.mp3
+			"large wolf howl" https://www.freesound.org/people/adrilahan/sounds/172652/
+			
+	vomit 1
+		vom1.wav
+			puking.wav https://www.freesound.org/people/dkmedic/sounds/104460/?page=5#comment
+	
+	vomit 2
+		vom2.wav
+			puke/vomiting https://www.freesound.org/people/Joao_de_Deus/sounds/330533/
+			
+	eating
+		eating.wav
+			"eating crisps" https://www.freesound.org/people/Sethroph/sounds/334209/
+			
+	drinking
+		drinking.wav
+			water drink https://www.freesound.org/people/Q.K./sounds/56270/
+			
+	glass smash 1
+		glass1.mp3
+			http://www.freesfx.co.uk/download/?type=mp3&id=3728&eula=true
+			
+
+	glass smash 2
+		glass2.mp3
+			http://www.freesfx.co.uk/download/?type=mp3&id=3731&eula=true
+			
+			
+	glass smash 3	
+		glass3.mp3
+			http://www.freesfx.co.uk/download/?type=mp3&id=3727&eula=true
+			
+	liquid pouring
+		petrol.mp3
+			liquid-pouring.mp3 https://freesound.org/people/shakala1/sounds/116396/
+			
+	petrol station fire
+		fireloop.mp3
+			"fire loop" https://www.freesoundeffects.com/free-sounds/fire-10007/
+			
+	fire1.mp3
+		forest_fire.mp3 www.freesoundeffects.com
+			
+	fire2.mp3
+		fire3.mp3 www.freesoundeffects.com
+			
+	tree breaking and falling
+		tree.wav
+			"01954 breaking tree.wav" http://www.freesound.org/people/Robinhood76/sounds/102971/
+			
+	coughing noise
+		cough.wav
+			double_cough_01.wav https://www.freesound.org/people/joedeshon/sounds/266019/
+			
+	axe	chop 1
+		axe1.mp3
+			http://www.freesfx.co.uk/download/?type=mp3&id=4828&eula=true
+		
+	axe chop 2
+		axe2.mp3
+			http://www.freesfx.co.uk/download/?type=mp3&id=4829&eula=true
+			
+	winch2, drone, train
+		These came from the sliding doors doom tutorial by Richard clark
+			http://zdoom.org/zdkb/zdoom1.html
+
+			
+				
+Created using Doombuilder2, gzdoombuilder, slade, pixelr
+
+
+
+

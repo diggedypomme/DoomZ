@@ -1,0 +1,734 @@
+
+
+
+// good one to base it off
+ACTOR M19Loaded : Ammo
+{
+ Inventory.MaxAmount 7
+ +IGNORESKILL
+ Inventory.Icon "CANBA0" // This displays on the fullscreen HUD.
+   Tag "Loaded .45 bullets"
+}
+
+
+
+ACTOR M1911 : DoomWeapon // point45acp
+{
+	attacksound "Weapons/pistol"
+	Weapon.AmmoType1 "M19Loaded"
+	Weapon.AmmoUse1 1
+	Weapon.AmmoGive1 0 
+	+Weapon.Ammo_Optional
+	Weapon.SlotNumber 4
+	Tag "M1911"
+Inventory.PickupMessage  "You picked up an M1911 (uses .45 acp ammo)"
+	Obituary  "%o was peppered by %k's M1911"
+	States
+		{
+		Ready: 
+			PISG B 1   A_WeaponReady
+			PISG B 1   A_WeaponReady(WRF_ALLOWRELOAD)
+			Loop
+		Deselect:
+			PISG A 1 A_Lower
+			Loop
+		Select:
+			PISG A 1 A_Raise
+			Loop
+		Fire:
+			NULL A 0 A_JumpIfNoAmmo("Reload")
+			AK4F A 1  BRIGHT A_FireBullets(5.6, 0, 1, 5, "BulletPuff")
+			NULL A 0 A_SpawnItemEx ("gunflash", 0, 0, 30, 0, 0, 0, 0)
+			AK4F A 1  A_PlaySound("Weapons/pistol", CHAN_WEAPON)
+			AK4F a 1  A_SpawnItemEx (DeadbulletCasing,20,3.5,32,random(0,1),random(1,2),random(0,1) )
+			AK4F B 1 
+			PISG B 1 
+			PISG B 1 A_ReFire ("letgo")
+			Goto Ready		
+		letgo:
+			PISG B 1 
+			PISG B 0 A_ReFire ("letgo")
+			Goto Ready
+		Reload:
+			PISG A 0 A_JumpIfInventory("M19Loaded", 6, 2) // If the gun's full, jump 2 states.
+			TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,36)), "ReloadWork") //34
+			PISG A 1 // Here's where that first line ends up - the gun does nothing and returns to Ready.
+			Goto Ready 
+		ReloadWork:
+			PISG A 1 Offset(0,35) A_PlayWeaponSound("weapons/shotgr") // click-clack.
+			PISG A 1 Offset(0,38)
+			PISG A 1 Offset(0,44)
+			PISG A 1 Offset(0,52)
+			PISG A 1 Offset(0,62)
+			PISG A 1 Offset(0,72)
+			PISG A 1 Offset(0,82)
+			TNT1 A 0 A_GiveInventory("M19Loaded", 7)
+			PISG A 1 Offset(0,82)
+			PISG A 1 Offset(0,72)
+			PISG A 1 Offset(0,62)
+			PISG A 1 Offset(0,52)
+			PISG A 1 Offset(0,44)
+			PISG A 1 Offset(0,38)
+			PISG A 1 Offset(0,35)
+			PISG A 1 Offset(0,32)
+			Goto Ready
+		Flash:
+			TNT1 A 2 bright
+			Stop
+		Spawn:
+			PIST A -1
+			Stop
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ACTOR ampLoaded : Ammo
+{
+ Inventory.MaxAmount 10 //point22
+ +IGNORESKILL
+ Inventory.Icon "CANBA0" // This displays on the fullscreen HUD.
+   Tag "Loaded .22 bullets"
+}
+
+
+
+
+   ACTOR amphibia : DoomWeapon  
+{
+	attacksound "Weapons/pistol"
+	Weapon.AmmoType1 "ampLoaded"
+	Weapon.AmmoUse1 1
+	Weapon.AmmoGive1 0 
+	+Weapon.Ammo_Optional
+	Weapon.SlotNumber 4
+	Tag "Amphibia"
+ Inventory.PickupMessage "Picked up an Amphibia S - takes 0.22 ammo" 
+ Obituary "%o was punctured by %k's Amphibia"
+	States
+		{
+		Ready: 
+			ZAUG A 1 A_WeaponReady
+			ZAUG A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+			Loop
+		Deselect:
+			ZAUG A 1 A_Lower
+			Loop
+		Select:
+			ZAUG A 1 A_Raise
+			Loop
+		Fire:
+			NULL A 0 A_JumpIfNoAmmo("Reload")
+			AK4F A 1  BRIGHT A_FireBullets(5.6, 0, 1, 5, "BulletPuff")
+			NULL A 0 A_SpawnItemEx ("gunflash", 0, 0, 30, 0, 0, 0, 0)
+			AK4F A 1  A_PlaySound("Weapons/pistol", CHAN_WEAPON)
+			AK4F a 1  A_SpawnItemEx (DeadbulletCasing,20,3.5,32,random(0,1),random(1,2),random(0,1) )
+			AK4F B 1 
+			PISG B 1 
+			PISG B 1 A_ReFire ("letgo")
+			Goto Ready		
+		letgo:
+			PISG B 1 
+			PISG B 0 A_ReFire ("letgo")
+			Goto Ready
+		Reload:
+			PISG A 0 A_JumpIfInventory("MakLoaded", 8, 2) // If the gun's full, jump 2 states.
+			TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,33)), "ReloadWorkMak") //34
+			PISG A 1 // Here's where that first line ends up - the gun does nothing and returns to Ready.
+			Goto Ready 
+		ReloadWorkMak:
+			PISG A 1 Offset(0,35) A_PlayWeaponSound("weapons/shotgr") // click-clack.
+			PISG A 1 Offset(0,38)
+			PISG A 1 Offset(0,44)
+			PISG A 1 Offset(0,52)
+			PISG A 1 Offset(0,62)
+			PISG A 1 Offset(0,72)
+			PISG A 1 Offset(0,82)
+			TNT1 A 0 A_GiveInventory("ampLoaded", 10)
+			PISG A 1 Offset(0,82)
+			PISG A 1 Offset(0,72)
+			PISG A 1 Offset(0,62)
+			PISG A 1 Offset(0,52)
+			PISG A 1 Offset(0,44)
+			PISG A 1 Offset(0,38)
+			PISG A 1 Offset(0,35)
+			PISG A 1 Offset(0,32)
+			Goto Ready
+		Flash:
+			TNT1 A 2 bright
+			Stop
+		Spawn:
+			PIST A -1
+			Stop
+   }
+}
+
+
+
+
+
+
+
+
+
+// number 15
+																					                            //magnum ammo
+ACTOR MaGLoaded : Ammo
+{
+ Inventory.MaxAmount 6
+ +IGNORESKILL
+ Tag "Loaded .357 ammo"
+}
+																					                            //magnum
+ACTOR Magnum : DoomWeapon  // takes 0.357 point357 (37)
+{
+ Weapon.SelectionOrder 708
+ Weapon.AmmoType1 "MaGLoaded"
+ Weapon.AmmoUse1 1
+ Weapon.AmmoGive1 0 
+ args 1                         //why this?
+ +Weapon.Ammo_Optional
+ Weapon.SlotNumber 2
+ Inventory.PickupMessage "Picked up a magnum" 
+ Obituary "%o was reamed by %k's magnum"
+ Tag "Magnum"
+	  States
+	   {
+	   Ready:
+			RVLV A 1 A_WeaponReady
+			RVLV A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+			Loop
+	   Deselect:
+			RVLV A 1 A_Lower
+			NULL AA 0 A_Lower //why this?
+			Loop
+	   Select:
+			RVLV A 1 A_RAISE
+			NULL AA 0 A_RAISE
+			Loop
+	   Fire:
+			NULL A 0 A_JumpIfNoAmmo("Reload")
+			NULL A 0  A_PlaySound("weapons/shotgf", CHAN_WEAPON)
+			NULL A 0 A_SpawnItemEx ("gunflash", 0, 0, 30, 0, 0, 0, 0)
+			RVLV B 2 Bright A_FireBullets(10, 10, 1, 20, "BulletPuff")
+			RVLV CDEFGHIJKLM 1
+			RVLV A 2
+			PISG B 0 A_ReFire ("letgo")
+			Goto Ready		
+		letgo:
+			RVLV a 1 
+			PISG B 0 A_ReFire ("letgo")
+			Goto Ready
+
+	   Reload:
+			RVLV A 0 A_JumpIfInventory("MaGLoaded", 5, 2) // If the gun's full, jump 2 states. Will this actually work, as those are 0 length 
+			TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,37)), "ReloadWorkMaG")
+			RVLV A 1 // Here's where that first line ends up - the gun does nothing and returns to Ready.     Should make a click noise when you try it
+			Goto Ready
+	   ReloadWorkMaG:
+			RVLV A 1 Offset(0,35) A_PlayWeaponSound("weapons/shotgr") // click-clack.
+			RVLV A 1 Offset(0,38)
+			RVLV A 1 Offset(0,44)
+			RVLV A 1 Offset(0,52)
+			RVLV A 1 Offset(0,62)
+			RVLV A 1 Offset(0,72)
+			RVLV A 1 Offset(0,82)
+			TNT1 A 0 A_GiveInventory("MaGLoaded", 6)
+			RVLV aaaaaa 1  A_SpawnItemEx (DeadbulletCasing,20,3.5,32,random(0,1),random(1,2),random(0,1) )
+			TNT1 A 8 A_TakeInventory("thrfiveseven", 1) // We'll treat one 9mmAmmo as one full clip.
+			RVLV A 1 Offset(0,82)
+			RVLV A 1 Offset(0,72)
+			RVLV A 1 Offset(0,62)
+			RVLV A 1 Offset(0,52)
+			RVLV A 1 Offset(0,44)
+			RVLV A 1 Offset(0,38)
+			RVLV A 1 Offset(0,35)
+			RVLV A 1 Offset(0,32)
+			Goto Ready
+	  Flash:
+			RVLV A 3 Bright A_Light2
+			RVLV A 3 Bright A_Light1
+			RVLV A 0 Bright A_Light0
+			Goto LightDone
+	   Spawn:
+			HGUN c -1						//should this spawn a pickup item and then kill itself? - why is this sprite not showing up any more?
+			Stop
+	   }
+}
+
+
+
+
+ACTOR MakLoaded : Ammo
+{
+ Inventory.MaxAmount 8
+ +IGNORESKILL
+ Tag "Loaded .380 ammo"
+}
+																					                            //magnum
+
+   ACTOR Makarov : DoomWeapon  3712 // takes 0.380 (34)
+{
+	attacksound "Weapons/pistol"
+	Weapon.AmmoType1 "MakLoaded"
+	Weapon.AmmoUse1 1
+	Weapon.AmmoGive1 0 
+	+Weapon.Ammo_Optional
+	Weapon.SlotNumber 4
+	Tag "Kakarov"
+ Inventory.PickupMessage "Picked up a Makarov - takes 0.380 ammo" 
+ Obituary "%o was punctured by %k's Makarov"
+	States
+		{
+		Ready: 
+			ymak A 1 A_WeaponReady
+			ymak A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+			Loop
+		Deselect:
+			ymak A 1 A_Lower
+			Loop
+		Select:
+			ymak A 1 A_Raise
+			Loop
+		Fire:
+			NULL A 0 A_JumpIfNoAmmo("Reload")
+			AK4F A 1  BRIGHT A_FireBullets(5.6, 0, 1, 5, "BulletPuff")
+			NULL A 0 A_SpawnItemEx ("gunflash", 0, 0, 30, 0, 0, 0, 0)
+			AK4F A 1  A_PlaySound("Weapons/pistol", CHAN_WEAPON)
+			AK4F a 1  A_SpawnItemEx (DeadbulletCasing,20,3.5,32,random(0,1),random(1,2),random(0,1) )
+			AK4F B 1 
+			PISG B 1 
+			PISG B 1 A_ReFire ("letgo")
+			Goto Ready		
+		letgo:
+			PISG B 1 
+			PISG B 0 A_ReFire ("letgo")
+			Goto Ready
+		Reload:
+			PISG A 0 A_JumpIfInventory("MakLoaded", 6, 2) // If the gun's full, jump 2 states.
+			TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,34)), "ReloadWorkMak") //34
+			PISG A 1 // Here's where that first line ends up - the gun does nothing and returns to Ready.
+			Goto Ready 
+		ReloadWorkMak:
+			PISG A 1 Offset(0,35) A_PlayWeaponSound("weapons/shotgr") // click-clack.
+			PISG A 1 Offset(0,38)
+			PISG A 1 Offset(0,44)
+			PISG A 1 Offset(0,52)
+			PISG A 1 Offset(0,62)
+			PISG A 1 Offset(0,72)
+			PISG A 1 Offset(0,82)
+			TNT1 A 0 A_GiveInventory("MakLoaded", 8)
+			PISG A 1 Offset(0,82)
+			PISG A 1 Offset(0,72)
+			PISG A 1 Offset(0,62)
+			PISG A 1 Offset(0,52)
+			PISG A 1 Offset(0,44)
+			PISG A 1 Offset(0,38)
+			PISG A 1 Offset(0,35)
+			PISG A 1 Offset(0,32)
+			Goto Ready
+		Flash:
+			TNT1 A 2 bright
+			Stop
+		Spawn:
+			PIST A -1
+			Stop
+   }
+}
+
+
+																					                            //magnum ammo
+ACTOR Derrloaded : Ammo
+{
+ Inventory.MaxAmount 2
+ +IGNORESKILL
+ Tag "Loaded .45 ammo"
+}
+																					                            //magnum
+ACTOR Derringer : DoomWeapon  // takes 0.45 point45acp (36)
+{
+ Weapon.SelectionOrder 708
+ Weapon.AmmoType1 "Derrloaded"
+ Weapon.AmmoUse1 1
+ Weapon.AmmoGive1 0 
+ args 1                         //why this?
+ +Weapon.Ammo_Optional
+ Weapon.SlotNumber 2
+ Inventory.PickupMessage "Picked up a magnum" 
+ Obituary "%o was reamed by %k's magnum"
+ Tag "Derringer"
+	  States
+	   {
+	   Ready:
+			yder A 1 A_WeaponReady
+			yder A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+			Loop
+	   Deselect:
+			yder A 1 A_Lower
+			NULL AA 0 A_Lower //why this?
+			Loop
+	   Select:
+			yder A 1 A_RAISE
+			NULL AA 0 A_RAISE
+			Loop
+	   Fire:
+			NULL A 0 A_JumpIfNoAmmo("Reload")
+			NULL A 0  A_PlaySound("weapons/shotgf", CHAN_WEAPON)
+			NULL A 0 A_SpawnItemEx ("gunflash", 0, 0, 30, 0, 0, 0, 0)
+			RVLV B 2 Bright A_FireBullets(10, 10, 1, 20, "BulletPuff")
+			RVLV CDEFGHIJKLM 1
+			RVLV A 2
+			PISG B 0 A_ReFire ("letgo")
+			Goto Ready		
+		letgo:
+			RVLV a 1 
+			PISG B 0 A_ReFire ("letgo")
+			Goto Ready
+
+	   Reload:
+			RVLV A 0 A_JumpIfInventory("MaGLoaded", 5, 2) // If the gun's full, jump 2 states. Will this actually work, as those are 0 length 
+			TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,36)), "ReloadWork")
+			RVLV A 1 // Here's where that first line ends up - the gun does nothing and returns to Ready.     Should make a click noise when you try it
+			Goto Ready
+	   ReloadWork:
+			RVLV A 1 Offset(0,35) A_PlayWeaponSound("weapons/shotgr") // click-clack.
+			RVLV A 1 Offset(0,38)
+			RVLV A 1 Offset(0,44)
+			RVLV A 1 Offset(0,52)
+			RVLV A 1 Offset(0,62)
+			RVLV A 1 Offset(0,72)
+			RVLV A 1 Offset(0,82)
+			TNT1 A 0 A_GiveInventory("DerrLoaded", 2)
+			RVLV aa 1  A_SpawnItemEx (DeadbulletCasing,20,3.5,32,random(0,1),random(1,2),random(0,1) )
+			TNT1 A 8 A_TakeInventory("thrfiveseven", 1) // We'll treat one 9mmAmmo as one full clip.
+			RVLV A 1 Offset(0,82)
+			RVLV A 1 Offset(0,72)
+			RVLV A 1 Offset(0,62)
+			RVLV A 1 Offset(0,52)
+			RVLV A 1 Offset(0,44)
+			RVLV A 1 Offset(0,38)
+			RVLV A 1 Offset(0,35)
+			RVLV A 1 Offset(0,32)
+			Goto Ready
+	  Flash:
+			RVLV A 3 Bright A_Light2
+			RVLV A 3 Bright A_Light1
+			RVLV A 0 Bright A_Light0
+			Goto LightDone
+	   Spawn:
+			pist a -1						//should this spawn a pickup item and then kill itself? - why is this sprite not showing up any more?
+			Stop
+	   }
+}
+
+
+
+
+			
+
+
+ACTOR longhornLoaded : Ammo  //7point62x39
+{
+ Inventory.MaxAmount 1
+ +IGNORESKILL
+ Inventory.Icon "CANBA0" // This displays on the fullscreen HUD.
+   Tag "loaded 7.62x39mm Round"
+}
+																					                            //longhorn
+Actor Longhorn : Weapon
+{
+  Obituary "%o was reamed with %k's  Longhorn"
+  +Weapon.Ammo_Optional
+  Inventory.PickupMessage "You picked up a Longhorn pistol"
+  Weapon.KickBack 125
+  Weapon.AmmoType1 "longhornLoaded"
+  Weapon.AmmoUse1 1
+  Weapon.AmmoGive1 0 
+  +Weapon.NoAutoFire
+  Scale 0.8
+  Decal BulletChip
+    Tag "Longhorn"
+
+  States
+  {
+		Spawn:
+			SNPP A -1
+			Stop
+		Ready:
+			ylng A 0
+			ylng A 0 A_JumpIfInventory("LonghornZoom", 1, "ScopedReady")
+			ylng A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+			Loop
+	  ScopedReady:
+			ylng A 1 A_WeaponReady(1)
+			Loop
+	  Deselect:
+			SNPG A 0 A_JumpIfInventory("LonghornZoom", 1, "ScopedDeselect")
+			ylng A 1 A_Lower
+			Loop
+	  ScopedDeselect:
+			SNPG A 0 A_TakeInventory("LonghornZoom", 2)
+			SNPG A 0 A_PlaySound("M40Rifle/Scope")
+			SNPG A 2 A_ZoomFactor(1.0)
+			SNPG A 1 A_Lower
+			Goto ScopedDeselect+3
+	  Select:
+			SNPG A 1 A_Raise
+			Loop
+	  Fire:
+			SNPG A 0 A_JumpIfNoAmmo("Reload")
+			SNPG A 0 A_JumpIfInventory("LonghornZoom", 1, "ScopedFire")
+			SNPG A 0 A_AlertMonsters
+			SNPG A 0 A_FireBullets (0.0, 0.0, -1, 115, "mospuff")
+			NULL A 0 A_SpawnItemEx ("gunflash", 0, 0, 30, 0, 0, 0, 0)
+			SNPG a 1  A_SpawnItemEx (DeadrifleCasing,20,3.5,32,random(0,1),random(1,2),random(0,1) )
+			SNPG A 0 
+			SNPG A 0 A_Quake(2, 2, 0, 1)
+			SNPG A 0 A_SetPitch(Pitch-0.5)
+			SNPF AB 2 A_PlayWeaponSound("weapons/shotgf")
+			SNPF CDE 3 
+			SNPG A 3
+			SNPG BC 3
+			SNPG DEF 2
+			SNPG H 2 //A_PlayWeaponSound("M40Rifle/Bolt1")
+			SNPG IJ 2
+			SNPG K 3
+			SNPG JI 2
+			SNPG H 2 A_PlayWeaponSound("M40Rifle/Bolt2")
+			SNPG FED 3
+			SNPG CB 4
+			SNPG A 2
+			SNPG A 1 A_ReFire 
+			Goto Ready
+	  ScopedFire:
+			SNPS A 0 A_AlertMonsters
+			SNPS A 0 A_FireBullets (0.0, 0.0, -1, 115, "mospuff")
+			SNPs a 0  A_SpawnItemEx (DeadrifleCasing,20,3.5,32,random(0,1),random(1,2),random(0,1) )
+			SNPS A 0 A_PlayWeaponSound("weapons/shotgf")
+			SNPS A 0 A_Quake(2, 2, 0, 1)
+			SNPS A 0 A_SetPitch(Pitch-0.5)
+			SNPS A 28
+			SNPS A 2 A_PlayWeaponSound("M40Rifle/Bolt1")
+			SNPS A 11
+			SNPS A 2 A_PlayWeaponSound("M40Rifle/Bolt2")
+			SNPS A 19
+			SNPS A 1 A_ReFire
+			Goto Ready
+	  AltFire:
+			SNPS A 0 A_JumpIfInventory("LonghornZoom", 1, "ZoomOut")
+			//SNPS A 0 A_JumpIfInventory("sawnmosZoom", 1, "ZoomMore")
+			SNPS A 0 A_PlaySound("M40Rifle/Scope")
+			SNPS A 0 A_GiveInventory("LonghornZoom", 1)
+			SNPS A 2 A_ZoomFactor(4.0)
+			Goto Ready
+	  ZoomOut:
+			SNPG A 0 A_TakeInventory("LonghornZoom", 2)
+			SNPG A 0 A_PlaySound("M40Rifle/Scope")
+			SNPG A 2 A_ZoomFactor(1.0)
+			Goto Ready
+	  ScopedReady:
+			SNPS A 1 A_WeaponReady(1)
+			Loop
+	  Reload:
+			SNPG A 0 A_JumpIfInventory("longhornLoaded", 1, 2) // If the gun's full, jump 2 states.
+			TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,39)), "ReloadWork")
+			SNPG A 1 // Here's where that first line ends up - the gun does nothing and returns to Ready.
+			Goto Ready
+	  ReloadWork:
+			SNPG A 1 Offset(0,35) A_PlayWeaponSound("weapons/shotgr") // click-clack.
+			SNPG A 2 Offset(0,38)
+			SNPG A 2 Offset(0,44)
+			SNPG A 2 Offset(0,52)
+			SNPG A 2 Offset(0,62)
+			SNPG A 2 Offset(0,72)
+			SNPG A 2 Offset(0,82)
+			SNPG A 50 A_GiveInventory("longhornLoaded", 1)
+			SNPG A 2 Offset(0,82)
+			SNPG A 2 Offset(0,72)
+			SNPG A 2 Offset(0,62)
+			SNPG A 2 Offset(0,52)
+			SNPG A 2 Offset(0,44)
+			SNPG A 2 Offset(0,38)
+			SNPG A 2 Offset(0,35)
+			SNPG A 2 Offset(0,32)
+			Goto Ready
+  }
+}
+
+ACTOR LonghornZoom : Inventory { Inventory.MaxAmount 2 }
+
+
+Actor mospuff : BulletPuff
+{
+  +NoExtremeDeath
+}
+
+
+
+
+
+
+ACTOR LugLoaded : Ammo //point9
+{
+ Inventory.MaxAmount 10
+ +IGNORESKILL
+ Tag "Loaded .380 ammo"
+}
+																					                            //magnum
+
+   ACTOR Luger : DoomWeapon  3712 // takes point9(35)
+{
+	attacksound "Weapons/pistol"
+	Weapon.AmmoType1 "LugLoaded"
+	Weapon.AmmoUse1 1
+	Weapon.AmmoGive1 0 
+	+Weapon.Ammo_Optional
+	Weapon.SlotNumber 4
+	Tag "Luger"
+ Inventory.PickupMessage "Picked up a Luger - takes 9mm ammo" 
+ Obituary "%o was punctured by %k's Luger"
+	States
+		{
+		Ready: 
+			YLUG A 1 A_WeaponReady
+			YLUG A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+			Loop
+		Deselect:
+			YLUG A 1 A_Lower
+			Loop
+		Select:
+			YLUG A 1 A_Raise
+			Loop
+		Fire:
+			NULL A 0 A_JumpIfNoAmmo("Reload")
+			AK4F A 1  BRIGHT A_FireBullets(5.6, 0, 1, 5, "BulletPuff")
+			NULL A 0 A_SpawnItemEx ("gunflash", 0, 0, 30, 0, 0, 0, 0)
+			AK4F A 1  A_PlaySound("Weapons/pistol", CHAN_WEAPON)
+			AK4F a 1  A_SpawnItemEx (DeadbulletCasing,20,3.5,32,random(0,1),random(1,2),random(0,1) )
+			AK4F B 1 
+			PISG B 1 
+			PISG B 1 A_ReFire ("letgo")
+			Goto Ready		
+		letgo:
+			PISG B 1 
+			PISG B 0 A_ReFire ("letgo")
+			Goto Ready
+		Reload:
+			PISG A 0 A_JumpIfInventory("LugLoaded", 8, 2) // If the gun's full, jump 2 states.
+			TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,35)), "ReloadWork")
+			PISG A 1 // Here's where that first line ends up - the gun does nothing and returns to Ready.
+			Goto Ready 
+		ReloadWork:
+			PISG A 1 Offset(0,35) A_PlayWeaponSound("weapons/shotgr") // click-clack.
+			PISG A 1 Offset(0,38)
+			PISG A 1 Offset(0,44)
+			PISG A 1 Offset(0,52)
+			PISG A 1 Offset(0,62)
+			PISG A 1 Offset(0,72)
+			PISG A 1 Offset(0,82)
+			TNT1 A 0 A_GiveInventory("LugLoaded", 10)
+			PISG A 1 Offset(0,82)
+			PISG A 1 Offset(0,72)
+			PISG A 1 Offset(0,62)
+			PISG A 1 Offset(0,52)
+			PISG A 1 Offset(0,44)
+			PISG A 1 Offset(0,38)
+			PISG A 1 Offset(0,35)
+			PISG A 1 Offset(0,32)
+			Goto Ready
+		Flash:
+			TNT1 A 2 bright
+			Stop
+		Spawn:
+			PIST A -1
+			Stop
+   }
+}
+
+
+ACTOR GlockLoaded : Ammo //point9
+{
+ Inventory.MaxAmount 15
+ +IGNORESKILL
+ Tag "Loaded .380 ammo"
+}
+																					                            //magnum
+
+   ACTOR Glock : DoomWeapon  3712 // takes point9(35)
+{
+	attacksound "Weapons/pistol"
+	Weapon.AmmoType1 "glockloaded"
+	Weapon.AmmoUse1 1
+	Weapon.AmmoGive1 0 
+	+Weapon.Ammo_Optional
+	Weapon.SlotNumber 4
+	Tag "glock"
+ Inventory.PickupMessage "Picked up a glock - takes 9mm ammo" 
+ Obituary "%o was punctured by %k's glock"
+	States
+		{
+		Ready: 
+			YGLK A 1 A_WeaponReady
+			YGLK A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+			Loop
+		Deselect:
+			YGLK A 1 A_Lower
+			Loop
+		Select:
+			YGLK A 1 A_Raise
+			Loop
+		Fire:
+			NULL A 0 A_JumpIfNoAmmo("Reload")
+			AK4F A 1  BRIGHT A_FireBullets(5.6, 0, 1, 5, "BulletPuff")
+			NULL A 0 A_SpawnItemEx ("gunflash", 0, 0, 30, 0, 0, 0, 0)
+			AK4F A 1  A_PlaySound("Weapons/pistol", CHAN_WEAPON)
+			AK4F a 1  A_SpawnItemEx (DeadbulletCasing,20,3.5,32,random(0,1),random(1,2),random(0,1) )
+			AK4F B 1 
+			PISG B 1 
+			PISG B 1 A_ReFire ("letgo")
+			Goto Ready		
+		letgo:
+			PISG B 1 
+			PISG B 0 A_ReFire ("letgo")
+			Goto Ready
+		Reload:
+			PISG A 0 A_JumpIfInventory("GlockLoaded", 14, 2) // If the gun's full, jump 2 states.
+			TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,35)), "ReloadWork")
+			PISG A 1 // Here's where that first line ends up - the gun does nothing and returns to Ready.
+			Goto Ready 
+		ReloadWork:
+			PISG A 1 Offset(0,35) A_PlayWeaponSound("weapons/shotgr") // click-clack.
+			PISG A 1 Offset(0,38)
+			PISG A 1 Offset(0,44)
+			PISG A 1 Offset(0,52)
+			PISG A 1 Offset(0,62)
+			PISG A 1 Offset(0,72)
+			PISG A 1 Offset(0,82)
+			TNT1 A 0 A_GiveInventory("glockloaded", 15)
+			PISG A 1 Offset(0,82)
+			PISG A 1 Offset(0,72)
+			PISG A 1 Offset(0,62)
+			PISG A 1 Offset(0,52)
+			PISG A 1 Offset(0,44)
+			PISG A 1 Offset(0,38)
+			PISG A 1 Offset(0,35)
+			PISG A 1 Offset(0,32)
+			Goto Ready
+		Flash:
+			TNT1 A 2 bright
+			Stop
+		Spawn:
+			PIST A -1
+			Stop
+   }
+}

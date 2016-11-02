@@ -1,0 +1,614 @@
+height 1;
+InterpolateHealth true;
+//InterpolateArmor true;
+
+
+
+
+statusbar Fullscreen, fullscreenoffsets
+{
+
+
+    drawnumber 3, CONFONT, yellow, ammo1,  -30, 20;
+	DrawString CONFONT, yellow, ":",-17, 20;	
+	drawnumber 3, CONFONT, yellow, ammo2,  -10, 20;
+								
+	DrawString CONFONT, yellow, weapontag,-50, 10;	
+	DrawString CONFONT, yellow, ammo2tag,-50, 20;
+	
+	
+	DrawSwitchableImage Healz == 1, "WZZlA0",  "WZZlA0", -50, 100+center,center;
+	DrawSwitchableImage Healz == 2, "nullimage",  "WZZkA0",-50, 100+center,center;
+	DrawSwitchableImage Healz == 3, "nullimage",  "WZZJA0",-50, 100+center,center;
+	DrawSwitchableImage Healz == 4, "nullimage",  "WZZIA0",-50, 100+center,center;
+  	DrawSwitchableImage Healz == 5, "nullimage",  "WZZHA0",-50, 100+center,center;
+	DrawSwitchableImage Healz == 6, "nullimage",  "WZZGA0",-50, 100+center,center;
+	DrawSwitchableImage Healz == 7, "nullimage",  "WZZFA0",-50, 100+center,center;
+	DrawSwitchableImage Healz == 8, "nullimage",  "WZZEA0",-50, 100+center,center;
+	DrawSwitchableImage Healz == 9, "nullimage",  "WZZDA0",-50, 100+center,center;
+	DrawSwitchableImage Healz == 10, "nullimage",  "WZZCA0",-50, 100+center,center;
+	DrawSwitchableImage Healz == 11, "nullimage",  "WZZBA0",-50, 100+center,center;
+	DrawSwitchableImage Healz == 12, "nullimage",  "WZZAA0",-50, 100+center,center;
+	DrawSwitchableImage Healz >=  12, "nullimage",  "HEAFA0",-50, 100+center,center;
+		
+		
+		
+			
+	DrawSwitchableImage Decplus, "nullimage", "HEAGA0",-50, 100+center,center;
+	DrawSwitchableImage decbleed, "nullimage", "HEBVA0",-50, 115+center,center;
+	DrawSwitchableImage Decbroken, "nullimage", "FOXVB0",-50, 160+center,center;
+	DrawSwitchableImage Decdry <30, "nullimage",  "WETVA0",-50, 115+center,center;
+	
+	
+		
+		
+	DrawSwitchableImage Foodz == 1, "nullimage",  "WZWLA0", -50, 0+center,center;
+	DrawSwitchableImage Foodz == 2, "nullimage",  "WZWKA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 3, "nullimage",  "WZWJA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 4, "nullimage",  "WZWIA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 5, "nullimage",  "WZWHA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 6, "nullimage",  "WZWGA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 7, "nullimage",  "WZWFA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 8, "nullimage",  "WZWEA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 9, "nullimage",  "WZWDA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 10, "nullimage",  "WZWCA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 11, "nullimage",  "WZWBA0",  -50, 0+center,center;
+	DrawSwitchableImage Foodz == 12, "nullimage",  "WZWAA0", -50, 0+center,center;
+	//	DrawNumber 3, HUDFONT_DOOM, RED, Foodz, fillzeros, 0, -650;
+	//	DrawNumber 3, HUDFONT_DOOM, RED, Bagcomz, fillzeros, 0, -650;
+	//	DrawNumber 3, HUDFONT_DOOM, GREEN, Smallbagpick, fillzeros, 0, -550;
+	//	DrawNumber 3, HUDFONT_DOOM, BLUE, Zootcomz, fillzeros, 0, -450;
+	//Bagcomz	
+	DrawSwitchableImage Drenkz == 1, "nullimage",  "WZTLA0",-50, -50+center,center;
+	DrawSwitchableImage Drenkz == 2, "nullimage",  "WZTKA0", -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 3, "nullimage",  "WZTJA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 4, "nullimage",  "WZTIA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 5, "nullimage",  "WZTHA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 6, "nullimage",  "WZTGA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 7, "nullimage",  "WZTFA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 8, "nullimage",  "WZTEA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 9, "nullimage",  "WZTDA0", -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 10, "nullimage",  "WZTCA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 11, "nullimage",  "WZTBA0",  -50, -50+center,center;
+	DrawSwitchableImage Drenkz == 12, "nullimage",  "WZTAA0", -50, -50+center,center;
+	//	DrawNumber 3, HUDFONT_DOOM, GREEN, Drenkz, fillzeros, 0, -600;
+	
+	
+	DrawSwitchableImage Tempz == 12, "nullimage",  "HETAA0", -50, 50+center,center;
+	
+	DrawSwitchableImage Tempz == 11, "nullimage",  "HETBA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 10, "nullimage",  "HETCA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 9, "nullimage",  "HETDA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 8, "nullimage",  "HETEA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 7, "nullimage",  "HETFA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 6, "nullimage",  "HETGA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 5, "nullimage",  "HETHA0", -50, 50+center,center;
+	DrawSwitchableImage Tempz == 3, "nullimage",  "HETIA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 4, "nullimage",  "HETIA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 2, "nullimage",  "HETJA0",  -50, 50+center,center;
+	DrawSwitchableImage Tempz == 1, "nullimage",  "HETKA0", -50, 50+center,center;
+	
+	
+	
+	
+	
+	
+	
+	}
+	
+	
+	
+	
+StatusBar PopupLog
+{
+
+//drawimage "DRINA0", 900, -50, center;
+//	drawimage "FOXVA0", 900, -100, center;
+	
+	
+//	drawimage "HEAFA0", 900, 0, center;
+	
+	
+	drawimage "UIMNA2", 180+center,  100+center, center,320,240; // the backing pi
+
+
+drawimage "UIMNA3", 240+center,  95+center, center,90,90; //inventory slots
+
+drawimage "UIMNA3", 580, -450, center;
+DrawSwitchableImage Smallbagpick, "nullimage", "UIMNA3B", 240+center,  95+center, center,90,90;
+DrawSwitchableImage Mbagpick2, "nullimage", "UIMNA4",240+center,  95+center, center,90,90;
+DrawSwitchableImage Largbagpick3, "nullimage", "UIMNA5", 240+center,  95+center, center,90,90;
+
+
+DrawSwitchableImage Selectr == 1, "nullimage", "UIMNA6",  212+center,  63+center, center, 23,23;
+DrawSwitchableImage Selectr == 2, "nullimage", "UIMNA6",  230+center,  65+center, center, 23,23;
+DrawSwitchableImage Selectr == 3, "nullimage", "UIMNA6", 248+center,  65+center, center, 23,23;
+DrawSwitchableImage Selectr == 4, "nullimage", "UIMNA6", 266+center,  65+center, center, 23,23;
+
+DrawSwitchableImage Selectr == 5, "nullimage", "UIMNA6", 212+center,  82+center, center, 23,23;
+DrawSwitchableImage Selectr == 6, "nullimage", "UIMNA6", 230+center,  83+center, center, 23,23;
+DrawSwitchableImage Selectr == 7, "nullimage", "UIMNA6", 248+center,  83+center, center, 23,23;
+DrawSwitchableImage Selectr == 8, "nullimage", "UIMNA6", 266+center,  83+center, center, 23,23;
+
+DrawSwitchableImage Selectr == 9, "nullimage", "UIMNA6", 212+center,  102+center, center, 23,23;
+DrawSwitchableImage Selectr == 10, "nullimage", "UIMNA6", 230+center,  103+center, center, 23,23;
+DrawSwitchableImage Selectr == 11, "nullimage", "UIMNA6", 248+center, 103+center, center, 23,23;
+DrawSwitchableImage Selectr == 12, "nullimage", "UIMNA6", 266+center,  103+center, center, 23,23;
+//nullimage
+
+
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar1, fillzeros, 445, -650;
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar2, fillzeros, 545, -650;
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar3, fillzeros, 635, -650;
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar4, fillzeros, 725, -650;
+
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar5, fillzeros, 445, -510;
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar6, fillzeros, 545, -510;
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar7, fillzeros, 635, -510;
+//DrawNumber 1, HUDFONT_DOOM, RED, Sbar8, fillzeros, 725, -510;
+
+//drawimage "SSHLA0", 445, -650, center;
+
+
+
+
+DrawSwitchableImage Sbar1 == 1, "nullimage", "CANBA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 2, "nullimage", "COKBA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 3, "nullimage", "BANDA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 4, "nullimage", "SSHLA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 5, "nullimage", "BOLBA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 6, "nullimage", "CLIPA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 7, "nullimage", "NTEMA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 8, "nullimage", "NTENA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 9, "nullimage", "CLIPA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 10, "nullimage", "NTEPA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 11, "nullimage", "NTEQA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 12, "nullimage", "NTERA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 13, "nullimage", "NTELA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 14, "nullimage", "STECB0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 15, "nullimage", "HETPA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 16, "nullimage", "ANTIU0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 17, "nullimage", "MORPI0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 18, "nullimage", "LOGSA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 19, "nullimage", "STECA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 20, "nullimage", "BBAGA0",  212+center,  63+center, center, 20,20;
+DrawSwitchableImage Sbar1 == 21, "nullimage", "CANPB0",  212+center,  63+center, center, 20,20; //empty canteen
+DrawSwitchableImage Sbar1 == 22, "nullimage", "CANPA0",  212+center,  63+center, center, 20,20; //canteen
+DrawSwitchableImage Sbar1 == 23, "nullimage", "BOOKA0",  212+center,  63+center, center, 20,20;// book
+DrawSwitchableImage Sbar1 == 24, "nullimage", "RTZZA0",  212+center,  63+center, center, 20,20;// dead rat
+DrawSwitchableImage Sbar1 == 25, "nullimage", "RATXA0",  212+center,  63+center, center, 20,20;// cooked rat
+DrawSwitchableImage Sbar1 == 26, "nullimage", "wheef0",  212+center,  63+center, center, 20,20;//wheel
+DrawSwitchableImage Sbar1 == 27, "nullimage", "battery",  212+center,  63+center, center, 20,20;//battery
+DrawSwitchableImage Sbar1 == 28, "nullimage", "PETRa0",  212+center,  63+center, center, 20,20;//petrol can
+DrawSwitchableImage Sbar1 == 29, "nullimage", "PETRd0",  212+center,  63+center, center, 20,20;//empty petrol can
+DrawSwitchableImage Sbar1 == 30, "nullimage", "DBHAA0",  212+center,  63+center, center, 20,20;//arm
+DrawSwitchableImage Sbar1 == 31, "nullimage", "DBHAC0",  212+center,  63+center, center, 20,20;//cooked arm
+//   drawnumber 3, CONFONT, yellow, Sbar1,   212+center,  63+center;
+
+
+DrawSwitchableImage Sbar2 == 1, "nullimage", "CANBA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 2, "nullimage", "COKBA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 3, "nullimage", "BANDA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 4, "nullimage", "SSHLA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 5, "nullimage", "BOLBA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 6, "nullimage", "CLIPA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 7, "nullimage", "NTEMA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 8, "nullimage", "NTENA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 9, "nullimage", "CLIPA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 10, "nullimage", "NTEPA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 11, "nullimage", "NTEQA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 12, "nullimage", "NTERA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 13, "nullimage", "NTELA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 14, "nullimage", "STECU0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 15, "nullimage", "HETPA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 16, "nullimage", "ANTIU0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 17, "nullimage", "MORPI0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 18, "nullimage", "LOGSA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 19, "nullimage", "STECA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 20, "nullimage", "BBAGA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 21, "nullimage", "CANPB0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 22, "nullimage", "CANPA0", 230+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar2 == 21, "nullimage", "CANPB0",  230+center,  65+center, center, 20,20; //empty canteen
+DrawSwitchableImage Sbar2 == 22, "nullimage", "CANPA0",  230+center,  65+center, center, 20,20; //canteen
+DrawSwitchableImage Sbar2 == 23, "nullimage", "BOOKA0",  230+center,  65+center, center, 20,20;// book
+DrawSwitchableImage Sbar2 == 24, "nullimage", "RTZZA0",  230+center,  65+center, center, 20,20;// dead rat
+DrawSwitchableImage Sbar2 == 25, "nullimage", "RATXA0",  230+center,  65+center, center, 20,20;// cooked rat
+DrawSwitchableImage Sbar2 == 26, "nullimage", "wheef0",  230+center,  65+center, center, 20,20;//wheel
+DrawSwitchableImage Sbar2 == 27, "nullimage", "battery",  230+center,  65+center, center, 20,20;//battery
+DrawSwitchableImage Sbar2 == 28, "nullimage", "PETRa0",  230+center,  65+center, center, 20,20;//petrol can
+DrawSwitchableImage Sbar2 == 29, "nullimage", "PETRd0",  230+center,  65+center, center, 20,20;//empty petrol can
+DrawSwitchableImage Sbar2 == 30, "nullimage", "DBHAA0",  230+center,  65+center, center, 20,20;//arm
+DrawSwitchableImage Sbar2 == 31, "nullimage", "DBHAC0",  230+center,  65+center, center, 20,20;//cooked arm
+
+
+DrawSwitchableImage Sbar3 == 1, "nullimage", "CANBA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 2, "nullimage", "COKBA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 3, "nullimage", "BANDA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 4, "nullimage", "SSHLA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 5, "nullimage", "BOLBA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 6, "nullimage", "CLIPA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 7, "nullimage", "NTEMA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 8, "nullimage", "NTENA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 9, "nullimage", "CLIPA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 10, "nullimage", "NTEPA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 11, "nullimage", "NTEQA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 12, "nullimage", "NTERA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 13, "nullimage", "NTELA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 14, "nullimage", "STECB0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 15, "nullimage", "HETPA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 16, "nullimage", "ANTIU0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 17, "nullimage", "MORPI0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 18, "nullimage", "LOGSA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 19, "nullimage", "STECA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 20, "nullimage", "BBAGA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 21, "nullimage", "CANPB0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 22, "nullimage", "CANPA0",248+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar3 == 21, "nullimage", "CANPB0",  248+center,  65+center, center, 20,20; //empty canteen
+DrawSwitchableImage Sbar3 == 22, "nullimage", "CANPA0",  248+center,  65+center, center, 20,20; //canteen
+DrawSwitchableImage Sbar3 == 23, "nullimage", "BOOKA0",  248+center,  65+center, center, 20,20;// book
+DrawSwitchableImage Sbar3 == 24, "nullimage", "RTZZA0",  248+center,  65+center, center, 20,20;// dead rat
+DrawSwitchableImage Sbar3 == 25, "nullimage", "RATXA0",  248+center,  65+center, center, 20,20;// cooked rat
+DrawSwitchableImage Sbar3 == 26, "nullimage", "wheef0",  248+center,  65+center, center, 20,20;//wheel
+DrawSwitchableImage Sbar3 == 27, "nullimage", "battery",  248+center,  65+center, center, 20,20;//battery
+DrawSwitchableImage Sbar3 == 28, "nullimage", "PETRa0",  248+center,  65+center, center, 20,20;//petrol can
+DrawSwitchableImage Sbar3 == 29, "nullimage", "PETRd0",  248+center,  65+center, center, 20,20;//empty petrol can
+DrawSwitchableImage Sbar3 == 30, "nullimage", "DBHAA0",  248+center,  65+center, center, 20,20;//arm
+DrawSwitchableImage Sbar3 == 31, "nullimage", "DBHAC0",  248+center,  65+center, center, 20,20;//cooked arm
+
+
+DrawSwitchableImage Sbar4 == 1, "nullimage", "CANBA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 2, "nullimage", "COKBA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 3, "nullimage", "BANDA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 4, "nullimage", "SSHLA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 5, "nullimage", "BOLBA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 6, "nullimage", "CLIPA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 7, "nullimage", "NTEMA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 8, "nullimage", "NTENA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 9, "nullimage", "CLIPA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 10, "nullimage", "NTEPA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 11, "nullimage", "NTEQA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 12, "nullimage", "NTERA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 13, "nullimage", "NTELA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 14, "nullimage", "STECB0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 15, "nullimage", "HETPA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 16, "nullimage", "ANTIU0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 17, "nullimage", "MORPI0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 18, "nullimage", "LOGSA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 19, "nullimage", "STECA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 20, "nullimage", "BBAGA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 21, "nullimage", "CANPB0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 22, "nullimage", "CANPA0", 266+center,  65+center, center, 20,20;
+DrawSwitchableImage Sbar4 == 21, "nullimage", "CANPB0",  266+center,  65+center, center, 20,20; //empty canteen
+DrawSwitchableImage Sbar4 == 22, "nullimage", "CANPA0",  266+center,  65+center, center, 20,20; //canteen
+DrawSwitchableImage Sbar4 == 23, "nullimage", "BOOKA0",  266+center,  65+center, center, 20,20;// book
+DrawSwitchableImage Sbar4 == 24, "nullimage", "RTZZA0",  266+center,  65+center, center, 20,20;// dead rat
+DrawSwitchableImage Sbar4 == 25, "nullimage", "RATXA0",  266+center,  65+center, center, 20,20;// cooked rat
+DrawSwitchableImage Sbar4 == 26, "nullimage", "wheef0",  266+center,  65+center, center, 20,20;//wheel
+DrawSwitchableImage Sbar4 == 27, "nullimage", "battery",  266+center,  65+center, center, 20,20;//battery
+DrawSwitchableImage Sbar4 == 28, "nullimage", "PETRa0",  266+center,  65+center, center, 20,20;//petrol can
+DrawSwitchableImage Sbar4 == 29, "nullimage", "PETRd0",  266+center,  65+center, center, 20,20;//empty petrol can
+DrawSwitchableImage Sbar4 == 30, "nullimage", "DBHAA0",  266+center,  65+center, center, 20,20;//arm
+DrawSwitchableImage Sbar4 == 31, "nullimage", "DBHAC0",  266+center,  65+center, center, 20,20;//cooked arm
+
+DrawSwitchableImage Sbar5 == 1, "nullimage", "CANBA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 2, "nullimage", "COKBA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 3, "nullimage", "BANDA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 4, "nullimage", "SSHLA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 5, "nullimage", "BOLBA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 6, "nullimage", "CLIPA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 7, "nullimage", "NTEMA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 8, "nullimage", "NTENA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 9, "nullimage", "CLIPA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 10, "nullimage", "NTEPA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 11, "nullimage", "NTEQA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 12, "nullimage", "NTERA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 13, "nullimage", "NTELA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 14, "nullimage", "STECB0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 15, "nullimage", "HETPA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 16, "nullimage", "ANTIU0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 17, "nullimage", "MORPI0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 18, "nullimage", "LOGSA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 19, "nullimage", "STECA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 20, "nullimage", "BBAGA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 21, "nullimage", "CANPB0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 22, "nullimage", "CANPA0", 212+center,  82+center, center, 20,20;
+DrawSwitchableImage Sbar5 == 21, "nullimage", "CANPB0", 212+center,  82+center, center, 20,20; //empty canteen
+DrawSwitchableImage Sbar5 == 22, "nullimage", "CANPA0", 212+center,  82+center, center, 20,20; //canteen
+DrawSwitchableImage Sbar5 == 23, "nullimage", "BOOKA0", 212+center,  82+center, center, 20,20;// book
+DrawSwitchableImage Sbar5 == 24, "nullimage", "RTZZA0", 212+center,  82+center, center, 20,20;// dead rat
+DrawSwitchableImage Sbar5 == 25, "nullimage", "RATXA0",  212+center,  82+center, center, 20,20;// cooked rat
+DrawSwitchableImage Sbar5 == 26, "nullimage", "wheef0",  212+center,  82+center, center, 20,20;//wheel
+DrawSwitchableImage Sbar5 == 27, "nullimage", "battery",  212+center,  82+center, center, 20,20;//battery
+DrawSwitchableImage Sbar5 == 28, "nullimage", "PETRa0",  212+center,  82+center, center, 20,20;//petrol can
+DrawSwitchableImage Sbar5 == 29, "nullimage", "PETRd0",  212+center,  82+center, center, 20,20;//empty petrol can
+DrawSwitchableImage Sbar5 == 30, "nullimage", "DBHAA0",  212+center,  82+center, center, 20,20;//arm
+DrawSwitchableImage Sbar5 == 31, "nullimage", "DBHAC0",  212+center,  82+center, center, 20,20;//cooked arm
+
+
+DrawSwitchableImage Sbar6 == 1, "nullimage", "CANBA0",  230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 2, "nullimage", "COKBA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 3, "nullimage", "BANDA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 4, "nullimage", "SSHLA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 5, "nullimage", "BOLBA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 6, "nullimage", "CLIPA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 7, "nullimage", "NTEMA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 8, "nullimage", "NTENA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 9, "nullimage", "CLIPA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 10, "nullimage", "NTEPA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 11, "nullimage", "NTEQA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 12, "nullimage", "NTERA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 13, "nullimage", "NTELA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 14, "nullimage", "STECB0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 15, "nullimage", "HETPA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 16, "nullimage", "ANTIU0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 17, "nullimage", "MORPI0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 18, "nullimage", "LOGSA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 19, "nullimage", "STECA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 20, "nullimage", "BBAGA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 21, "nullimage", "CANPB0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 22, "nullimage", "CANPA0", 230+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar6 == 21, "nullimage", "CANPB0",  230+center,  83+center, center , 20,20; //empty canteen
+DrawSwitchableImage Sbar6 == 22, "nullimage", "CANPA0",  230+center,  83+center, center , 20,20; //canteen
+DrawSwitchableImage Sbar6 == 23, "nullimage", "BOOKA0",  230+center,  83+center, center , 20,20;// book
+DrawSwitchableImage Sbar6 == 24, "nullimage", "RTZZA0",  230+center,  83+center, center , 20,20;// dead rat
+DrawSwitchableImage Sbar6 == 25, "nullimage", "RATXA0",  230+center,  83+center, center , 20,20;// cooked rat
+DrawSwitchableImage Sbar6 == 26, "nullimage", "wheef0",  230+center,  83+center, center , 20,20;//wheel
+DrawSwitchableImage Sbar6 == 27, "nullimage", "battery",  230+center,  83+center, center , 20,20;//battery
+DrawSwitchableImage Sbar6 == 28, "nullimage", "PETRa0",  230+center,  83+center, center , 20,20;//petrol can
+DrawSwitchableImage Sbar6 == 29, "nullimage", "PETRd0",  230+center,  83+center, center , 20,20;//empty petrol can
+DrawSwitchableImage Sbar6 == 30, "nullimage", "DBHAA0",  230+center,  83+center, center , 20,20;//arm
+DrawSwitchableImage Sbar6 == 31, "nullimage", "DBHAC0",  230+center,  83+center, center , 20,20;//cooked arm
+
+
+DrawSwitchableImage Sbar7 == 1, "nullimage", "CANBA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 2, "nullimage", "COKBA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 3, "nullimage", "BANDA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 4, "nullimage", "SSHLA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 5, "nullimage", "BOLBA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 6, "nullimage", "CLIPA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 7, "nullimage", "NTEMA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 8, "nullimage", "NTENA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 9, "nullimage", "CLIPA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 10, "nullimage", "NTEPA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 11, "nullimage", "NTEQA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 12, "nullimage", "NTERA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 13, "nullimage", "NTELA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 14, "nullimage", "STECB0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 15, "nullimage", "HETPA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 16, "nullimage", "ANTIU0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 17, "nullimage", "MORPI0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 18, "nullimage", "LOGSA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 19, "nullimage", "STECA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 20, "nullimage", "BBAGA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 21, "nullimage", "CANPB0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 22, "nullimage", "CANPA0",248+center,  83+center, center , 20,20;
+DrawSwitchableImage Sbar7 == 21, "nullimage", "CANPB0",  248+center,  83+center, center , 20,20; //empty canteen
+DrawSwitchableImage Sbar7 == 22, "nullimage", "CANPA0",  248+center,  83+center, center , 20,20; //canteen
+DrawSwitchableImage Sbar7 == 23, "nullimage", "BOOKA0",  248+center,  83+center, center , 20,20;// book
+DrawSwitchableImage Sbar7 == 24, "nullimage", "RTZZA0",  248+center,  83+center, center , 20,20;// dead rat
+DrawSwitchableImage Sbar7 == 25, "nullimage", "RATXA0",  248+center,  83+center, center , 20,20;// cooked rat
+DrawSwitchableImage Sbar7 == 26, "nullimage", "wheef0",  248+center,  83+center, center , 20,20;//wheel
+DrawSwitchableImage Sbar7 == 27, "nullimage", "battery",  248+center,  83+center, center , 20,20;//battery
+DrawSwitchableImage Sbar7 == 28, "nullimage", "PETRa0",  248+center,  83+center, center , 20,20;//petrol can
+DrawSwitchableImage Sbar7 == 29, "nullimage", "PETRd0",  248+center,  83+center, center , 20,20;//empty petrol can
+DrawSwitchableImage Sbar7 == 30, "nullimage", "DBHAA0",  248+center,  83+center, center , 20,20;//arm
+DrawSwitchableImage Sbar7 == 31, "nullimage", "DBHAC0",  248+center,  83+center, center , 20,20;//cooked arm
+
+
+DrawSwitchableImage Sbar8== 1, "nullimage", "CANBA0",266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8== 2, "nullimage", "COKBA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8== 3, "nullimage", "BANDA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8== 4, "nullimage", "SSHLA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8== 5, "nullimage", "BOLBA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8== 6, "nullimage", "CLIPA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8== 7, "nullimage", "NTEMA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8== 8, "nullimage", "NTENA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8== 9, "nullimage", "CLIPA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8== 10, "nullimage", "NTEPA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8== 11, "nullimage", "NTEQA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8== 12, "nullimage", "NTERA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8== 13, "nullimage", "NTELA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8 == 14, "nullimage", "STECB0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8 == 15, "nullimage", "HETPA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8 == 16, "nullimage", "ANTIU0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8 == 17, "nullimage", "MORPI0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8 == 18, "nullimage", "LOGSA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8 == 19, "nullimage", "STECA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8 == 20, "nullimage", "BBAGA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8 == 21, "nullimage", "CANPB0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8 == 22, "nullimage", "CANPA0", 266+center,  83+center, center, 20,20;
+DrawSwitchableImage Sbar8 == 21, "nullimage", "CANPB0",  266+center,  83+center, center, 20,20; //empty canteen
+DrawSwitchableImage Sbar8 == 22, "nullimage", "CANPA0",  266+center,  83+center, center, 20,20; //canteen
+DrawSwitchableImage Sbar8 == 23, "nullimage", "BOOKA0",  266+center,  83+center, center, 20,20;// book
+DrawSwitchableImage Sbar8 == 24, "nullimage", "RTZZA0",  266+center,  83+center, center, 20,20;// dead rat
+DrawSwitchableImage Sbar8 == 25, "nullimage", "RATXA0",  266+center,  83+center, center, 20,20;// cooked rat
+DrawSwitchableImage Sbar8 == 26, "nullimage", "wheef0",  266+center,  83+center, center, 20,20;//wheel
+DrawSwitchableImage Sbar8 == 27, "nullimage", "battery",  266+center,  83+center, center, 20,20;//battery
+DrawSwitchableImage Sbar8 == 28, "nullimage", "PETRa0",  266+center,  83+center, center, 20,20;//petrol can
+DrawSwitchableImage Sbar8 == 29, "nullimage", "PETRd0",  266+center,  83+center, center, 20,20;//empty petrol can
+DrawSwitchableImage Sbar8 == 30, "nullimage", "DBHAA0",  266+center,  83+center, center, 20,20;//arm
+DrawSwitchableImage Sbar8 == 31, "nullimage", "DBHAC0",  266+center,  83+center, center, 20,20;//cooked arm
+
+
+DrawSwitchableImage sbar9 == 1, "nullimage", "CANBA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage sbar9 == 2, "nullimage", "COKBA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage sbar9 == 3, "nullimage", "BANDA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage sbar9 == 4, "nullimage", "SSHLA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage sbar9 == 5, "nullimage", "BOLBA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage sbar9 == 6, "nullimage", "CLIPA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage sbar9 == 7, "nullimage", "NTEMA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage sbar9 == 8, "nullimage", "NTENA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage sbar9 == 9, "nullimage", "CLIPA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage sbar9 == 10, "nullimage", "NTEPA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage sbar9 == 11, "nullimage", "NTEQA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage sbar9 == 12, "nullimage", "NTERA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage sbar9 == 13, "nullimage", "NTELA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage Sbar9 == 14, "nullimage", "STECB0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage Sbar9 == 15, "nullimage", "HETPA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage Sbar9 == 16, "nullimage", "ANTIU0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage Sbar9 == 17, "nullimage", "MORPI0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage Sbar9 == 18, "nullimage", "LOGSA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage Sbar9 == 19, "nullimage", "STECA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage Sbar9 == 20, "nullimage", "BBAGA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage Sbar9 == 21, "nullimage", "CANPB0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage Sbar9 == 22, "nullimage", "CANPA0", 212+center,  102+center, center, 20,20;
+DrawSwitchableImage Sbar9 == 21, "nullimage", "CANPB0",  212+center,  102+center, center, 20,20; //empty canteen
+DrawSwitchableImage Sbar9 == 22, "nullimage", "CANPA0",  212+center,  102+center, center, 20,20; //canteen
+DrawSwitchableImage Sbar9 == 23, "nullimage", "BOOKA0",  212+center,  102+center, center, 20,20;// book
+DrawSwitchableImage Sbar9 == 24, "nullimage", "RTZZA0",  212+center,  102+center, center, 20,20;// dead rat
+DrawSwitchableImage Sbar9 == 25, "nullimage", "RATXA0",  212+center,  102+center, center, 20,20;// cooked rat
+DrawSwitchableImage Sbar9 == 26, "nullimage", "wheef0",  212+center,  102+center, center, 20,20;//wheel
+DrawSwitchableImage Sbar9 == 27, "nullimage", "battery",  212+center,  102+center, center, 20,20;//battery
+DrawSwitchableImage Sbar9 == 28, "nullimage", "PETRa0",  212+center,  102+center, center, 20,20;//petrol can
+DrawSwitchableImage Sbar9 == 29, "nullimage", "PETRd0",  212+center,  102+center, center, 20,20;//empty petrol can
+DrawSwitchableImage Sbar9 == 30, "nullimage", "DBHAA0",  212+center,  102+center, center, 20,20;//arm
+DrawSwitchableImage Sbar9 == 31, "nullimage", "DBHAC0",  212+center,  102+center, center, 20,20;//cooked arm
+
+
+
+DrawSwitchableImage Sbar19 == 1, "nullimage", "CANBA0",230+center,  103+center, center, 20,20;
+DrawSwitchableImage sbar10 == 2, "nullimage", "COKBA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage sbar10 == 3, "nullimage", "BANDA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage sbar10 == 4, "nullimage", "SSHLA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage sbar10 == 5, "nullimage", "BOLBA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage sbar10 == 6, "nullimage", "CLIPA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage sbar10 == 7, "nullimage", "NTEMA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage sbar10 == 8, "nullimage", "NTENA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage sbar10 == 9, "nullimage", "CLIPA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage sbar10 == 10, "nullimage", "NTEPA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage sbar10 == 11, "nullimage", "NTEQA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage sbar10 == 12, "nullimage", "NTERA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage sbar10 == 13, "nullimage", "NTELA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage Sbar10 == 14, "nullimage", "STECB0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage Sbar10 == 15, "nullimage", "HETPA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage Sbar10 == 16, "nullimage", "ANTIU0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage Sbar10 == 17, "nullimage", "MORPI0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage Sbar10 == 18, "nullimage", "LOGSA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage Sbar10 == 19, "nullimage", "STECA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage Sbar10 == 20, "nullimage", "BBAGA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage Sbar10 == 21, "nullimage", "CANPB0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage Sbar10 == 22, "nullimage", "CANPA0", 230+center,  103+center, center, 20,20;
+DrawSwitchableImage Sbar10 == 21, "nullimage", "CANPB0",  230+center,  103+center, center, 20,20; //empty canteen
+DrawSwitchableImage Sbar10 == 22, "nullimage", "CANPA0",  230+center,  103+center, center, 20,20; //canteen
+DrawSwitchableImage Sbar10 == 23, "nullimage", "BOOKA0",  230+center,  103+center, center, 20,20;// book
+DrawSwitchableImage Sbar10 == 24, "nullimage", "RTZZA0",  230+center,  103+center, center, 20,20;// dead rat
+DrawSwitchableImage Sbar10 == 25, "nullimage", "RATXA0",  230+center,  103+center, center, 20,20;// cooked rat
+DrawSwitchableImage Sbar10 == 26, "nullimage", "wheef0",  230+center,  103+center, center, 20,20;//wheel
+DrawSwitchableImage Sbar10 == 27, "nullimage", "battery",  230+center,  103+center, center, 20,20;//battery
+DrawSwitchableImage Sbar10 == 28, "nullimage", "PETRa0",  230+center,  103+center, center, 20,20;//petrol can
+DrawSwitchableImage Sbar10 == 29, "nullimage", "PETRd0",  230+center,  103+center, center, 20,20;//empty petrol can
+DrawSwitchableImage Sbar10 == 30, "nullimage", "DBHAA0",  230+center,  103+center, center, 20,20;//arm
+DrawSwitchableImage Sbar10 == 31, "nullimage", "DBHAC0",  230+center,  103+center, center, 20,20;//cooked arm
+
+
+
+DrawSwitchableImage sbar11 == 1, "nullimage", "CANBA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage sbar11 == 2, "nullimage", "COKBA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage sbar11 == 3, "nullimage", "BANDA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage sbar11 == 4, "nullimage", "SSHLA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage sbar11 == 5, "nullimage", "BOLBA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage sbar11 == 6, "nullimage", "CLIPA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage sbar11 == 7, "nullimage", "NTEMA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage sbar11 == 8, "nullimage", "NTENA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage sbar11 == 9, "nullimage", "CLIPA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage sbar11 == 10, "nullimage", "NTEPA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage sbar11 == 11, "nullimage", "NTEQA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage sbar11 == 12, "nullimage", "NTERA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage sbar11 == 13, "nullimage", "NTELA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage Sbar11 == 14, "nullimage", "STECB0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage Sbar11 == 15, "nullimage", "HETPA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage Sbar11 == 16, "nullimage", "ANTIU0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage Sbar11 == 17, "nullimage", "MORPI0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage Sbar11 == 18, "nullimage", "LOGSA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage Sbar11 == 19, "nullimage", "STECA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage Sbar11 == 20, "nullimage", "BBAGA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage Sbar11 == 21, "nullimage", "CANPB0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage Sbar11 == 22, "nullimage", "CANPA0", 248+center, 103+center, center, 20,20;
+DrawSwitchableImage Sbar11== 21, "nullimage", "CANPB0",  248+center, 103+center, center, 20,20; //empty canteen
+DrawSwitchableImage Sbar11== 22, "nullimage", "CANPA0",  248+center, 103+center, center, 20,20; //canteen
+DrawSwitchableImage Sbar11== 23, "nullimage", "BOOKA0",  248+center, 103+center, center, 20,20;// book
+DrawSwitchableImage Sbar11== 24, "nullimage", "RTZZA0",  248+center, 103+center, center, 20,20;// dead rat
+DrawSwitchableImage Sbar11== 25, "nullimage", "RATXA0",  248+center, 103+center, center, 20,20;// cooked rat
+DrawSwitchableImage Sbar11== 26, "nullimage", "wheef0",  248+center, 103+center, center, 20,20;//wheel
+DrawSwitchableImage Sbar11== 27, "nullimage", "battery",  248+center, 103+center, center, 20,20;//battery
+DrawSwitchableImage Sbar11== 28, "nullimage", "PETRa0",  248+center, 103+center, center, 20,20;//petrol can
+DrawSwitchableImage Sbar11== 29, "nullimage", "PETRd0",  248+center, 103+center, center, 20,20;//empty petrol can
+DrawSwitchableImage Sbar11== 30, "nullimage", "DBHAA0",  248+center, 103+center, center, 20,20;//arm
+DrawSwitchableImage Sbar11== 31, "nullimage", "DBHAC0",  248+center, 103+center, center, 20,20;//cooked arm
+
+
+
+DrawSwitchableImage sbar12== 1, "nullimage", "CANBA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage sbar12== 2, "nullimage", "COKBA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage sbar12== 3, "nullimage", "BANDA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage sbar12== 4, "nullimage", "SSHLA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage sbar12== 5, "nullimage", "BOLBA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage sbar12== 6, "nullimage", "CLIPA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage sbar12== 7, "nullimage", "NTEMA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage sbar12== 8, "nullimage", "NTENA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage sbar12== 9, "nullimage", "CLIPA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage sbar12== 10, "nullimage", "NTEPA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage sbar12== 11, "nullimage", "NTEQA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage sbar12== 12, "nullimage", "NTERA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage sbar12== 13, "nullimage", "NTELA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage Sbar12 == 14, "nullimage", "STECB0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage Sbar12 == 15, "nullimage", "HETPA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage Sbar12 == 16, "nullimage", "ANTIU0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage Sbar12 == 17, "nullimage", "MORPI0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage Sbar12 == 18, "nullimage", "LOGSA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage Sbar12 == 19, "nullimage", "STECA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage Sbar12 == 20, "nullimage", "BBAGA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage Sbar12 == 21, "nullimage", "CANPB0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage Sbar12 == 22, "nullimage", "CANPA0", 266+center,  103+center, center, 20,20 ;
+DrawSwitchableImage Sbar12 == 21, "nullimage", "CANPB0",  266+center,  103+center, center, 20,20 ; //empty canteen
+DrawSwitchableImage Sbar12 == 22, "nullimage", "CANPA0",  266+center,  103+center, center, 20,20 ; //canteen
+DrawSwitchableImage Sbar12 == 23, "nullimage", "BOOKA0",  266+center,  103+center, center, 20,20 ;// book
+DrawSwitchableImage Sbar12 == 24, "nullimage", "RTZZA0",  266+center,  103+center, center, 20,20 ;// dead rat
+DrawSwitchableImage Sbar12 == 25, "nullimage", "RATXA0",  266+center,  103+center, center, 20,20 ;// cooked rat
+DrawSwitchableImage Sbar12 == 26, "nullimage", "wheef0",  266+center,  103+center, center, 20,20 ;//wheel
+DrawSwitchableImage Sbar12 == 27, "nullimage", "battery",  266+center,  103+center, center, 20,20 ;//battery
+DrawSwitchableImage Sbar12 == 28, "nullimage", "PETRa0",  266+center,  103+center, center, 20,20 ;//petrol can
+DrawSwitchableImage Sbar12 == 29, "nullimage", "PETRd0",  266+center,  103+center, center, 20,20 ;//empty petrol can
+DrawSwitchableImage Sbar12 == 30, "nullimage", "DBHAA0",  266+center,  103+center, center, 20,20 ;//arm
+DrawSwitchableImage Sbar12 == 31, "nullimage", "DBHAC0",  266+center,  103+center, center, 20,20 ;//cooked arm
+
+
+
+
+
+//DrawSwitchableImage Canfoo, "nullimage", "UIMNA6", 720, -410, center;  //the selector I think
+
+DrawSwitchableImage Descripter == 1, "nullimage", "UIMNA7", 65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 2, "nullimage", "UIMNA8",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 3, "nullimage", "UIMNA9",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 4, "nullimage", "UIMNA10",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 5, "nullimage", "UIMNA11",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 6, "nullimage", "UIMNA12",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 7, "nullimage", "UIMNA13",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 8, "nullimage", "UIMNA14",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 9, "nullimage", "UIMNA15",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 10, "nullimage", "UIMNA16",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 11, "nullimage", "UIMNA17",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 12, "nullimage", "UIMNA18",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 13, "nullimage", "UIMNA19",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 14, "nullimage", "UIMNA20",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 15, "nullimage", "UIMNA21",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 16, "nullimage", "UIMNA22",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 17, "nullimage", "UIMNA23",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 18, "nullimage", "UIMNA24",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 19, "nullimage", "UIMNA25",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 20, "nullimage", "UIMNA26",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 21, "nullimage", "UIMNA27",  65+center,  110+center, center, 70,90; // the description
+DrawSwitchableImage Descripter == 22, "nullimage", "UIMNA28",  65+center,  110+center, center, 70,90; // the description
+
+
+drawimage "invexp", 210+center,  150+center, center,180,180; //inventory slots
+//DrawString CONFONT, yellow, weapontag,350,  140;	
+	//DrawString CONFONT, yellow, "This is usually [ for left, ] for right. 'Enter' to ",350,  150;	
+	//DrawString CONFONT, yellow, "discard. If they don't work, set them up in the controls menu.",350,  160;
+	//DrawString CONFONT, yellow, "(inventory left etc). It's the 'mission objectives' ",350,  170;
+	//DrawString CONFONT, yellow, "button to exit this menu (usually 'i')",350,  180;
+	drawimage "UIMNA1", 169+center,  100+center, center,80,80; //doomguy
+
+}
+

@@ -1,0 +1,708 @@
+//  zcan		zGdrink
+//  ztin		zGfood
+//  zbands	bandpickup	zbandager
+//  zamto		
+//  zbolt		
+//  CLIPA0		
+//  zamxo		
+//  zamyo		
+//  zamxo		
+//  zamwo		
+//  zamvo		
+//  zamuo		
+//  CLIPA0		
+//  zsteak	Steakpickup	zgivesteak
+//  heatpad	heatpickup	zGheat
+//  zanti	antibpickup	ZGantib
+//  zmorph	morphpickup	ztakemorph
+//  zwood	woodpickup	zusebranch
+//  zmeat	Meatpickup	
+//  zblood	bloodpickup	zgiveBlood
+ //  zcane	emptycantepickup	
+//  zcanf	zcanteenpickup	Zcanteenfull
+//  zbook		
+//  zzratc	cookedratpickup	zrateat
+//  zzratu	deadratpickup	
+//  NIwheel		
+//  zbatt		
+//  petrolf		
+//  petrole		
+//  zhandu		
+//  zhandc		
+
+
+
+ACTOR zgivesteak : Weapon  						                                             // food eater
+{
+  Game Doom
+  Weapon.SelectionOrder 1003
+  Weapon.AmmoUse 0
+  Weapon.AmmoGive 0
+ Weapon.AmmoUse2 0
+ Weapon.AmmoGive2 0
+ Inventory.MaxAmount 100
+  Obituary "$OB_MPPISTOL"
+  //+WEAPON.WIMPY_WEAPON
+   +INVENTORY.UNDROPPABLE
+  Inventory.Pickupmessage "You got a meat eating arm"
+   Tag "Cooked meat eating arm"
+  Weapon.SlotNumber 9 
+  States
+  {
+  Ready:
+    STEK A 1 A_WeaponReady
+    Loop
+  Deselect:
+    STEK A 1 A_Lower
+    Loop
+  Select:
+    STEK A 1 A_Raise
+    Loop
+  Fire:
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,14)), "Firing")
+	goto Deselect
+  Firing:	
+   STEK A 10
+   STEK bc 2
+   STEK e 5 A_PlaySound("eating", CHAN_WEAPON)
+ //  STEK f 1 A_TakeInventory("Stekfoo", 1)
+   STEK f 1 ACS_Execute(701,0,0,0,0)
+   STEK fhijlm 20
+   STEK m 5 A_ReFire
+   TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,14)), "Ready")
+   TNT1 A 0 A_TakeInventory("zgivesteak", 1)
+   stop
+   AltFire:
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,14)), "Throwing")
+	goto Deselect
+  Throwing:
+	FOOF A 1 A_TakeInventory("Stekfoo", 1)
+	PUNG A 12 A_SpawnItemEx ("Steakpickup", 80, 0, 30, 0, 0, 0, 0)
+   	 TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,14)), "Ready")
+	 TNT1 A 0 A_TakeInventory("zgivesteak", 1)
+    stop
+  Spawn:
+    CANB A -1
+    Stop
+  }
+}
+
+
+
+ACTOR Zcanteenfull : Weapon  						                                             // food eater
+{
+  Game Doom
+  Weapon.SelectionOrder 1004
+    Weapon.AmmoUse 0
+  Weapon.AmmoGive 0
+ Weapon.AmmoUse2 0
+ Weapon.AmmoGive2 0
+  +INVENTORY.UNDROPPABLE
+  ////+WEAPON.WIMPY_WEAPON
+  Inventory.Pickupmessage "Canteen drinking arm"
+  Tag "Canteen drinking arm"
+  Weapon.SlotNumber 9 
+  States
+  {
+  Ready:
+    CANT A 1 A_WeaponReady
+    Loop
+  Deselect:
+    CANT A 1 A_Lower
+    Loop
+  Select:
+    CANT A 1 A_Raise
+    Loop
+  Fire:
+      TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,22)), "Firing")
+	  goto Deselect
+  Firing:
+    CANT ABCD 10
+    CANT e 9 
+    CANT e 1 A_PlaySound("drinking", CHAN_WEAPON)
+    TNT1 A 0 ACS_ExecuteWithResult(860,21)
+    CANT f 1 A_GiveInventory("EMPTfoo", 1)
+	//TNT1 A 0 ACS_Execute(867,21)
+    CANT f 1 ACS_Execute(702,0,0,0,0)
+    CANT fEDG 10
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,22)), "Ready")
+	 TNT1 A 0 A_TakeInventory("Zcanteenfull", 1)
+    stop
+  AltFire:
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,22)), "Throwing")
+	goto Deselect
+  Throwing:
+	PUNG A 12 A_SpawnItemEx ("zcanteenpickup", 80, 0, 30, 0, 0, 0, 0)
+   TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,22)), "Ready")
+	TNT1 A 0 A_TakeInventory("Zcanteenfull", 1)
+    stop
+  Spawn:
+    COKB A -1
+    Stop
+  }
+}
+
+
+
+
+
+
+// 
+
+
+
+
+
+
+
+ACTOR zGfood : Weapon  						                                             // food eater
+{
+  Game Doom
+  
+  Weapon.SelectionOrder 1003
+  Weapon.AmmoUse 0
+  Weapon.AmmoGive 0
+  Weapon.AmmoUse2 0
+  Weapon.AmmoGive2 0
+  Tag "Your eating arm"
+  Inventory.Pickupmessage "Eating arm"
+  Scale 0.12
+ +INVENTORY.UNDROPPABLE
+ Inventory.MaxAmount 100
+  Obituary "$OB_MPPISTOL"
+  //+WEAPON.WIMPY_WEAPON
+
+  Weapon.SlotNumber 9 
+  States
+  {
+  Ready:
+    SCAN A 1 A_WeaponReady
+    Loop
+  Deselect:
+    SCAN A 1 A_Lower
+    Loop
+  Select:
+    SCAN A 1 A_Raise
+    Loop
+  Fire:
+      TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,2)), "Firing")
+	  goto Deselect
+  Firing:
+    SCAN ABCDEFGHIJ 7
+    SCAN k 7 A_PlaySound("eating", CHAN_WEAPON)
+    SCAN HIJKFL 7
+    SCAN A 0 A_TakeInventory("Canfoo", 1)
+	SCAN A 0 ACS_Execute(701,0,0,0,0)
+     TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,2)), "Ready")
+	 TNT1 A 0 A_TakeInventory("zGfood", 1)
+    stop
+  AltFire:
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,2)), "Throwing")
+	goto Deselect
+  Throwing:
+	FOOF A 1 A_TakeInventory("Canfoo", 1)                                   //are you sure this should be foof?
+	PUNG A 12 A_SpawnItemEx ("tinpickup", 80, 0, 30, 0, 0, 0, 0)
+	 TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,2)), "Ready")
+	 TNT1 A 0 A_TakeInventory("zGfood", 1)
+    stop
+  Spawn:
+    CANB A -1                                                                 // this shouldnt be  a  can really.
+    Stop
+  }
+}
+
+
+
+
+
+ACTOR zGdrink : Weapon  	3110
+//USED TO BE CALLED GDRINKNEW					                                             // food eater
+{
+  Game Doom
+  Weapon.SelectionOrder 1004
+  Weapon.AmmoUse 0
+  Weapon.AmmoGive 0
+  Weapon.AmmoUse2 0
+  Weapon.AmmoGive2 0
+  +INVENTORY.UNDROPPABLE
+  Inventory.MaxAmount 100
+  Obituary "$OB_MPPISTOL"
+  Weapon.AmmoGive2 0
+  Tag "your drinking arm"
+  Inventory.Pickupmessage "drinking arm"
+  Weapon.SlotNumber 9 
+  States
+  {
+  Ready:
+	DRNc A 0  A_JumpIfNoAmmo("nocan")
+	DRNc A 1 A_WeaponReady
+    Loop
+  nocan:
+   DRNc H 1
+    loop
+  Deselect:
+    DRNc A 1 A_Lower
+    Loop
+  Select:
+    DRNc A 1 A_Raise
+    Loop
+  Fire:
+      TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,1)), "Firing")
+	  goto Deselect
+  Firing:
+    DRNc Abc 5
+    DRNc D 5 A_PlaySound("drinking", CHAN_WEAPON)
+	DRNc E 1 A_TakeInventory("Drnkfoo", 1)
+	DRNc E 40 ACS_Execute(702,0,0,0,0)
+	DRNc F 10
+	
+	 TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,1)), "Ready")
+	 DRNc AAAAAA 3 A_Lower
+	 TNT1 A 1 A_TakeInventory("zGdrink", 1)
+    stop
+  AltFire:
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,1)), "Throwing")
+	goto Deselect
+  Throwing:
+	DRNc G 5 A_TakeInventory("Drnkfoo", 1)
+	DRNc H 12 A_SpawnItemEx ("Canpickup", 80, 0, 30, 0, 0, 0, 0)
+  	 TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,1)), "Ready")
+	 TNT1 A 0 A_TakeInventory("zGdrink", 1)
+    stop
+ Spawn:
+    COKB A -1
+    Stop
+  }
+}
+
+
+
+
+
+
+
+
+ACTOR zbandager : Weapon  						                                             // food eater
+{
+  Game Doom
+  Weapon.SelectionOrder 1004
+  Weapon.AmmoUse 0
+  Weapon.AmmoGive 0
+
+ Weapon.AmmoUse2 0
+ Weapon.AmmoGive2 0
+  +INVENTORY.UNDROPPABLE
+ Inventory.MaxAmount 100
+  Obituary "$OB_MPPISTOL"
+ // //+WEAPON.WIMPY_WEAPON
+  
+  Inventory.Pickupmessage "you got a bandage"
+   Tag "Bandaging arm"
+  Weapon.SlotNumber 9 
+  States
+  {
+  Ready:
+     SCBN A 1 A_WeaponReady
+    Loop
+	Ready2:
+    SCBN j 1 A_WeaponReady
+    Loop
+  Deselect:
+    SCBN A 1 A_Lower
+    Loop
+  Select:
+    SCBN A 1 A_Raise
+    Loop
+  Fire:
+      TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,3)), "Firing")
+	  goto Deselect
+  Firing:
+   SCBN A 10
+   SCBN B 5
+   SCBN C 15
+   SCBN D 10
+   SCBN E 5 A_TakeInventory("Banfoo", 1)
+   SCBN F 5  ACS_Execute(703,0,0,0,0)
+   SCBN G 5  
+   SCBN G 1 
+   SCBN G 25
+   SCBN H 10
+   SCBN I 5
+   SCBN J 40
+  	 TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,3)), "Ready")
+	 TNT1 A 0 A_TakeInventory("zbandager", 1)
+    stop
+     Goto Ready
+   AltFire:
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,3)), "Throwing")
+	goto Deselect
+  Throwing:
+	DRNc G 5 A_TakeInventory("Drnkfoo", 1)
+	DRNc H 12 A_SpawnItemEx ("bandpickup",  80, 0, 30, 0, 0, 0, 0)
+  	 TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,3)), "Ready")
+	TNT1 A 0 A_TakeInventory("zbandager", 10)
+	DRNc A 50 
+	 stop
+  Spawn:
+    CANB A -1
+    Stop
+  }
+}
+
+
+//bandpickup
+
+
+
+ACTOR zgiveBlood : Weapon  						                                             // food eater
+{
+  Game Doom
+  Weapon.SelectionOrder 1004
+  Weapon.AmmoUse 0
+  Weapon.AmmoGive 0
+  Weapon.AmmoType "Bloodfoo"
+   Weapon.AmmoType2 "Bloodfoo"
+ Weapon.AmmoUse2 1
+ Weapon.AmmoGive2 0
+  +INVENTORY.UNDROPPABLE
+ Inventory.MaxAmount 100
+  Obituary "$OB_MPPISTOL"
+  //+WEAPON.WIMPY_WEAPON
+  
+  Inventory.Pickupmessage "you got a blood bag arm"
+   Tag "Blood infusion arm"
+  Weapon.SlotNumber 9 
+  States
+  {
+  Ready:
+    BBAG Z 1 A_WeaponReady
+    Loop
+  Deselect:
+    BBAG Z 1 A_Lower
+    Loop
+  Select:
+    BBAG Z 1 A_Raise
+    Loop
+  Fire:
+   TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,20)), "Firing")
+   goto Deselect
+  Firing:
+   BBAG bc 10
+   BBAG d 2
+   BBAG e 10
+   BBAG f 1 A_TakeInventory("Bloodfoo", 1)
+   BBAG f 1 ACS_Execute(705,0,0,0,0)
+   BBAG fghijklmn 10
+ TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,20)), "Ready")
+	 TNT1 A 0 A_TakeInventory("zgiveBlood", 1)
+    stop
+		
+AltFire:
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,20)), "Throwing")
+	goto Deselect
+Throwing:
+   PUNG a 12 A_SpawnItemEx ("bloodpickup", 80, 0, 30, 0, 0, 0, 0)
+   TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,20)), "Ready")
+    stop
+  Spawn:
+    CANB A -1
+    Stop
+  }
+}
+
+
+ACTOR zusebranch : Weapon  						                                             // food eater
+{
+  Game Doom
+  Weapon.SelectionOrder 1003
+  Weapon.AmmoUse 0
+  Weapon.AmmoGive 0
+ Weapon.AmmoUse2 0
+ Weapon.AmmoGive2 0
+ Inventory.MaxAmount 100
+  Obituary "$OB_MPPISTOL"
+  //+WEAPON.WIMPY_WEAPON
+   +INVENTORY.UNDROPPABLE
+  Inventory.Pickupmessage "You got a fire making arm"
+   Tag "Wood for a fire"
+  Weapon.SlotNumber 9 
+  States
+  {
+  Ready:
+    BRAN A 1 A_WeaponReady
+    Loop
+  Deselect:
+    BRAN A 1 A_Lower
+    Loop
+  Select:
+    BRAN A 1 A_Raise
+    Loop
+ Fire:
+   TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,18)), "Firing")
+   goto Deselect
+  Firing:
+   //STEK A 3
+	BRAN A 10
+	BRAN b 2
+	BRAN c 10
+	BRAN de 5
+	BRAN f 5 
+	BRAN g 1 A_SpawnItemEx ("fire2", 80, 0, 30, 0, 0, 0, 0)
+	BRAN g 20 
+	BRAN h 5
+	BRAN i 20	
+	 TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,18)), "Ready")
+	 TNT1 A 0 A_TakeInventory("zusebranch", 1)
+    stop
+AltFire:
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,18)), "Throwing")
+	goto Deselect
+Throwing:
+   PUNG A 12 A_SpawnItemEx ("woodpickup", 80, 0, 30, 0, 0, 0, 0)
+   TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,18)), "Ready")
+    stop
+
+  Spawn:
+    CANB A -1
+    Stop
+  }
+}
+
+
+
+
+ACTOR ztakemorph : Weapon  						                                             // food eater
+{
+  Game Doom
+  Weapon.SelectionOrder 1003
+  Weapon.AmmoUse 0
+  Weapon.AmmoGive 0
+ Weapon.AmmoUse2 0
+ Weapon.AmmoGive2 0
+ Inventory.MaxAmount 100
+  Obituary "$OB_MPPISTOL"
+  //+WEAPON.WIMPY_WEAPON
+   +INVENTORY.UNDROPPABLE
+    Tag "Morpheine injector"
+  Inventory.Pickupmessage "You got a morpheine injecting arm"
+  Weapon.SlotNumber 9 
+  States
+  {
+  Ready:
+    inje a 1 A_WeaponReady
+    Loop
+  Deselect:
+    inje A 1 A_Lower
+    Loop
+  Select:
+    inje A 1 A_Raise
+    Loop
+  Fire:
+   TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,17)), "Firing")
+   goto Deselect
+  Firing:
+    inje ABC 5
+	inje D 5 
+	inje Ef 5
+	inje g 1 A_TakeInventory("Morphfoo", 1)
+	inje g 1 ACS_Execute(706,0,0,0,0)
+	inje g 48
+	inje hi 5
+	null a 10
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,17)), "Ready")
+    TNT1 A 0 A_TakeInventory("ztakemorph", 1)
+    stop
+  AltFire:
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,17)), "Throwing")
+	goto Deselect
+  Throwing:
+   PUNG A 12 A_SpawnItemEx ("morphpickup", 80, 0, 30, 0, 0, 0, 0)
+   TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,17)), "Ready")
+    stop
+
+  Spawn:
+    CANB A -1
+    Stop
+  }
+}
+
+
+ 
+
+ACTOR ZGantib : Weapon  						                                             // food eater
+{
+  Game Doom
+  Weapon.SelectionOrder 1003
+  Weapon.AmmoUse 0
+  Weapon.AmmoGive 0
+ Weapon.AmmoUse2 0
+ Weapon.AmmoGive2 0
+ Inventory.MaxAmount 100
+  Obituary "$OB_MPPISTOL"
+  //+WEAPON.WIMPY_WEAPON
+   +INVENTORY.UNDROPPABLE
+  Inventory.Pickupmessage "You got an antibioticing arm"
+   Tag "Antibiotic taking arm"
+  Weapon.SlotNumber 9 
+  States
+  {
+  Ready:
+    ANTI B 1 A_WeaponReady
+    Loop
+  Deselect:
+    ANTI B  1 A_Lower
+    Loop
+  Select:
+    ANTI B  1 A_Raise
+    Loop
+  Fire:
+   TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,16)), "Firing")
+   goto Deselect
+  Firing:
+   ANTy aBC 5
+   ANTy d 15
+   ANTy e 2
+   ANTy f 5
+   ANTy h 20
+   ANTy i 3 A_TakeInventory("antibfoo", 100)
+   ANTy i 3 A_PlaySound("eating", CHAN_WEAPON)
+   ANTy i 3 ACS_Execute(707,0,0,0,0)
+   ANTy iJ 10
+   ANTy j 1 A_ReFire
+   ANTy j 10
+   //ANTy k 5
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,16)), "Ready")
+    TNT1 A 0 A_TakeInventory("ZGantib", 1)
+    stop
+  AltFire:
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,16)), "Throwing")
+	goto Deselect
+  Throwing:
+   PUNG A 12 A_SpawnItemEx ("antibpickup", 80, 0, 30, 0, 0, 0, 0)
+   TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,16)), "Ready")
+    stoP	
+  Spawn:
+    CANB A -1
+    Stop
+  }
+}
+
+
+
+
+ACTOR zGheat : Weapon  						                                             // food eater
+{
+  Game Doom
+  Weapon.SelectionOrder 1003
+  Weapon.AmmoUse 0
+  Weapon.AmmoGive 0
+  Weapon.AmmoType "Heatfoo"
+   Weapon.AmmoType2 "Heatfoo"
+ Weapon.AmmoUse2 0
+ Weapon.AmmoGive2 0
+ Inventory.MaxAmount 100
+  Obituary "$OB_MPPISTOL"
+  //+WEAPON.WIMPY_WEAPON
+   +INVENTORY.UNDROPPABLE
+    Tag "Heatpad using arm"
+  Inventory.Pickupmessage "You got a heatbag giving arm"
+  Weapon.SlotNumber 9 
+  States
+  {
+  Ready:
+   GHET A 1 A_WeaponReady
+    Loop
+  Deselect:
+    GHET A  1 A_Lower
+    Loop
+  Select:
+    GHET A  1 A_Raise
+    Loop
+  Fire:	
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,15)), "FirING")
+    TNT1 A 0 A_TakeInventory("Gheat", 1)
+    stop
+  FirING:	
+    GHET Abcdef 5
+    GHET g 1 A_TakeInventory("Heatfoo", 1)
+    GHET g 1 ACS_Execute(708,0,0,0,0)
+    GHET g 20
+    GHET hij 8
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,15)), "Ready")
+    TNT1 A 0 A_TakeInventory("Gheat", 1)
+    stop
+  AltFire:
+	FOOF A 1 A_TakeInventory("Heatfoo", 1)
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,15)), "Throwing")
+	goto Deselect
+  Throwing:
+	PUNG A 12 A_SpawnItemEx ("heatpickup", 80, 0, 30, 0, 0, 0, 0)
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,15)), "Ready")
+   stop	
+  Spawn:
+    CANB A -1
+    Stop
+  }
+}
+
+ACTOR zrateat : Weapon  						                                             // food eater
+{
+  Game Doom
+  Weapon.SelectionOrder 1003
+  Weapon.AmmoUse 0
+  Weapon.AmmoGive 0
+
+ Weapon.AmmoUse2 0
+ Weapon.AmmoGive2 0
+ Inventory.MaxAmount 100
+  Obituary "$OB_MPPISTOL"
+  //+WEAPON.WIMPY_WEAPON
+   +INVENTORY.UNDROPPABLE
+  Inventory.Pickupmessage "You got a rat eating arm"
+   Tag "Cooked rat"
+  Weapon.SlotNumber 9 
+  States
+  {
+  Ready:
+   rate A 1 A_WeaponReady
+    Loop
+  Deselect:
+    rate A  1 A_Lower
+    Loop
+  Select:
+    rate A  1 A_Raise
+    Loop
+  Fire:
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,24)), "FirING")
+    TNT1 A 0 A_TakeInventory("zrateat", 1)
+    stop
+  FirING:
+   rate A 5
+   rate b 5
+   rate c 5
+   rate d 5
+   rate d 1 A_TakeInventory("cookedratfoo", 1)
+   rate d 1 ACS_Execute(852,1,50,20,0)
+   rate d 1 A_PlaySound("eating", CHAN_WEAPON)
+   rate d 20  
+   TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,24)), "Ready")
+   TNT1 A 0 A_TakeInventory("Gheat", 1)
+    stop
+  AltFire:
+	FOOF A 1 A_TakeInventory("Heatfoo", 1)
+    TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(867,24)), "Throwing")
+	goto Deselect
+ Throwing:
+	PUNG A 12 A_SpawnItemEx ("cookedratpickup", 80, 0, 30, 0, 0, 0, 0)
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(868,24)), "Ready")
+   stop	
+  Spawn:
+    CANB A -1
+    Stop
+  }
+}
+
+
+
+
+

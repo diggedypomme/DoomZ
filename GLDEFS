@@ -1,0 +1,141 @@
+flickerlight2 campfire
+{
+	COLOR 1.0 0.7 0.1
+	Size 32
+	SecondarySize 48
+	Interval 0.01
+}
+
+
+pointlight headlgt
+{
+	COLOR 1.0 1.0 1.0
+	Size 60
+	offset 0 50 0
+}
+
+
+pointlight gunfireeffect
+{
+	COLOR 1.0 0.7 0.1
+	Size 60
+	offset 0 50 0
+}
+
+
+pointlight bulletsplash
+{
+	COLOR 1.0 1.0 1.0
+	Size 5
+	offset 0 0 0
+}
+
+flickerlight2 petrolburnlight
+{
+	COLOR 1.0 0.7 0.1
+	Size 100
+	SecondarySize 150
+	Interval 0.01
+}
+
+Object fire2
+{
+	Frame FIRE
+	{
+		light campfire
+	}
+}
+
+Object petrolfire
+{
+	Frame PFIR
+	{
+		light petrolburnlight
+	}
+}
+
+
+Object gunflash
+{
+	Frame NULL
+	{
+		light gunfireeffect
+	}
+}
+
+Object headlight
+{
+	Frame NULL
+	{
+		light headlgt
+	}
+}
+
+
+
+Object BulletPuff2
+{
+Frame PUFFA 
+	{
+		light bulletsplash
+	}
+	
+	}
+
+
+
+//Object flsh2puff
+//{
+	//Frame PUFF 
+	//{
+	//	light headlgt
+	//}
+	
+//	Frame PUFFC 
+//	{
+//		light headlgt
+//	}
+	
+//	Frame PUFFD 
+//	{
+//		light headlgt
+//	}
+	
+//	Frame NULL 
+//	{
+//		light headlgt
+//	}
+//}
+
+
+//removed 14.04
+//Skybox testsky 
+//{
+ 
+//  12f
+ // 12b
+  //12l
+//  12r
+ // 12u
+ // 12d
+//}
+
+
+//Skybox testsky2
+//{
+ 
+ // 12f
+  //12b
+ // 12l
+  //12r
+ // NS612UC // up
+  //12d  // down
+//}
+
+
+//  u
+ // d
+ // f
+ // b
+ // l
+  //r

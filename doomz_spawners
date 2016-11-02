@@ -1,0 +1,191 @@
+
+
+actor ZombiespawnerDoomz : RandomSpawner 1113
+
+{
+DropItem "ZombieClone", 100, 5
+  //  DropItem "ZombieClones", 175, 3
+//DropItem "ZombieClones", 175, 3
+DropItem "ZombieClones", 175, 3
+}   
+
+actor dog1spawn : RandomSpawner 
+{DropItem "doomdog", 70, 5}   
+
+actor dog2spawn : RandomSpawner 
+{DropItem "doomdog", 150, 5}  
+
+actor dog3spawn : RandomSpawner 
+{DropItem "doomdog", 200, 5}  
+
+actor FoodwaterSpwn : RandomSpawner 1112
+
+{
+DropItem "Canpickup", 150, 6
+DropItem "tinpickup", 200, 6
+DropItem "bandpickup", 100, 5
+DropItem "Smallbagpick", 150, 3
+DropItem "Mbagpick2", 75, 1
+DropItem "zcanteenpickup", 150, 2
+//DropItem "Largbagpick3", 20, 1
+DropItem "ir", 20, 1	
+DropItem "woodpickup", 100, 1	
+DropItem "Binocs", 150, 1	
+//DropItem "book1foo", 50, 1
+DropItem "FlashlightCentered", 150, 1	
+}   
+
+actor helecopteritem : RandomSpawner 
+
+{
+DropItem "Mbagpick2", 255, 2
+ DropItem "zcanteenpickup", 255, 1
+DropItem "ir", 255, 2	
+DropItem "antibpickup", 255, 1
+	DropItem "morphpickup", 255,2
+	DropItem "bloodpickup", 255, 3
+}   
+
+actor treeorno : RandomSpawner  // does it spawn a new tree or just a stump
+
+{
+DropItem "treestump", 255, 1
+ DropItem "dailytree", 255, 2
+}   
+
+
+actor carlootspawner : RandomSpawner 
+
+{
+DropItem "wheel", 255, 2
+ DropItem "petrolcan", 255, 3
+ DropItem "battery", 255, 1
+}   
+
+
+actor garagespawner : RandomSpawner 
+
+{
+DropItem "wheel", 170, 2
+ DropItem "petrolcan", 170, 3
+ DropItem "battery", 200, 1
+}   
+																						//enemies
+
+
+
+actor CowSpwn : RandomSpawner 1117
+
+{
+    DropItem "newcow", 150, 3
+ }   
+
+
+actor Hospawn : RandomSpawner 
+
+{
+    DropItem "antibpickup", 255, 3
+	DropItem "morphpickup", 255, 3
+	DropItem "bloodpickup", 255, 3
+ }   
+
+
+
+actor Weaponspawner : RandomSpawner 1199
+
+{
+
+//DropItem "Base", 175, 3
+DropItem "Axe", 175, 3
+DropItem "Knife", 175, 3
+DropItem "Machete", 175, 3
+DropItem "Cross", 175, 3
+//DropItem "M1911", 175, 3
+//DropItem "Longhorn", 175, 3
+DropItem "Magnum", 175, 3
+DropItem "Makarov", 175, 3
+DropItem "Snub", 175, 3
+//DropItem "Amp", 175, 3
+DropItem "Akm", 175, 3
+DropItem "Mfour", 175, 3
+DropItem "Mosin", 175, 3
+//DropItem "Sks", 175, 3
+DropItem "Mp5", 175, 1
+//DropItem "Izh", 175, 3
+//DropItem "Sawn", 175, 3
+
+}   
+
+actor Ammospawner : RandomSpawner 1114
+
+{
+DropItem "bolts", 100, 5
+DropItem "9mmAmmo", 175, 3
+//DropItem "twelvammo", 175, 3
+DropItem "fortyfive", 175, 3
+DropItem "thrtyate", 175, 3
+DropItem "thrfiveseven", 175, 3
+DropItem "fiftyone", 175, 3
+DropItem "thirtynine", 175, 3
+DropItem "twentytwo", 175, 3
+DropItem "fivefivesix", 175, 3
+}   
+
+actor neweapspawn : RandomSpawner 1737
+
+{
+DropItem "p_crossbow", 255, 1
+DropItem "p_M1911", 255, 1
+DropItem "p_Magnum", 255, 1
+DropItem "p_Makarov", 255, 1
+DropItem "p_Derringer", 255, 1
+DropItem "p_Longhorn", 255, 1
+DropItem "p_Luger", 255, 1
+DropItem "p_Glock", 255, 1
+DropItem "p_mp5", 255, 1
+DropItem "p_ump45", 255, 1
+DropItem "p_IZH", 255, 1
+DropItem "p_sawnizh", 255, 1
+DropItem "p_mp133", 255, 1
+//DropItem "p_pitchfork", 255, 1
+DropItem "p_machete", 255, 1
+//DropItem "p_book", 255, 1
+DropItem "p_baseballbat", 255, 1
+DropItem "p_Axe", 255, 1
+DropItem "p_knife", 255, 1
+DropItem "p_repeater", 255, 1
+DropItem "p_sks", 255, 1
+DropItem "p_cr527", 255, 1
+DropItem "p_doublerifle", 255, 1
+DropItem "p_winchester", 255, 1
+DropItem "p_Akm", 255, 1
+DropItem "p_ak101", 255, 1
+DropItem "p_m4a1", 255, 1
+DropItem "p_sawnmosin", 255, 1
+DropItem "p_Mosin", 255, 1
+DropItem "p_steyr", 255, 1
+DropItem "p_amphibia", 255, 1
+}   
+
+actor newammospawn : RandomSpawner 1738
+
+{
+DropItem "bolt_new"
+DropItem "point22"
+DropItem "point380"
+DropItem "point9"
+DropItem "point45acp"
+DropItem "point357"
+DropItem "5point56"
+DropItem "7point62x39"
+DropItem "point308"
+DropItem "7point62x54"
+DropItem "12gauge"
+}
+
+actor treeorno : RandomSpawner  // does it spawn a new tree or just a stump
+
+{
+DropItem "treestump", 255, 1
+ DropItem "dailytree", 255, 2
+}   

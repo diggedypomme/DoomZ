@@ -1,0 +1,32 @@
+
+DrawSwitchableImage Sbar1 == 1, "nullimage", "CANBA0",  212+center,  63+center, center, 20,20;// tin
+DrawSwitchableImage Sbar1 == 2, "nullimage", "COKBA0",  212+center,  63+center, center, 20,20;// can
+DrawSwitchableImage Sbar1 == 3, "nullimage", "BANDA0",  212+center,  63+center, center, 20,20;// bandage
+DrawSwitchableImage Sbar1 == 4, "nullimage", "SSHLA0",  212+center,  63+center, center, 20,20; // shotgun shells
+DrawSwitchableImage Sbar1 == 5, "nullimage", "BOLBA0",  212+center,  63+center, center, 20,20;// twelvammo
+DrawSwitchableImage Sbar1 == 6, "nullimage", "CLIPA0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 7, "nullimage", "NTEMA0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 8, "nullimage", "NTENA0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 9, "nullimage", "CLIPA0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 10, "nullimage", "NTEPA0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 11, "nullimage", "NTEQA0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 12, "nullimage", "NTERA0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 13, "nullimage", "NTELA0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 14, "nullimage", "STECB0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 15, "nullimage", "HETPA0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 16, "nullimage", "ANTIU0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 17, "nullimage", "MORPI0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 18, "nullimage", "LOGSA0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 19, "nullimage", "STECA0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 20, "nullimage", "BBAGA0",  212+center,  63+center, center, 20,20;//
+DrawSwitchableImage Sbar1 == 21, "nullimage", "CANPB0",  212+center,  63+center, center, 20,20; //empty canteen
+DrawSwitchableImage Sbar1 == 22, "nullimage", "CANPA0",  212+center,  63+center, center, 20,20; //canteen
+DrawSwitchableImage Sbar1 == 23, "nullimage", "BOOKA0",  212+center,  63+center, center, 20,20;// book
+DrawSwitchableImage Sbar1 == 24, "nullimage", "RTZZA0",  212+center,  63+center, center, 20,20;// dead rat
+DrawSwitchableImage Sbar1 == 25, "nullimage", "RATXA0",  212+center,  63+center, center, 20,20;// cooked rat
+DrawSwitchableImage Sbar1 == 26, "nullimage", "wheef0",  212+center,  63+center, center, 20,20;//wheel
+DrawSwitchableImage Sbar1 == 27, "nullimage", "battery",  212+center,  63+center, center, 20,20;//battery
+DrawSwitchableImage Sbar1 == 28, "nullimage", "PETRa0",  212+center,  63+center, center, 20,20;//petrol can
+DrawSwitchableImage Sbar1 == 29, "nullimage", "PETRd0",  212+center,  63+center, center, 20,20;//empty petrol can
+DrawSwitchableImage Sbar1 == 30, "nullimage", "DBHAA0",  212+center,  63+center, center, 20,20;//arm
+DrawSwitchableImage Sbar1 == 31, "nullimage", "DBHAC0",  212+center,  63+center, center, 20,20;//cooked arm 

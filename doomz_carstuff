@@ -1,0 +1,265 @@
+
+ACTOR dice 1873
+{
+	height 0.5
+	radius 1
+	+SOLID
+	+nogravity
+	scale 0.2
+	states
+	{
+	Spawn:
+		dice A -1
+		goto spawn
+		Rock:
+		dice ABC 5
+		goto rock
+		Rock2:
+		dice ABC 3
+		goto rock2
+		rocks:
+		dice A -1
+		goto rock2
+	}
+}
+
+
+ACTOR petrolfoo : Ammo 	 								                               	//book 
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 100
+ 
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 100 
+ Inventory.Icon "CANBA0" 
+ scale 0.07
+ Inventory.PickupMessage "You picked up a Can of petrol"
+ States
+ {
+ Spawn:
+  petr A -1
+  Stop
+ 
+ }
+}
+
+
+
+
+
+ACTOR teleportchecker   //
+{
+//BURNFIRE
+  Game Doom
+  SpawnID 149
+  Radius 16
+  Height 32
+  -shootable
+   +USESPECIAL
+   //  +ROCKETTRAIL
+   Activation THINGSPEC_Switch
+  ProjectilePassHeight -16
+  +SOLID
+  States
+  {
+  Spawn:
+ FIRE BCD 4 Bright
+   FIRE BCD 4 Bright 
+    stop
+   
+  
+   
+  }
+}
+
+ACTOR 905ing : Ammo                    //        which menu page youre on                                              
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 1
+ Ammo.BackpackAmount 1
+ Ammo.BackpackMaxAmount 1 
+ Inventory.Icon "CLIPA0" 
+ Inventory.PickupMessage "Picked up some bolts."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+
+
+
+
+
+ACTOR headlight replaces ExplosiveBarrel
+{
+//BURNFIRE
+  Game Doom
+  SpawnID 149
+  Radius 30
+  Height 32
+  -shootable
+   +USESPECIAL
+   //  +ROCKETTRAIL
+   Activation THINGSPEC_Switch
+  ProjectilePassHeight -16
+  -SOLID
+  States
+  {
+  Spawn:
+ NULL B 2 Bright	
+   
+      stop
+   
+  Ready:
+   
+
+   stop
+   
+  }
+}
+
+
+
+
+
+
+
+ACTOR carxplod: rocket
+{
+  Game Doom
+  SpawnID 127
+  Radius 2
+  Height 8
+  Speed 80
+  Damage 1
+  Scale 3.0
+  Projectile
+  +RANDOMIZE
+  +DEHEXPLOSION
+  -ROCKETTRAIL
+  -solid
+  SeeSound "weapons/rocklx"
+  DeathSound "weapons/rocklx"
+  Obituary "$OB_MPROCKET" // "%o rode %k's rocket."
+  States
+  {
+  Spawn:
+    null A 2 Bright
+    goto death 
+	
+  Death:
+    MISL B 8 Bright A_Explode(150 ,800 ,0, true)
+    MISL C 6 Bright
+    MISL D 4 Bright
+    Stop
+  }
+}
+
+
+
+
+
+
+
+ACTOR carsky : SkyViewpoint replaces SkyViewpoint
+{
+  +NOSECTOR
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +DONTSPLASH
+    Height 1
+}
+
+
+
+
+
+	ACTOR drivecar 1871
+{
+  Game Doom
+
+  Health 200
+  Radius 32
+  Height 30
+  Mass 50
+  Speed 15
+  Damage 3
+  PainChance 0
+  
+  //Monster
+  
+ + SHOOTABLE
++COUNTKILL
++SOLID
++CANPUSHWALLS
++CANUSEWALLS
++ACTIVATEMCROSS
++CANPASS
++ISMONSTER
++ACTIVATEIMPACT
+
+ // +SLIDESONWALLS
+  
+  +solid
+  -FLOAT
+  -NOGRAVITY
+  +DONTFALL
+  +NOICEDEATH
+  +USESPECIAL
+  
+ bloodtype bulletpuff
+	 Activation THINGSPEC_NoDeathSpecial
+  //AttackSound "skull/melee"
+ // PainSound "skull/pain"
+  DeathSound "skull/death"
+  ActiveSound "skull/active"
+  //RenderStyle SoulTrans
+  Obituary "The car was destroyed"
+  States
+  {
+  Spawn:
+  
+  RCAR A 1
+   NULL BCD 1 	Thing_SetSpecial(0, 80, 805, 0, 0)
+		//RCAR A -1
+		
+	 RCAR A -1
+	//RCAR A 10 A_CustomMissile ("carcollision"	)
+
+  
+  light:
+    //UHEL A 6 Bright A_Chase
+		RCAR A 1 bright A_CustomBulletAttack(3, 0,2,0, "FlashLBeam", 0, CBAF_AIMFACING)
+	//	RCAR A 10 A_CustomMissile("rocket",48,0)
+    Loop
+	
+  // Damcar:
+    //UHEL A 6 Bright A_Chase
+	//damc A -1
+   // Loop
+ 
+ 
+ //Pain:
+   //RCAR A 10 bright A_CustomBulletAttack(0, 0,1,0, "FlashLBeam", 0, CBAF_AIMFACING)
+  // RCAR A 1
+   // Goto see
+  Death:
+
+    BRCA A 10 //A_PlaySound("explod", CHAN_WEAPON)//explod
+	// remove self and replace with car
+	BRCA B 3 ACS_Execute(853,1,1,20,0)
+	
+	
+	//run script 853
+	BRCA B 1  A_SpawnItemEx ("Thunderbr",0, 0, 0, 0, 0, 0, 0, 0 , 0, 0) //the last 0 is for tid i think
+	BRCA B 1  A_SpawnItemEx ("lootcar",0, 0, 0, 0, 0, 0, 0, 0 , 0, 0) //the last 0 is for tid i think
+	stop
+  }
+}
+
+

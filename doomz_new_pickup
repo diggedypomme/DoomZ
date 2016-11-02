@@ -1,0 +1,767 @@
+Actor p_knife : CustomInventory 5685
+{
+ Inventory.PickupMessage "You picked up a knife"
+    Tag "knife"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		KNFE A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,1)), "vanish")
+		TNT1 A 0 A_GiveInventory("knife", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+																                               // mele
+Actor p_axe : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up an axe"
+    Tag "axe"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 ZXXD  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,2)), "vanish")
+		TNT1 A 0 A_GiveInventory("Axe", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_book : CustomInventory  //broken. crossbow image
+{
+ Inventory.PickupMessage "You picked up a book"
+    Tag "book"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		KNFE A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,3)), "vanish")
+		TNT1 A 0 A_GiveInventory("book", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_baseball : CustomInventory //broken
+{
+ Inventory.PickupMessage "You picked up a baseball bat"
+    Tag "baseball bat"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 BACT  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,4)), "vanish")
+		TNT1 A 0 A_GiveInventory("baseball", 1)
+   vanish:
+		MHTE A 0 
+		stop
+  }
+}
+																                               // mele
+Actor p_machete : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a machete"
+    Tag "machete"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 KNFE  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,5)), "vanish")
+		TNT1 A 0 A_GiveInventory("machete", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_pitchfork : CustomInventory //broken
+{
+ Inventory.PickupMessage "You picked up a pitchfork"
+    Tag "pitchfork"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		KNFE A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,6)), "vanish")
+		TNT1 A 0 A_GiveInventory("pitchfork", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+																                               // mele
+Actor p_crossbow : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a crossbow"
+    Tag "crossbow"
+  Inventory.PickupSound "misc/p_pkup"
+scale 0.8
+  States
+  {
+  Spawn:
+		 XBOW  z -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,7)), "vanish")
+		TNT1 A 0 A_GiveInventory("crossbow", 1)
+		//fail
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_bow : CustomInventory //broken
+{
+ Inventory.PickupMessage "You picked up a bow"
+    Tag "bow"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		KNFE A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,8)), "vanish")
+		TNT1 A 0 A_GiveInventory("bow", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_Amphibia : CustomInventory //broken - has a full clip from the start
+{
+ Inventory.PickupMessage "You picked up an Amphibia silenced pistol"
+    Tag "Amphibia (silenced)"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		PIST A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,9)), "vanish")
+		TNT1 A 0 A_GiveInventory("Amphibia", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+																                               // mele
+Actor p_makarov : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a makarov pistol"
+    Tag "makarov"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 PIST  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,10)), "vanish")
+		TNT1 A 0 A_GiveInventory("makarov", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+Actor p_Luger : CustomInventory 5685
+{
+ Inventory.PickupMessage "You picked up a Luger"
+    Tag "Luger pistol"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		PIST A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,11)), "vanish")
+		TNT1 A 0 A_GiveInventory("Luger", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+																                               // mele
+Actor p_Glock : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a Glock"
+ Tag "Glock"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		 PIST  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,12)), "vanish")
+		TNT1 A 0 A_GiveInventory("Glock", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_Derringer : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a Derringer"
+    Tag "Derringer"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		PIST A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,13)), "vanish")
+		TNT1 A 0 A_GiveInventory("Derringer", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+																                               // mele
+Actor p_m1911 : CustomInventory //broken - starts with a clip
+{
+ Inventory.PickupMessage "You picked up an m1911 pistol"
+    Tag "m1911"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 PIST  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,14)), "vanish")
+		TNT1 A 0 A_GiveInventory("m1911", 1)
+		//fail
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_magnum : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a knife"
+    Tag "Heatpack"
+	Inventory.PickupSound "misc/p_pkup"
+	scale 0.5
+  States
+  {
+  Spawn:
+		HGUN c -1	
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,15)), "vanish")
+		TNT1 A 0 A_GiveInventory("magnum", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+																                               // mele
+Actor p_longhorn : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a longhorn"
+    Tag "longhorn"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 HGUN  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,16)), "vanish")
+		TNT1 A 0 A_GiveInventory("longhorn", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_Flaregun : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a Flaregun"
+    Tag "Flaregun"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		KNFE A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,17)), "vanish")
+		TNT1 A 0 A_GiveInventory("Flaregun", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+																                               // mele
+Actor p_mp5k : CustomInventory //broken - pickup script does wortk
+{
+ Inventory.PickupMessage "You picked up an mp5-k"
+    Tag "mp5k"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 MPFI  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,18)), "vanish")
+		TNT1 A 0 A_GiveInventory("mp5", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_ump45 : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a ump-45"
+    Tag "Heatpack"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		MPFI A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,19)), "vanish")
+		TNT1 A 0 A_GiveInventory("ump45", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+																                               // mele
+Actor p_repeater : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a repeater rifle"
+    Tag "repeater rifle"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 SNPP  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,20)), "vanish")
+		TNT1 A 0 A_GiveInventory("repeaterrifle", 1)
+		//fail
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_sks: CustomInventory 5685
+{
+ Inventory.PickupMessage "You picked up an sks"
+    Tag "sks"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		SNPP A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,21)), "vanish")
+		TNT1 A 0 A_GiveInventory("sks", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+																                               // mele
+Actor p_doublerifle : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a blaze double rifle"
+    Tag "blaze double rifle"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 SNPP  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,22)), "vanish")
+		TNT1 A 0 A_GiveInventory("blaze", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_winchester : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a winchester model  70"
+    Tag "winchester model  70"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		SNPP A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,23)), "vanish")
+		TNT1 A 0 A_GiveInventory("winchester", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+																                               // mele
+Actor p_mosin : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a mosin 9130"
+    Tag "mosin 9130"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 SNPP  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,24)), "vanish")
+		TNT1 A 0 A_GiveInventory("mosin", 1)
+		//fail
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_sawnmosin : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a sawn off mosin"
+    Tag "sawn off mosin"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		SNPP A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,25)), "vanish")
+		TNT1 A 0 A_GiveInventory("sawnmosin", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+																                               // mele
+Actor p_ak101 : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up an AK-101"
+    Tag "AK-101"
+  Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		 AK4I  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,26)), "vanish")
+		TNT1 A 0 A_GiveInventory("ak101", 1)
+		//fail
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_m4a1 : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up an M4-A1"
+    Tag "M4-A1"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		AK4I A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,27)), "vanish")
+		TNT1 A 0 A_GiveInventory("m4a1", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+																                               // mele
+Actor p_steyr : CustomInventory //broken - missing texture
+{
+ Inventory.PickupMessage "You picked up a steyr aug"
+    Tag "steyr aug "
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 AK4I  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,28)), "vanish")
+		TNT1 A 0 A_GiveInventory("aug2", 1)
+		//fail
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_akm : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up an AKM"
+    Tag "Heatpack"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		AK4I A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,29)), "vanish")
+		TNT1 A 0 A_GiveInventory("akm", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+																                               // mele
+Actor p_cr527 : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a cr527 carbine"
+    Tag "cr527 carbine"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 SNPP  A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,30)), "vanish")
+		TNT1 A 0 A_GiveInventory("cr527", 1)
+		//fail
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_izh : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up an izh"
+    Tag "izh"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 SHTG   A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,31)), "vanish")
+		TNT1 A 0 A_GiveInventory("izh", 1)
+		//fail
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_sawnizh : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a sawn off izh"
+    Tag "sawn off izh"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 SHTG   A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,32)), "vanish")
+		TNT1 A 0 A_GiveInventory("sawnizh", 1)
+		//fail
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor p_mp133 : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up an mp-133"
+    Tag "mp-133"
+  Inventory.PickupSound "misc/p_pkup"
+
+  States
+  {
+  Spawn:
+		 SHTG   A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(869,33)), "vanish")
+		TNT1 A 0 A_GiveInventory("mp133", 1)
+		//fail
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+
+Actor bag1 : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a knife"
+    Tag "eight"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		KNFE A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(873,8)), "vanish")
+		TNT1 A 0 A_GiveInventory("meatfoo", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+Actor bag2 : CustomInventory 
+{
+ Inventory.PickupMessage "You picked up a knife"
+    Tag "twelve"
+	Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+		KNFE A -1
+		Stop
+   Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(873,12)), "vanish")
+		TNT1 A 0 A_GiveInventory("meatfoo", 1)
+   vanish:
+		TNT1 A 0 
+		stop
+  }
+}
+
+
+Actor bag3 : CustomInventory 
+{
+ Inventory.PickupMessage "Picked up an empty can of petrol"
+    Tag "empty petrol can"
+  Inventory.PickupSound "misc/p_pkup"
+ scale 1.5
+  States
+  {
+  Spawn:
+		casc A -1
+		Stop
+   vanish:
+		TNT1 A 0 A_GiveInventory ("Heatfoo")
+		stop
+  Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(873,3)), "vanish")
+		fail
+  }
+}
+
+
+Actor bag4 : CustomInventory 
+{
+ Inventory.PickupMessage "Picked up an empty can of petrol"
+    Tag "empty d can"
+  Inventory.PickupSound "misc/p_pkup"
+ scale 1.5
+  States
+  {
+  Spawn:
+		casc A -1
+		Stop
+   vanish:
+		TNT1 A 0 A_GiveInventory ("Heatfoo")
+		stop
+  Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(873,8)), "vanish")
+		fail
+  }
+}
+
+
+Actor bag5 : CustomInventory 
+{
+ Inventory.PickupMessage "Picked up an empty can of petrol"
+    Tag "empty f can"
+  Inventory.PickupSound "misc/p_pkup"
+ scale 1.5
+  States
+  {
+  Spawn:
+		casc A -1
+		Stop
+   vanish:
+		TNT1 A 0 A_GiveInventory ("Heatfoo")
+		stop
+  Pickup:
+		TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(873,12)), "vanish")
+		fail
+  }
+}

@@ -1,0 +1,57 @@
+//  [PLEASE UPDATE LINE NUMBERS AFTER ADDING DEFINITIONS]
+//  Player's Handler: Line 15
+//  Weapons & Ammo: Line 40
+//  Powerups, pickups, keys: Line 264
+//  Vegetation: Line 329
+//  Exploding Items: Line 443
+//  Computers: Line 559
+//  Animated Monitor: Line 679
+//  Office/Toilet Items, Beds: Line 816
+//  Decorative Items (equipment, pipes, etc.): Line 1140
+//	Vortigaunt charge effect: Line 1876
+//	Vortigaunt projectile: Line 1932
+//	Zen life forms: Line 2014
+//  Barney, Otis, Scientists, Administrator: Line 2136
+
+///////////////////////
+//  Player's Handler //
+///////////////////////
+
+
+Model toilet1
+{
+   Path "models"
+   Model 0 "toilet1.md3"
+   Skin 0 "toilet1.png"
+   Scale 50.0 50.0 50.0
+   FrameIndex POSS A 0 0
+}
+
+Model roof
+{
+   Path "models"
+   Model 0 "roof.md2"
+   Skin 0 "roof.pcx"
+   Scale 40.0 70.0 50.0
+   FrameIndex POSS A 0 0
+   ZOffset -50.0
+}
+
+Model roof2
+{
+   Path "models"
+   Model 0 "roof.md2"
+   Skin 0 "roof.pcx"
+   Scale 100.0 20.0 40.0
+   FrameIndex POSS A 0 0
+}
+
+Model generator2
+{ 
+   Path "models" 
+   Model 0 "generator2.md2" 
+   Skin 0 "generator2.md2"
+   Scale 1.0 1.0 1.0
+   
+   FrameIndex POSS A 0 0
+}

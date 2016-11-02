@@ -1,0 +1,274 @@
+/*
+New ammo 
+-bolt_new
+-point22
+-point380
+-point9
+-point45acp
+-point357
+-5point56
+-7point62x39
+-point308
+-7point62x54
+-12gauge
+*/
+
+
+//For this section, just have an image of one bullet on its own, then use inheritance to have boxes
+
+///////////////////////////////////////////////////////////
+ACTOR tester : bolts                                                                            //bolts
+{
+ Inventory.maxAmount 0 // You'll get half this if a monster drops it.
+ }	
+ 
+ACTOR Fire_bolt // this is the projectile rather than the ammo type
+{
+  Game Doom
+  SpawnID 128
+  Radius 1
+  Height 8
+  Speed 50
+  Damage 20
+  Projectile
+  -ACTIVATEIMPACT 
+  -ACTIVATEPCROSS
+  +THRUGHOST
+  +DONTREFLECT
+  +NOEXTREMEDEATH
+  SeeSound "weapons/sshoto"
+  DeathSound "weapons/sshoto"
+  Obituary "$OB_MPROCKET" // didnt work "%o was impaled by %k's bolt."
+   Tag "Bolt"
+  States
+  {
+  Spawn:
+	XBLT A -1
+  Death:
+	XBLT A 25 // Bright  - why was this set to bright?
+	XBLT A 12 A_SpawnItemEx ("bolt_new")
+    Stop
+  }
+}			
+	
+	///////////////////////////////////////////////////////////		   
+
+ACTOR bolt_new : CustomInventory                                                                            //bolts
+{
+ Inventory.Icon "CLIPA0" // needs changing
+ Inventory.PickupMessage "Picked up some bolts."
+  SpawnID 195 // needs changing?
+ States
+ {
+ Spawn:
+	BOLB A -1
+	Stop
+ vanish:
+    TNT1 A 0 A_GiveInventory ("tester")  //why the hell is this necessary. it clones them otherwise
+	stop
+ Pickup:
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,32)), "vanish")
+	fail	
+ }
+}
+
+ACTOR point22 : CustomInventory                                                                      //.22
+{
+ Inventory.Icon "CLIPA0" // This needs updating
+ Inventory.PickupMessage "Picked up some .22 ammo used by the Amphibia S"
+Scale 0.25
+	SpawnID 196 // should this be changed?
+ States
+ {
+ Spawn:
+	wptt A -1 // sprite needs changing
+	Stop
+ vanish:
+    TNT1 A 0 A_GiveInventory ("tester")  //why the hell is this necessary. it clones them otherwise
+	stop
+ Pickup:
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,33)), "vanish")
+	fail		
+ }
+}
+
+
+ACTOR point380 : CustomInventory  3711                                                                            //.380
+{
+ Inventory.Icon "CLIPA0" // needs changing
+ Inventory.PickupMessage "Picked up some .380 ammo - for the makarov and ? "
+  Scale 0.25
+ States
+ {
+ Spawn:
+	wtoe A -1
+	Stop
+ vanish:
+    TNT1 A 0 A_GiveInventory ("tester")  //why the hell is this necessary. it clones them otherwise
+	stop
+ Pickup:
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,34)), "vanish")
+	fail	
+ }
+}
+
+
+ACTOR point9 : CustomInventory                                                                              //.380
+{
+ Inventory.Icon "CLIPA0" // needs changing
+ Inventory.PickupMessage "Picked up some 9mm ammo - for the Glock and MP5 "
+  Scale 0.25
+ States
+ {
+ Spawn:
+	wnmm A -1
+	Stop
+ vanish:
+    TNT1 A 0 A_GiveInventory ("tester")  //why the hell is this necessary. it clones them otherwise
+	stop
+ Pickup:
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,35)), "vanish")
+	fail	
+ }
+}
+
+
+ACTOR point45acp : CustomInventory                                                                              //.45
+{
+ Inventory.Icon "CLIPA0" // needs changing
+ Inventory.PickupMessage "Picked up some .45 ammo - for the Derringer, the 1911 and the UMP"
+Scale 0.25
+ States
+ {
+ Spawn:
+	wpff A -1  // needs changing
+	Stop
+  vanish:
+    TNT1 A 0 A_GiveInventory ("tester")  //why the hell is this necessary. it clones them otherwise
+	stop
+ Pickup:
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,36)), "vanish")
+	fail		
+ }
+}
+
+
+ACTOR point357 : CustomInventory                                                                              //.357
+{
+ Inventory.Icon "CLIPA0" // needs changing
+ Inventory.PickupMessage "Picked up some .357 ammo - for the magnum and the repeat rifle"
+  Scale 0.25
+ States
+ {
+ Spawn:
+	wtfs A -1  // needs changing
+	Stop
+  vanish:
+    TNT1 A 0 A_GiveInventory ("tester")  //why the hell is this necessary. it clones them otherwise
+	stop
+ Pickup:
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,37)), "vanish")
+	fail		
+ }
+}
+ 
+
+ACTOR 5point56 : CustomInventory                                                                              //5.56 
+{
+ Inventory.Icon "CLIPA0" // needs changing
+ Inventory.PickupMessage "Picked up some 5.56 ammo - for the AK101, the M4A1 and the Steyr"
+  Scale 0.25
+ States
+ {
+ Spawn:
+	wffs A -1  // needs changing
+	Stop
+  vanish:
+    TNT1 A 0 A_GiveInventory ("tester")  //why the hell is this necessary. it clones them otherwise
+	stop
+ Pickup:
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,38)), "vanish")
+	fail		
+ }
+}
+
+
+ACTOR 7point62x39 : CustomInventory                                                                              //7.62x39
+{
+
+ Inventory.Icon "CLIPA0" // needs changing
+ Inventory.PickupMessage "Picked up some 7.62x39 ammo - for the cr527, the SKS and the AKM"  // for any more?
+  Scale 0.25
+ States
+ {
+ Spawn:
+	wptn A -1  // needs changing
+	Stop
+  vanish:
+    TNT1 A 0 A_GiveInventory ("tester")  //why the hell is this necessary. it clones them otherwise
+	stop
+ Pickup:
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,39)), "vanish")
+	fail		
+ }
+}
+
+
+ACTOR point308 : CustomInventory                                                                              //.308
+{
+ Inventory.Icon "CLIPA0" // needs changing
+ Inventory.PickupMessage "Picked up some .308 ammo - for the double rifle, winchester and the longhorn"
+  Scale 0.25
+ States
+ {
+ Spawn:
+	wpte A -1  // needs changing
+	Stop
+  vanish:
+    TNT1 A 0 A_GiveInventory ("tester")  //why the hell is this necessary. it clones them otherwise
+	stop
+ Pickup:
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,40)), "vanish")
+	fail	
+ }
+}
+
+
+ACTOR 7point62x54 : CustomInventory                                                                              //7.62x54
+{
+ Inventory.Icon "CLIPA0" // needs changing
+ Inventory.PickupMessage "Mosin and the sawn off something" //not 'something'
+  Scale 0.25
+ States
+ {
+ Spawn:
+	wsff A -1  // needs changing
+	Stop
+  vanish:
+    TNT1 A 0 A_GiveInventory ("tester")  //why the hell is this necessary. it clones them otherwise
+	stop
+ Pickup:
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,41)), "vanish")
+	fail		
+ }
+}
+
+
+ACTOR 12gauge : CustomInventory                                                                              //7.62x54
+{
+ Inventory.Icon "CLIPA0" // needs changing
+ Inventory.PickupMessage "Picked up some 12 gauge ammo" //not 'something'
+  Scale 0.2
+ States
+ {
+ Spawn:
+	wtwg A -1  // needs changing
+	Stop
+  vanish:
+    TNT1 A 0 A_GiveInventory ("tester")  //why the hell is this necessary. it clones them otherwise
+	stop
+ Pickup:
+	TNT1 A 0 A_JumpIf(1 == (ACS_ExecuteWithResult(860,42)), "vanish")
+	fail		
+ }
+}

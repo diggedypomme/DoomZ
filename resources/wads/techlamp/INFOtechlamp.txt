@@ -1,0 +1,20 @@
+SWITCHABLE TECH LAMP
+
+{tab=Preview}
+SwitchableTechLamp.png
+{tab=Info}
+Name: Switchable Tech Lamp
+Connection: Tech lamps from Doom 2
+Palette: Doom
+Summon: TechLampOn, TechLampOff
+Ambient Sound: No, but it plays sounds when switched
+De-/Activatable: Yes
+Destroyable: No
+Special Effects: No
+{tab=Credits}
+Submitted: Gez
+Decorate: Gez
+Sprites: Simo Malinen
+{/tabs}
+
+(used as a base for the lockers)

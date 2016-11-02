@@ -1,0 +1,706 @@
+
+
+ACTOR Dectemperature : Ammo                                                                           
+{
+ Inventory.Amount 100 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 100
+ Ammo.BackpackAmount 0 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 100 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "You got a bit warmer."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+ACTOR Tempz : Ammo      //the one that displays in ui                                                                   
+{
+ Inventory.Amount 100 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 100
+ Ammo.BackpackAmount 0 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 100 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Something to do with temp"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+
+
+ACTOR cover : Ammo        //0 is outside, 1 is tents, 3 is houses                                                                   
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 2
+ Ammo.BackpackAmount 0 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 2 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "you got under cover."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Decdry : Ammo        //0 is outside, 1 is tents, 3 is houses                                                                   
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 100
+ Ammo.BackpackAmount 0 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 2 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "You dried out a little"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+
+ACTOR debugger : Ammo        //0 is outside, 1 is tents, 3 is houses                                                                   
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 1
+ Ammo.BackpackAmount 0 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 2 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Turned debugger on."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+
+
+ACTOR Decbroken : Ammo                                                                            //bolts
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 1
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 1 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "You broke a limb."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Decwet: Ammo                                                                            //bolts
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 1
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 1 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "You got a little wet."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Decill : Ammo                                                                        //bolts
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 1
+ spawnid 56
+ -solid
+ 
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 1 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Looks like you got ill."
+ States
+ {
+ Spawn:
+ 
+ NULL A 1
+  NULL A 100
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+
+
+ACTOR Decbleed : Ammo                                                                            //bolts
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 1
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 1 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "You started to bleed."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Deceat : Ammo                                                                            //bolts
+{
+ Inventory.Amount 100 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 100
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "you ate some food."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Decdrink : Ammo                                                                            //bolts
+{
+ Inventory.Amount 100 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 100
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "you drank some drink."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Decplus : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 1
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "no idea."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Copcans : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some bolts."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Copdrink : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some bolts."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Copband : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some bolts."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+ACTOR Coptwelvammo : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some bolts."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+
+
+ACTOR Selectr : Ammo                                                                            //bolts
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 4
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "moved the section on"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Descripter : Ammo                                                                            //bolts
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ //Inventory.MaxAmount 23
+ Inventory.MaxAmount 100
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "description"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+
+
+
+
+ACTOR Sbar1 : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 31
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "inventory slot 1."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+ACTOR Sbar2 : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 31
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "inventory slot 2"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+ACTOR Sbar3 : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 31
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "inventory slot 3"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+ACTOR Sbar4 : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 31
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "inventory slot 4"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+ACTOR Sbar5 : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 31
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "inventory slot 5"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+ACTOR Sbar6 : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 31
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "inventory slot 6"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+ACTOR Sbar7 : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 31
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "inventory slot 7"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+ACTOR Sbar8 : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 31
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "inventory slot 8"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Sbar9 : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 31
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "inventory slot 9"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Sbar10 : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 31
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "inventory slot 10"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Sbar11 : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 31
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "inventory slot 11"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Sbar12 : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 31
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "inventory slot 12"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Colourchange : PowerupGiver replaces InvulnerabilitySphere
+{
+  Game Doom
+  SpawnID 133
+  +COUNTITEM
+  +INVENTORY.AUTOACTIVATE
+  +INVENTORY.ALWAYSPICKUP
+  +INVENTORY.BIGPOWERUP
+  Powerup.Duration 0x7FFFFFFF
+  Inventory.MaxAmount 0
+  Powerup.Type "Invulnerable"
+  Powerup.Colormap 1.0, 1.0, 1.0 
+  Inventory.PickupMessage "$GOTINVUL" // "Invulnerability!"
+  States
+  {
+  Spawn:
+    PINV ABCD 6 Bright
+    Loop
+  }
+}
+
+ACTOR Healz : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 200
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "health"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Foodz : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 200
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "food"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Drenkz : Ammo                                                                            //bolts
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 200
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some bolts."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Bagcomz : Ammo                                                                            //for comparing the bag to so that you can
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 2
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some bolts."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR Zootcomz : Ammo                                                                            //to replace zoot
+{
+ Inventory.Amount 0 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 500
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some bolts."
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+
+
+
+
+
+
+
+
+ACTOR Decsick : Ammo                                                                        //bolts
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 1
+ spawnid 56
+ -solid
+ 
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 1 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Looks like you got ill."
+ States
+ {
+ Spawn:
+ 
+ NULL A 1
+  NULL A 100
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+
+
+
+ACTOR menufoo : Ammo                    //        which menu page youre on                                              
+{
+ Inventory.Amount 1 
+ Inventory.MaxAmount 10
+ Ammo.BackpackAmount 0
+ Ammo.BackpackMaxAmount 1 
+ Inventory.Icon "CLIPA0" 
+ Inventory.PickupMessage "added to menu number"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR menulevel : Ammo       
+{
+ Inventory.Amount 1 // 
+ Inventory.MaxAmount 10
+ Ammo.BackpackAmount 0 
+ Ammo.BackpackMaxAmount 1
+ Inventory.Icon "CLIPA0" 
+ Inventory.PickupMessage "added to menu level"
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+

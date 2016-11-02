@@ -1,0 +1,49 @@
+
+
+
+
+ addkeysection "DoomZ Menu" DoomZmenu               // here too
+
+
+addmenukey "Open Menu" opnmenu
+   alias opnmenu "puke 785"
+   bind Del opnmenu
+   
+   addmenukey "Menu up" menuup
+   alias menuup "puke 786"
+   bind Pgup menuup
+
+   addmenukey "Menu down" menudn
+   alias menudn "puke 787"
+   bind Pgdn menudn
+
+   
+  
+   
+   
+
+   addmenukey "Menu Ok" menuok
+   alias menuok "puke 788"
+ bind End menuok
+ //   defaultbind Space "+USE"  
+//defaultbind Space menuok 
+  
+  
+ addkeysection "DoomZ Inventory" DoomZinv             // here too
+
+   addmenukey "Inventory Left" dzinvl
+   alias dzinvl "puke 906" 
+   defaultbind [ dzinvl
+   
+   addmenukey "Inventory Right" dzinvr
+   alias dzinvr "puke 907"
+   defaultbind ] dzinvr
+
+   addmenukey "Inventory Use" dzinvuse
+   alias dzinvuse "puke 908"
+   defaultbind Enter dzinvuse
+   
+
+
+
+

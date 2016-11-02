@@ -1,0 +1,264 @@
+
+actor robtable 10815
+{
+	
+	+NOGRAVITY
+	Radius 10
+	Height 20
+	+SOLID
+	scale 1.25
+	+SHOOTABLE
+	+NODAMAGE
+	+NOBLOOD
+	+CANPASS
+	States
+	{
+	Spawn:
+		RTAB A -1
+		Stop
+	}
+}
+
+
+actor tv1 10316
+{
+	
+	+NOGRAVITY
+	Radius 10
+	Height 20
+	+SOLID
+	scale 1.25
+	+SHOOTABLE
+	+NODAMAGE
+	+NOBLOOD
+	+CANPASS
+	States
+	{
+	Spawn:
+		tvoo A -1
+		Stop
+	}
+}
+
+actor tv2 10315
+{
+	
+	+NOGRAVITY
+	Radius 10
+	Height 20
+	+SOLID
+	scale 1.25
+	+SHOOTABLE
+	+NODAMAGE
+	+NOBLOOD
+	+CANPASS
+	States
+	{
+	Spawn:
+		tvtb A -1
+		Stop
+	}
+}
+
+actor robchair 10816
+{
+	
+	+NOGRAVITY
+	Radius 10
+	Height 20
+	+SOLID
+	scale 1.7
+	+SHOOTABLE
+	+NODAMAGE
+	+NOBLOOD
+	+CANPASS
+	States
+	{
+	Spawn:
+		RCHA A -1
+		Stop
+	}
+}
+
+actor robchairtable 10817
+{
+	
+	+NOGRAVITY
+	Radius 10
+	Height 20
+	+SOLID
+	scale 1.25
+	+SHOOTABLE
+	+NODAMAGE
+	+NOBLOOD
+	+CANPASS
+	States
+	{
+	Spawn:
+		RTCH A -1
+		Stop
+	}
+}
+
+actor tableragged 10818
+{
+	
+	+NOGRAVITY
+	Radius 10
+	Height 20
+	+SOLID
+	scale 1.5
+	+SHOOTABLE
+	+NODAMAGE
+	+NOBLOOD
+	+CANPASS
+	States
+	{
+	Spawn:
+		RTRA A -1
+		Stop
+	}
+}
+
+
+
+
+ACTOR locker2 : SwitchableDecoration 10901
+{
+	//$Category Light
+	Radius 16
+	Height 80
+	//10809
+	+nogravity
+	+SOLID
+	+USESPECIAL
+	Activation THINGSPEC_Switch
+	States
+	{
+	Active:
+	//LOCK B 5  A_SpawnItemEx ("canfoo",25, 0, 30, 0, 0, 0, 270)
+		LOCK A -1 A_PlaySound("switches/normbutn")
+		// Fall through
+	//Lit:
+	//	LOCK A 4  
+		stop
+	Inactive:
+		LOCK B 0 A_PlaySound("switches/exitbutn")
+		// Fall through
+	Spawn:
+		LOCK B -1
+		Stop
+	}
+}
+
+
+ACTOR locker : SwitchableDecoration 10900
+{
+	//$Category Light
+	Radius 16
+	Height 80
+	+nogravity
+	+SOLID
+	+USESPECIAL
+	
+	Activation THINGSPEC_Switch
+	States
+	{
+	Active:
+	LOCK B 1  A_SpawnItemEx ("FoodwaterSpwn",25, 0, 30, 0, 0, 0, 270) 
+	LOCK B 1 A_PlaySound("switches/exitbutn")
+	LOCK B 1  A_SpawnItemEx ("locker2",0, 0, 0, 0, 0, 0, 0, 0 , 0, 312)
+		// Fall through
+	
+		  
+		stop
+	Inactive:
+		LOCK A 0 A_PlaySound("switches/exitbutn")
+		// Fall through
+	Spawn:
+		LOCK A -1
+		Stop
+	closed:
+		LOCK A -1
+		
+		stop
+	}
+}
+
+
+
+
+actor chair 1875
+{
+	//$Category Voxel Vehicles Pack - Cars
+	//$Title "burktros chair"
+	-NOGRAVITY
+	Radius 10
+	Height 10
+	+SOLID
+	+SHOOTABLE
+	+NODAMAGE
+	+NOBLOOD
+	+CANPASS
+	scale 1
+	States
+	{
+	Spawn:
+		CHER A -1
+		Stop
+	}
+}
+
+actor table 1876
+{
+	//$Category Voxel Vehicles Pack - Cars
+	//$Title "burktros table"
+	+NOGRAVITY
+	Radius 10
+	Height 10
+	-SOLID
+	+SHOOTABLE
+	+NODAMAGE
+	+NOBLOOD
+	+CANPASS
+	scale 0.7
+	States
+	{
+	Spawn:
+		TABL A -1
+		Stop
+	}
+}
+
+
+actor sink : table 1878
+{
+	//$Title "shit sink"
+	Radius 1
+	Height 30
+	scale 5.0
+	States
+	{
+	Spawn:
+		sink A -1
+		Stop
+	}
+}
+
+
+actor toilet : table 1880
+{
+	//$Title "shit toilet"
+	Radius 10
+	Height 30
+	scale 4.0
+	Radius 1
+	Height 10
+	States
+	{
+	Spawn:
+		toil A -1
+		Stop
+	}
+}
+

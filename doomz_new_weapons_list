@@ -1,0 +1,152 @@
+
+
+
+//	0	
+//	1	zcan
+//	2	ztin
+//	3	zbands
+//	4	zamto
+//	5	zbolt
+//	6	CLIPA0
+//	7	zamxo
+//	8	zamyo
+//	9	zamxo
+//	10	zamwo
+//	11	 "zamvo"
+//	12	zamuo
+//	13	CLIPA0
+//	14	zsteak
+//	15	heatpad
+//	16	zanti
+//	17	 "zmorph"
+//	18	zwood
+//	19	zmeat
+//	20	zblood
+//	21	 "zcane"
+//	22	zcanf
+//	23	zbook
+//	24	zzratc
+//	25	zzratu
+//	26	NIwheel
+//	27	 "zbatt"
+//	28	petrolf
+//	29	petrole
+//	30	zhandu
+//	31	zhandc
+//	32	bolt_new
+//	33	point22
+//	34	point380
+//	35	point9mm
+//	36	point45acp
+//	37	point357
+//	38	5point56
+//	39	7point62x39
+//	40	point308
+//	41	7point62x54
+//	42	12gauge
+
+
+
+
+//New weapons
+/*
+
+empty          	    #                 slot 1
+knife               #                 slot 1
+axe                 #	             slot 1
+baseball bat        #                 slot 1
+machete             #                 slot 1
+book                #     	         slot 1
+pitchfork           #                 slot 1
+crossbow            #          		slot 5
+possibly a bow?     #                slot 5
+Amphibia S          #                slot 2
+makarov             #             	slot 2
+luger (red 9)       #                slot 2
+Glock               #           		slot 2
+Derringer           #                slot 2
+1911                #          		slot 2
+magnum              #           		slot 2
+longhorn            #               	slot 2
+Flaregun?           #                slot 2
+mp5-k               #       		    slot 4
+ump45               #       		    slot 4
+repeater rifle      #
+sks                 #
+blaze double rifle  #
+winchester model 70 #
+mosin 9130          #
+sawn off mosin      #
+AK101               #
+m4a1                #
+steyre aug          #
+akm                 #
+cr527 carbine       #
+izh                 #          		    slot 3
+sawn off izh        #                 	slot 3
+mp133               #          		    slot 3
+
+
+
+0	empty
+1	knife
+2	axe
+3	book
+4	baseball bat
+5	machete
+6	pitchfork
+7	crossbow
+8	bow
+9	Amphibia
+10	makarov
+11	Luger
+12	Glock
+13	Derringer
+14	m1911
+15	magnum
+16	longhorn
+17	Flaregun
+18	mp5-k
+19	ump-45
+20	repeater rifle
+21	sks
+22	blaze double rifle
+23	winchester model 70
+24	mosin 9130 
+25	sawn off mosin
+26	AK101 
+27	m4a1                
+28	steyr aug 
+29	akm
+30	cr527 carbine
+31	izh
+32	sawn off izh
+33	mp133
+
+
+
+
+
+You need to check to see if spawning an axe from scratch actually works, or if you need to 
+use the extra pickup items. You might need to do that weird fix with adding the testing item#
+
+You then need to make names for each of the above so they can be referenced.
+
+
+
+//****************************************** Empty
+
+*/
+
+//****************************************** START OF GUNS ******************************************
+//***************************************************************************************************
+
+// DZ_ - weapon
+// DL_ - loaded
+// DZA_ - ammo
+
+
+//get some more accurate values for reload time etc and damage from the guns
+
+//****************************************** crossbow
+ 		

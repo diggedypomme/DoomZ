@@ -1,0 +1,247 @@
+
+                                   
+	ACTOR Bolt // this is the projectile rather than the ammo type
+{
+  Game Doom
+  SpawnID 128
+  Radius 1
+  Height 8
+  Speed 50
+  Damage 20
+  Projectile
+  -ACTIVATEIMPACT 
+  -ACTIVATEPCROSS
+  +THRUGHOST
+  +DONTREFLECT
+  +NOEXTREMEDEATH
+  //+RANDOMIZE
+    //+ROCKETTRAIL
+  SeeSound "weapons/sshoto"
+  DeathSound "weapons/sshoto"
+  Obituary "$OB_MPROCKET" // didnt work "%o was impaled by %k's bolt."
+    Tag "Bolt"
+  States
+  {
+  Spawn:
+  XBLT A -1
+    //MISL A 1 Bright
+    
+  Death:
+  
+  
+    XBLT A 25 // Bright  - why was this set to bright?
+    
+	XBLT A 12 A_SpawnItemEx ("bolts")
+    Stop
+  }
+}							   
+								   
+	
+	
+							   
+								   
+								   
+ACTOR twelvammo : Ammo                                                                      //
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 999 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some 12 Gage shells."
+   Tag "12 Gage shells"
+ scale 0.12
+  SpawnID 196
+ States
+ {
+ Spawn:
+  SSHL A -1
+  Stop
+ }
+}
+
+ACTOR bolts : Ammo                                                                            //bolts
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 999 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some bolts."
+   Tag "bolt"
+  SpawnID 195
+ States
+ {
+ Spawn:
+  BOLB A -1
+  Stop
+  //Death:
+  //  BOLB A 160
+ }
+}
+
+ACTOR 9mmAmmo : Ammo                                                                              //9mm
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+  SpawnID 194
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 999 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some 9mm ammo."
+   Tag "9mm ammo"
+  Scale 0.75
+ States
+ {
+ Spawn:
+  CLIP A -1
+  Stop
+ }
+}
+
+
+
+
+
+ACTOR fortyfive : Ammo                                                                     //45
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 999 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up .45 ammo."
+   Tag ".45 ammo"
+  scale 0.1
+   SpawnID 193
+ States
+ {
+ Spawn:
+  NTEM A -1
+  Stop
+ }
+}
+
+
+ACTOR thrtyate : Ammo                                                                        //38 magnum special
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+  SpawnID 192
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 999 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some 38 magnum special rounds"
+   Tag ".38 ammo"
+  scale 0.1
+ States
+ {
+ Spawn:
+  NTEN A -1
+  Stop
+ }
+}
+
+
+
+ACTOR thrfiveseven : Ammo                                                                            //.357
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+  SpawnID 191
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 999 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some .357 ammo."
+   Tag ".357 ammo"
+  //scale 0.2
+ States
+ {
+ Spawn:
+  CLIP A -1
+  Stop
+ }
+}
+
+
+ACTOR fiftyone : Ammo                                                                             //7.62x51mm Round	
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+  SpawnID 190
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 999 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some 7.62x51mm Rounds"
+ Tag "7.62x51mm Rounds"
+  scale 0.12
+ States
+ {
+ Spawn:
+  //SNPP B -1
+  NTEP A -1
+  Stop
+ }
+}
+
+ACTOR thirtynine : Ammo                                                                              //7.62x39mm Round
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+  SpawnID 189
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 999 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some 7.62x39mm Rounds."
+ tag "7.62x39mm Rounds"
+  scale 0.1
+ States
+ {
+ Spawn:
+  NTEQ A -1
+  Stop
+ }
+}
+
+
+ACTOR twentytwo : Ammo                                                                              // .22
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+  SpawnID 187
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 999 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some .22 rounds"
+ tag ".22 rounds"
+ scale 0.1
+ States
+ {
+ Spawn:
+  NTER A -1
+
+  Stop
+ }
+}
+
+ACTOR fivefivesix : Ammo                                                                              // .556
+{
+ SpawnID 186
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 999
+ Ammo.BackpackAmount 1 // How much you'll get out of backpacks or equivalent.
+ Ammo.BackpackMaxAmount 999 // The new max amount if player has a backpack.
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "Picked up some .556 ammo."
+ tag ".556 rounds"
+  scale 0.1
+ States
+ {
+ Spawn:
+  NTEL A -1
+  
+  Stop
+ }
+}
+
+

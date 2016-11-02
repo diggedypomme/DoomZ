@@ -1,0 +1,55 @@
+
+
+ACTOR Smallbagpick : Ammo                                                                             //7.62x51mm Round	
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 1
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "You picked up a small backpack"
+   Tag "Small backpack"
+ States
+ {
+ Spawn:
+ 
+  BPAM A -1
+  Stop
+ }
+}
+
+
+ACTOR Mbagpick2 : Ammo                                                                             //7.62x51mm Round	
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 1
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "You picked up a medium backpack"
+   Tag "Medium backpack"
+ States
+ {
+ Spawn:
+  BPAM A -1
+  Stop
+ 
+  Stop
+  
+ }
+}
+
+
+ACTOR Largbagpick3 : Ammo                                                                             //7.62x51mm Round	
+{
+ Inventory.Amount 1 // You'll get half this if a monster drops it.
+ Inventory.MaxAmount 1
+   Tag "Large backpack"
+ 
+ Inventory.Icon "CLIPA0" // This displays on the fullscreen HUD.
+ Inventory.PickupMessage "You picked up a large backpack"
+ States
+ {
+ Spawn:
+  BPAM A -1
+  Stop
+ }
+}

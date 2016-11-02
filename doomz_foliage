@@ -1,0 +1,581 @@
+//real_trisk's awesome oblivion style trees, adapted to give variation in colour and affect their dropping etc
+ACTOR ATLeaves 10577
+{
+	height 8
+	radius 8
+	-SOLID
+		+NOBLOOD
+	+SHOOTABLE
+	+NOGRAVITY
+	+FORCEXYBILLBOARD
+	+CLIENTSIDEONLY
+	+NOTAUTOAIMED
+	mass 1000000 
+		Health 1
+	//scale 0.4
+	scale 0.6
+	states
+	{
+	Spawn:
+			BRNC A 0
+			BRNC A 1
+			//BRNC A 0 A_SetScale(random (0.4, 0.6))
+	BRNC A 0  A_Jump (100, "darker")
+	BRNC A 0  A_Jump (50, "lighter")
+		BRNc A -1
+		Stop
+	snowy:
+	    BRNC B -1
+		stop
+	darker:
+	    BRND a -1
+		stop
+	lighter:
+	    BRND a -1
+		stop
+		
+	Death:
+	
+	BRNC a 0 A_ChangeFlag("nogravity", 0) 
+	BRNC A random (1, 200)
+//	BRNC A 1 A_SpawnItemEx ("ATLeavesfall", 0, 0, 0, 0, 0, 0, 0)
+			BRNC A 1
+			stop
+	}
+}
+
+
+actor trunkspawner2old 
+{
+	scale 7.0
+	Health 100
+	Radius 24
+	Height 100
+	bloodtype splinters
+	 PainChance 100
+	  DamageFactor "Normal", 0
+	   DamageFactor "axe", 1
+	     DamageFactor "knife", 0.1
+		   DamageFactor "machete", 3
+	+DONTTHRUST 
+	+SOLID
+	+DROPPED
+	
+	+SHOOTABLE
+	-NODAMAGE
+	-NOBLOOD
+	+nogravity
+	-CANPASS	
+	+NOTAUTOAIMED
+	States
+	{
+	Spawn:
+	trun k 10
+	trun KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK 0 A_SpawnItemEx ("ATLeaves", random (-60, 60), random (-60, 60),random (80, 150),0,0,0,0,SXF_SETMASTER ,0)
+	trun k 50
+	trun k 1 A_jump (150, "second")
+	trun k -1
+	second:
+	trun JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ 1 A_SpawnItemEx ("ATLeaves", random (-90, 90), random (-90, 90),random (150, 200),0,0,0,0,SXF_SETMASTER,0)
+	trun j 50
+	
+	trun J 1 A_jump (150, "third")
+	trun J -1
+	third:
+	trun I 20
+	trun IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII 1 A_SpawnItemEx ("ATLeaves", random (-60, 60), random (-60, 60),random (200, 240),0,0,0,0,SXF_SETMASTER,0)
+	trun i-1
+	stop
+	
+	Death:
+	trun l 50 A_PlayWeaponSound("tree")
+	null A 1 A_SpawnItemEx ("treestump", 0, 0, 0, 0, 0, 0, 0)
+	null A 12 A_KillChildren 
+	
+	null c 1
+	Stop
+	}
+}
+
+
+
+
+
+actor trunkspawner  
+{
+	scale 9.0
+	Health 10
+	Radius 24
+	Height 100
+	
+	+DONTTHRUST 
+	+SOLID
+	+SHOOTABLE
+	-NODAMAGE
+	+NOBLOOD
+	-nogravity
+	+NOBLOODDECALS
+	-CANPASS	
+	+NOTAUTOAIMED
+	States
+	{
+	Spawn:
+	trun e 1
+	null A 1 A_SpawnItemEx ("ATLeaves", 50, 0, 100, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", -50, 0, 100, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", 0, 50, 100, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", 0, -50, 100, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", 70, 0, 110, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", -70, 0, 130, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", 0, 70, 130, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", 0, -70, 120, 0, 0, 0, 0)
+		null A 1 A_SpawnItemEx ("ATLeaves", 70, 0, 110, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", -40, 0, 140, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", 0, 30, 120, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", 0, -50, 150, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", 20, 0, 160, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", -70, 0, 180, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", 0, 30, 140, 0, 0, 0, 0)
+	null A 1 A_SpawnItemEx ("ATLeaves", 0, -10, 110, 0, 0, 0, 0)
+		trun e -1
+	
+	Death:
+	    
+		trun e 50 A_PlayWeaponSound("tree")
+		null a 8  A_Explode(10 ,250 ,0, true)
+		null A 1 A_SpawnItemEx ("treestump", 0, 0, 0, 0, 0, 0, 0)
+		null A 12 A_KillChildren 
+	    null c 1
+		Stop
+	}
+}
+
+
+actor trunkspawner2 12383
+{
+	scale 7.0
+	Health 100
+	Radius 24
+	Height 100
+	bloodtype splinters
+	 PainChance 100
+	  DamageFactor "Normal", 0
+	   DamageFactor "axe", 1
+	     DamageFactor "knife", 0.1
+		   DamageFactor "machete", 3
+	+DONTTHRUST 
+	+SOLID
+	+DROPPED
+	
+	+SHOOTABLE
+	-NODAMAGE
+	-NOBLOOD
+	+NOBLOODDECALS
+	+nogravity
+	-CANPASS	
+	+NOTAUTOAIMED
+	States
+	{
+	Spawn:
+	trun k 10
+	trun k 1 A_GiveInventory("branchfoo", 1)
+	//trun k 1 A_Jump (200, "skip")
+	//trun KKKKKKKKKK 1 A_SpawnItemEx ("ATLeaves", random (-20, 20), random (-20, 20),random (random(20,70), 80),0,0,0,0,SXF_SETMASTER ,0)
+	
+	//skip:
+	trun KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK 1 A_SpawnItemEx ("ATLeaves", random (-60, 60), random (-60, 60),random (80, 150),0,0,0,0,SXF_SETMASTER ,0)
+	trun k 50 
+	trun k 1 A_jump (150, "second")
+	trun k -1
+	second:
+	trun JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ 1 A_SpawnItemEx ("ATLeaves", random (-90, 90), random (-90, 90),random (150, 200),0,0,0,0,SXF_SETMASTER,0)
+	trun j 50 A_GiveInventory("branchfoo", 1)
+	
+	trun J 1 A_jump (150, "third")
+	trun J -1
+	third:
+	trun I 20 A_GiveInventory("branchfoo", 3)
+	trun IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII 1 A_SpawnItemEx ("ATLeaves", random (-60, 60), random (-60, 60),random (200, 240),0,0,0,0,SXF_SETMASTER,0)
+	trun i-1
+	stop
+	
+	Death:
+	trun l 50 A_PlayWeaponSound("tree")
+	null A 1 A_SpawnItemEx ("treeorno", 0, 0, 0, 0, 0, 5, 0)
+	 trun l 5 A_DropInventory ("branchfoo")
+	 trun l 5 A_DropInventory ("branchfoo")
+	 trun l 5 A_DropInventory ("branchfoo")
+	null A 12 A_KillChildren 
+	//null A 1  A_SpawnItemEx ("branchfoo",80, 0, 30, 0, random(0, 10), random(0, 10), random(0, 255))
+	null c 1
+	Stop
+	}
+}
+
+
+
+
+
+
+ACTOR dailyspritetree 
+{
+	
+	height 80
+	radius 10
+	mass 10000000
+	-PUSHABLE
+	+NOBLOOD
+	+SOLID 
+	  Health 1000
+	   DamageFactor "BulletPuff", 100.0
+	    DamageFactor "axe", 100.8
+	+SOLID
+	+SHOOTABLE
+	scale 1.5
+	states
+	{
+	Spawn:
+		TREN A -1
+		Stop
+	death:	
+		TREN A 1
+		TREN A 1 A_SpawnItemEx ("treestump", 0, 0, 0, 0, 0, 0, 0)
+		PUNG A 12 A_SpawnItemEx ("branchfoo",80, 0, 30, 0, 0, 0, random(0, 255))
+	stop
+	
+	grow:
+		TREN A 1 A_SpawnItemEx ("dailytree", 0, 0, 0, 0, 0, 0, 0)
+	stop
+	}
+}
+
+
+                               
+	ACTOR Boltplanter // this is the projectile rather than the ammo type
+{
+  Game Doom
+  SpawnID 128
+  Radius 1
+  Height 8
+  Speed 50
+  Damage 0
+  Projectile
+  gravity 10
+  -ACTIVATEIMPACT 
+  -ACTIVATEPCROSS
+  +THRUGHOST
+  +DONTREFLECT
+  +NOEXTREMEDEATH
+  //+RANDOMIZE
+    //+ROCKETTRAIL
+  SeeSound "weapons/sshoto"
+  DeathSound "weapons/sshoto"
+  Obituary "$OB_MPROCKET" // didnt work "%o was impaled by %k's bolt."
+  States
+  {
+  Spawn:
+  XBLT A 2
+    //MISL A 1 Bright
+    
+  Death:
+   
+  
+   // XBLT A 25 // Bright  - why was this set to bright?
+    
+	XBLT A 0 A_SpawnItemEx ("dailytree")
+    Stop
+  }
+}				
+
+
+ACTOR planter : Weapon
+{
+  Weapon.SelectionOrder 3700
+  Weapon.Kickback 100
+  Obituary "$OB_MPFIST"
+  Tag "$TAG_FIST"
+  +WEAPON.WIMPY_WEAPON
+  +WEAPON.MELEEWEAPON
+  States
+  {
+  Ready:
+    PUNG A 1 A_WeaponReady
+    Loop
+  Deselect:
+    PUNG A 1 A_Lower
+    Loop
+  Select:
+    PUNG A 1 A_Raise
+    Loop
+  Fire:
+    PUNG B 4
+    PUNG C 4  A_FireCustomMissile ("Boltplanter")
+    PUNG D 5
+    PUNG C 4
+    PUNG B 5 A_ReFire
+    Goto Ready
+  }
+}
+
+
+
+
+
+
+ACTOR dailytreestump 
+{
+	
+	height 10
+	radius 5
+
+	-PUSHABLE
+	+NOBLOOD
+	-SOLID 
+	
+	scale 1.5
+	states
+	{
+	Spawn:
+		TREN C -1
+		Stop
+	grow:
+		TREN A 1 A_SpawnItemEx ("dailyspritetree", 0, 0, 0, 0, 0, 0, 0)
+		
+	stop
+	
+			}
+}
+
+
+
+
+
+
+
+actor dailytree 
+{
+	scale 7.0
+	Health 100
+	Radius 24
+	Height 100
+	bloodtype splinters
+	PainChance 100
+	DamageFactor "Normal", 0
+	DamageFactor "axe", 1
+	DamageFactor "knife", 0.1
+	DamageFactor "machete", 3
+	+DONTTHRUST 
+	-SOLID
+	+DROPPED
+	+SHOOTABLE
+	-NODAMAGE
+	-NOBLOOD
+	-nogravity
+	-CANPASS	
+	+NOBLOODDECALS
+	+NOTAUTOAIMED
+	States
+	{
+	spawn:
+		null a 0
+		null a 0 a_changeflag ("solid", false)
+		 null a 0 Thing_ChangeTID(0, 1801)
+		 TREN C 0 A_SetScale(0.3)
+		 TREN C 1 
+		 TREN c -1
+	stump:
+		//stump
+		TREN C 0
+		null a 0 a_changeflag ("solid", false)
+		TREN C 0 A_SetScale(1)
+		TREN C -1
+	
+	spritetree:
+		TREN A 0 A_SetScale(1.5)
+		null a 0 a_changeflag ("solid", true)
+		TREN A 1 A_GiveInventory("branchfoo", 1)
+		TREN A -1
+		
+	onetree:
+		TREN C 0 A_SetScale(7.0)
+		
+		trun KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK 0 A_SpawnItemEx ("ATLeaves", random (-60, 60), random (-60, 60),random (80, 150),0,0,0,0,SXF_SETMASTER ,0)
+		trun k 50
+		trun k 1 A_GiveInventory("branchfoo", 1)
+		trun k -1
+	
+	twotree:
+		trun JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ 1 A_SpawnItemEx ("ATLeaves", random (-90, 90), random (-90, 90),random (150, 200),0,0,0,0,SXF_SETMASTER,0)
+		trun j 50
+		trun j 1 A_GiveInventory("branchfoo", 1)
+		trun J -1
+	
+	threetree:
+		trun I 20
+		trun i 1 A_GiveInventory("branchfoo", 1)
+		trun IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII 1 A_SpawnItemEx ("ATLeaves", random (-60, 60), random (-60, 60),random (200, 240),0,0,0,0,SXF_SETMASTER,0)
+		trun i-1
+	stop
+	
+	Death:
+		trun l 50 A_PlayWeaponSound("tree")
+		//
+		null A 1 A_SpawnItemEx ("treeorno", 0, 0, 0, 0, 0, 0, 0)
+		trun l 0 A_DropInventory ("branchfoo")
+	 trun l 0 A_DropInventory ("branchfoo")
+	 trun l  0 A_DropInventory ("branchfoo")
+	  trun l  0 A_DropInventory ("branchfoo")
+		null A 12 A_KillChildren 
+		//PUNG AA 12 A_SpawnItemEx ("branchfoo",80, 0, random(1,2), random(1,2), random(1,2), 0, random(0, 255))
+		null c 1
+	Stop
+	}
+}
+
+
+actor dailytreetype2 : dailytree
+{
+states{
+	spritetree:
+		TREN B  0 A_SetScale(1)
+		null a 0 a_changeflag ("solid", true)
+		TREN B -1
+		
+		
+	onetree:
+		TREN C 0 A_SetScale(5.0)
+		trun KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK 0 A_SpawnItemEx ("leaf5", random (-80, 80), random (-80, 80),random (90, 150),0,0,0,0,SXF_SETMASTER ,0)
+		trun JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ 0 A_SpawnItemEx ("leaf5", random (-40, 40), random (-50, 50),random (150, 200),0,0,0,0,SXF_SETMASTER,0)
+		trun IIIIIIIIIIIIIIIIIII 0 A_SpawnItemEx ("leaf5", random (-10, 10), random (-10, 10),random (200, 240),0,0,0,0,SXF_SETMASTER,0)
+		trun i-1
+	
+	twotree:
+		trun i-1
+	
+	threetree:
+		trun i-1
+}
+}
+
+
+
+
+
+
+
+
+ACTOR splinters : Blood
+{
+  Mass 5
+  +NOBLOCKMAP
+  +NOTELEPORT
+  +ALLOWPARTICLES
+  States
+  {
+  Spawn:
+  SPLN A 1
+  SPLN a 1 A_PlayWeaponSound("axe2")
+  
+    SPLN ABC 8
+    Stop
+  Spray:
+    SPLN ABC 3
+    SPLN A 2
+    Stop
+  }
+}
+
+
+ACTOR tree1 10630
+{
+	
+	height 80
+	radius 10
+	mass 10000000
+	-PUSHABLE
+	+NOBLOOD
+	+SOLID 
+	//heal
+	 //DamageFactor "chop", 1000.0
+	//DamageFactor 0
+	//DamageFactor "chop", 1.0
+	  Health 1000
+	   DamageFactor "BulletPuff", 100.0
+	    DamageFactor "axe", 100.8
+	   //DamageFactor "axe", 1.0
+	  //    DamageFactor 0.0
+	    //DamageFactor "fire", 500.0
+		//PainChance "Fire", 255
+	+SOLID
+	+SHOOTABLE
+	scale 1.5
+	states
+	{
+	Spawn:
+		TREN A -1
+		Stop
+		death:	
+	TREN A 1
+		TREN A 1 A_SpawnItemEx ("treestump", 0, 0, 0, 0, 0, 0, 0)
+		PUNG A 12 A_SpawnItemEx ("branchfoo",80, 0, 30, 0, 0, 0, random(0, 255))
+	stop
+	}
+}
+ACTOR tree2 10631
+{
+	
+	height 50
+	radius 10
+	mass 10000000
+	-PUSHABLE
+	+NOBLOOD
+	+SOLID 
+	//heal
+	 //DamageFactor "chop", 1000.0
+	//DamageFactor 0
+	//DamageFactor "chop", 1.0
+	  Health 1000
+	   DamageFactor "BulletPuff", 100.0
+	    DamageFactor "axe", 100.8
+	   //DamageFactor "axe", 1.0
+	  //    DamageFactor 0.0
+	    //DamageFactor "fire", 500.0
+		//PainChance "Fire", 255
+	+SOLID
+	+SHOOTABLE
+	scale 1.5
+	states
+	{
+	Spawn:
+		TREN B -1
+		Stop
+		death:	
+	TREN A 1
+		TREN A 1 A_SpawnItemEx ("treestump", 0, 0, 0, 0, 0, 0, 0)
+		PUNG A 12 A_SpawnItemEx ("branchfoo",80, 0, 30, 0, 0, 0, random(0, 255))
+	stop
+	}
+}
+
+
+ACTOR treestump //10632
+{
+	
+	height 10
+	radius 5
+
+	-PUSHABLE
+	+NOBLOOD
+	-SOLID 
+	
+	scale 1.5
+	states
+	{
+	Spawn:
+		TREN C -1
+		Stop
+			}
+}
+
+
+

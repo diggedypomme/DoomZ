@@ -1,0 +1,10 @@
+:Train1
+	door		0
+	playrepeat	train
+end
+
+:Winch1
+	door		1
+	playrepeat	winch
+end
+
